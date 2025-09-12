@@ -1,0 +1,270 @@
+config:
+  target: 'http://localhost:3001'
+  phases:
+    # Warm-up phase
+    - duration: 60
+      arrivalRate: 1
+      name: "Warm-up"
+    
+    # Ramp-up phase
+    - duration: 120
+      arrivalRate: 1
+      rampTo: 10
+      name: "Ramp-up load"
+    
+    # Sustained load phase
+    - duration: 300
+      arrivalRate: 10
+      name: "Sustained load"
+    
+    # Peak load phase
+    - duration: 120
+      arrivalRate: 10
+      rampTo: 25
+      name: "Peak load"
+    
+    # Cool-down phase
+    - duration: 60
+      arrivalRate: 25
+      rampTo: 1
+      name: "Cool-down"
+  
+  payload:
+    # Test data for conversations
+    - path: "./test-data/conversation-payloads.csv"
+      fields:
+        - "title"
+        - "initialMessage"
+        - "followUpMessage"
+    
+    # Test data for voice synthesis
+    - path: "./test-data/voice-payloads.csv"
+      fields:
+        - "text"
+        - "voice"
+        - "speed"
+  
+  variables:
+    testApiKey: "test-api-key-123"
+    userId: "load-test-user-{{ $randomInt(1, 1000) }}"
+  
+  plugins:
+    expect: {}
+    metrics-by-endpoint: {}
+    hdrhistogram: {}
+  
+  # Performance thresholds
+  ensure:
+    http.response_time.p95: 2000  # 95th percentile should be under 2 seconds
+    http.response_time.p99: 5000  # 99th percentile should be under 5 seconds
+    http.request_rate: 20         # Should handle at least 20 requests per second
+    http.codes.200: 95           # 95% success rate
+    vusers.failed: 0             # No failed virtual users
+
+scenarios:
+  # Basic API health check scenario
+  - name: "Health Check Load Test"
+    weight: 10
+    flow:
+      - get:
+          url: "/api/v1/health"
+          expect:
+            - statusCode: 200
+            - hasProperty: "status"
+            - equals:
+                - "{{ status }}"
+                - "healthy"
+  
+  # Authentication and user session scenario
+  - name: "Authentication Flow"
+    weight: 15
+    flow:
+      - post:
+          url: "/api/v1/auth/login"
+          json:
+            email: "loadtest+{{ userId }}@susan-ai.com"
+            password: "loadtest123"
+          capture:
+            - json: "$.data.token"
+              as: "authToken"
+          expect:
+            - statusCode: 200
+            - hasProperty: "data.token"
+      
+      - get:
+          url: "/api/v1/users/profile"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          expect:
+            - statusCode: 200
+            - hasProperty: "data.id"
+  
+  # Conversation creation and messaging scenario
+  - name: "Conversation Workflow"
+    weight: 40
+    flow:
+      # Login first
+      - post:
+          url: "/api/v1/auth/login"
+          json:
+            email: "loadtest+{{ userId }}@susan-ai.com"
+            password: "loadtest123"
+          capture:
+            - json: "$.data.token"
+              as: "authToken"
+      
+      # Create conversation
+      - post:
+          url: "/api/v1/conversations"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          json:
+            title: "{{ title }}"
+            initialMessage: "{{ initialMessage }}"
+          capture:
+            - json: "$.data.conversation.id"
+              as: "conversationId"
+          expect:
+            - statusCode: 201
+            - hasProperty: "data.conversation.id"
+      
+      # Send follow-up message
+      - post:
+          url: "/api/v1/conversations/{{ conversationId }}/messages"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          json:
+            content: "{{ followUpMessage }}"
+          expect:
+            - statusCode: 200
+            - hasProperty: "data.assistantMessage"
+      
+      # Get conversation
+      - get:
+          url: "/api/v1/conversations/{{ conversationId }}"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          expect:
+            - statusCode: 200
+            - hasProperty: "data.messages"
+      
+      # List conversations
+      - get:
+          url: "/api/v1/conversations?limit=10"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          expect:
+            - statusCode: 200
+            - hasProperty: "data.conversations"
+  
+  # Voice synthesis load test
+  - name: "Voice Synthesis Load"
+    weight: 20
+    flow:
+      # Login
+      - post:
+          url: "/api/v1/auth/login"
+          json:
+            email: "loadtest+{{ userId }}@susan-ai.com"
+            password: "loadtest123"
+          capture:
+            - json: "$.data.token"
+              as: "authToken"
+      
+      # Synthesize speech
+      - post:
+          url: "/api/v1/voice/synthesize"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          json:
+            text: "{{ text }}"
+            voice: "{{ voice }}"
+            speed: "{{ speed }}"
+          expect:
+            - statusCode: 200
+            - hasProperty: "data.audioBuffer"
+      
+      # Get available voices
+      - get:
+          url: "/api/v1/voice/voices"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          expect:
+            - statusCode: 200
+            - hasProperty: "data.voices"
+  
+  # Memory and analytics scenario
+  - name: "Memory Operations"
+    weight: 10
+    flow:
+      # Login
+      - post:
+          url: "/api/v1/auth/login"
+          json:
+            email: "loadtest+{{ userId }}@susan-ai.com"
+            password: "loadtest123"
+          capture:
+            - json: "$.data.token"
+              as: "authToken"
+      
+      # Search memory
+      - post:
+          url: "/api/v1/memory/search"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          json:
+            query: "artificial intelligence"
+            limit: 5
+          expect:
+            - statusCode: 200
+            - hasProperty: "data.results"
+      
+      # Get memory analytics
+      - get:
+          url: "/api/v1/memory/analytics"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          expect:
+            - statusCode: 200
+            - hasProperty: "data.analytics"
+  
+  # Real-time data APIs scenario
+  - name: "Real-time Data Load"
+    weight: 5
+    flow:
+      # Login
+      - post:
+          url: "/api/v1/auth/login"
+          json:
+            email: "loadtest+{{ userId }}@susan-ai.com"
+            password: "loadtest123"
+          capture:
+            - json: "$.data.token"
+              as: "authToken"
+      
+      # Get weather data
+      - get:
+          url: "/api/v1/data/weather?location=London&units=metric"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          expect:
+            - statusCode: 200
+            - hasProperty: "data.current"
+      
+      # Get news data
+      - get:
+          url: "/api/v1/data/news?category=technology&limit=5"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          expect:
+            - statusCode: 200
+            - hasProperty: "data.articles"
+      
+      # Get stock data
+      - get:
+          url: "/api/v1/data/stocks?symbols=AAPL,GOOGL,MSFT"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          expect:
+            - statusCode: 200
+            - hasProperty: "data.quotes"

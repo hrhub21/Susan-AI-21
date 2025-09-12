@@ -1,0 +1,506 @@
+{
+  "id": "documentation_requirements",
+  "categoryId": "insurance_process",
+  "categoryName": "Insurance Process Training",
+  "name": "Documentation Requirements",
+  "description": "Comprehensive training module for documentation requirements.",
+  "difficulty": "intermediate",
+  "estimatedDuration": 75,
+  "prerequisites": [],
+  "learningObjectives": [
+    "Master the fundamentals of documentation requirements",
+    "Apply best practices in professional insurance process scenarios",
+    "Demonstrate competency through practical assessments"
+  ],
+  "content": {
+    "overview": {
+      "description": "Comprehensive training module for documentation requirements.",
+      "objectives": [
+        "Master the fundamentals of documentation requirements",
+        "Apply best practices in professional insurance process scenarios",
+        "Demonstrate competency through practical assessments"
+      ],
+      "duration": 75,
+      "difficulty": "intermediate"
+    },
+    "lessons": [
+      {
+        "type": "interactive",
+        "estimatedDuration": 15,
+        "mediaType": "mixed",
+        "hasQuiz": true,
+        "hasPractical": false,
+        "id": "lesson_1",
+        "title": "Documentation Requirements - Part 1",
+        "description": "Comprehensive lesson 1 covering key aspects of documentation requirements.",
+        "content": {
+          "introduction": "Welcome to lesson 1 of Documentation Requirements.",
+          "sections": [
+            {
+              "type": "text",
+              "title": "Learning Overview",
+              "content": "In this lesson, you will learn about key concepts in documentation requirements."
+            },
+            {
+              "type": "interactive",
+              "title": "Interactive Exercise",
+              "content": "Hands-on practice with real-world scenarios."
+            },
+            {
+              "type": "video",
+              "title": "Demonstration Video",
+              "content": "Visual demonstration of key techniques and concepts.",
+              "duration": 300
+            }
+          ],
+          "summary": "Summary of key points covered in lesson 1.",
+          "nextSteps": "Preparation for lesson 2 or module completion."
+        },
+        "objectives": [
+          "Complete objective 1 for Documentation Requirements"
+        ],
+        "prerequisites": [],
+        "sequence": 1
+      },
+      {
+        "type": "interactive",
+        "estimatedDuration": 15,
+        "mediaType": "mixed",
+        "hasQuiz": true,
+        "hasPractical": false,
+        "id": "lesson_2",
+        "title": "Documentation Requirements - Part 2",
+        "description": "Comprehensive lesson 2 covering key aspects of documentation requirements.",
+        "content": {
+          "introduction": "Welcome to lesson 2 of Documentation Requirements.",
+          "sections": [
+            {
+              "type": "text",
+              "title": "Learning Overview",
+              "content": "In this lesson, you will learn about key concepts in documentation requirements."
+            },
+            {
+              "type": "interactive",
+              "title": "Interactive Exercise",
+              "content": "Hands-on practice with real-world scenarios."
+            },
+            {
+              "type": "video",
+              "title": "Demonstration Video",
+              "content": "Visual demonstration of key techniques and concepts.",
+              "duration": 300
+            }
+          ],
+          "summary": "Summary of key points covered in lesson 2.",
+          "nextSteps": "Preparation for lesson 3 or module completion."
+        },
+        "objectives": [
+          "Complete objective 2 for Documentation Requirements"
+        ],
+        "prerequisites": [
+          "lesson_1"
+        ],
+        "sequence": 2
+      },
+      {
+        "type": "interactive",
+        "estimatedDuration": 15,
+        "mediaType": "mixed",
+        "hasQuiz": true,
+        "hasPractical": false,
+        "id": "lesson_3",
+        "title": "Documentation Requirements - Part 3",
+        "description": "Comprehensive lesson 3 covering key aspects of documentation requirements.",
+        "content": {
+          "introduction": "Welcome to lesson 3 of Documentation Requirements.",
+          "sections": [
+            {
+              "type": "text",
+              "title": "Learning Overview",
+              "content": "In this lesson, you will learn about key concepts in documentation requirements."
+            },
+            {
+              "type": "interactive",
+              "title": "Interactive Exercise",
+              "content": "Hands-on practice with real-world scenarios."
+            },
+            {
+              "type": "video",
+              "title": "Demonstration Video",
+              "content": "Visual demonstration of key techniques and concepts.",
+              "duration": 300
+            }
+          ],
+          "summary": "Summary of key points covered in lesson 3.",
+          "nextSteps": "Preparation for lesson 4 or module completion."
+        },
+        "objectives": [
+          "Complete objective 3 for Documentation Requirements"
+        ],
+        "prerequisites": [
+          "lesson_2"
+        ],
+        "sequence": 3
+      },
+      {
+        "type": "interactive",
+        "estimatedDuration": 15,
+        "mediaType": "mixed",
+        "hasQuiz": true,
+        "hasPractical": false,
+        "id": "lesson_4",
+        "title": "Documentation Requirements - Part 4",
+        "description": "Comprehensive lesson 4 covering key aspects of documentation requirements.",
+        "content": {
+          "introduction": "Welcome to lesson 4 of Documentation Requirements.",
+          "sections": [
+            {
+              "type": "text",
+              "title": "Learning Overview",
+              "content": "In this lesson, you will learn about key concepts in documentation requirements."
+            },
+            {
+              "type": "interactive",
+              "title": "Interactive Exercise",
+              "content": "Hands-on practice with real-world scenarios."
+            },
+            {
+              "type": "video",
+              "title": "Demonstration Video",
+              "content": "Visual demonstration of key techniques and concepts.",
+              "duration": 300
+            }
+          ],
+          "summary": "Summary of key points covered in lesson 4.",
+          "nextSteps": "Preparation for lesson 5 or module completion."
+        },
+        "objectives": [
+          "Complete objective 4 for Documentation Requirements"
+        ],
+        "prerequisites": [
+          "lesson_3"
+        ],
+        "sequence": 4
+      },
+      {
+        "type": "interactive",
+        "estimatedDuration": 15,
+        "mediaType": "mixed",
+        "hasQuiz": true,
+        "hasPractical": false,
+        "id": "lesson_5",
+        "title": "Documentation Requirements - Part 5",
+        "description": "Comprehensive lesson 5 covering key aspects of documentation requirements.",
+        "content": {
+          "introduction": "Welcome to lesson 5 of Documentation Requirements.",
+          "sections": [
+            {
+              "type": "text",
+              "title": "Learning Overview",
+              "content": "In this lesson, you will learn about key concepts in documentation requirements."
+            },
+            {
+              "type": "interactive",
+              "title": "Interactive Exercise",
+              "content": "Hands-on practice with real-world scenarios."
+            },
+            {
+              "type": "video",
+              "title": "Demonstration Video",
+              "content": "Visual demonstration of key techniques and concepts.",
+              "duration": 300
+            }
+          ],
+          "summary": "Summary of key points covered in lesson 5.",
+          "nextSteps": "Preparation for lesson 6 or module completion."
+        },
+        "objectives": [
+          "Complete objective 5 for Documentation Requirements"
+        ],
+        "prerequisites": [
+          "lesson_4"
+        ],
+        "sequence": 5
+      },
+      {
+        "type": "interactive",
+        "estimatedDuration": 15,
+        "mediaType": "mixed",
+        "hasQuiz": true,
+        "hasPractical": false,
+        "id": "lesson_6",
+        "title": "Documentation Requirements - Part 6",
+        "description": "Comprehensive lesson 6 covering key aspects of documentation requirements.",
+        "content": {
+          "introduction": "Welcome to lesson 6 of Documentation Requirements.",
+          "sections": [
+            {
+              "type": "text",
+              "title": "Learning Overview",
+              "content": "In this lesson, you will learn about key concepts in documentation requirements."
+            },
+            {
+              "type": "interactive",
+              "title": "Interactive Exercise",
+              "content": "Hands-on practice with real-world scenarios."
+            },
+            {
+              "type": "video",
+              "title": "Demonstration Video",
+              "content": "Visual demonstration of key techniques and concepts.",
+              "duration": 300
+            }
+          ],
+          "summary": "Summary of key points covered in lesson 6.",
+          "nextSteps": "Preparation for lesson 7 or module completion."
+        },
+        "objectives": [
+          "Complete objective 6 for Documentation Requirements"
+        ],
+        "prerequisites": [
+          "lesson_5"
+        ],
+        "sequence": 6
+      }
+    ],
+    "practicalExercises": [],
+    "caseStudies": [],
+    "resources": [],
+    "glossary": []
+  },
+  "assessments": [
+    {
+      "id": "documentation_requirements_quiz",
+      "type": "quiz",
+      "title": "Documentation Requirements Knowledge Check",
+      "description": "Test your understanding of key concepts",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "multiple_choice",
+          "question": "What is the primary focus of documentation requirements?",
+          "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Detailed explanation of the correct answer.",
+          "points": 10
+        },
+        {
+          "id": "q2",
+          "type": "scenario",
+          "question": "In a typical insurance process scenario, what would you do first?",
+          "options": [
+            "Action A",
+            "Action B",
+            "Action C",
+            "Action D"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Explanation of best practices.",
+          "points": 15
+        }
+      ],
+      "passingScore": 80,
+      "timeLimit": 30,
+      "attempts": 3
+    },
+    {
+      "id": "documentation_requirements_practical",
+      "type": "practical",
+      "title": "Documentation Requirements Practical Assessment",
+      "description": "Apply your knowledge in real-world scenarios",
+      "tasks": [
+        {
+          "id": "task1",
+          "title": "Photo Analysis Task",
+          "description": "Analyze the provided roofing photos and identify key issues",
+          "type": "photo_analysis",
+          "materials": [
+            "sample_photos",
+            "analysis_template"
+          ],
+          "timeEstimate": 20,
+          "scoring": {
+            "accuracy": 40,
+            "completeness": 30,
+            "professionalism": 30
+          }
+        }
+      ],
+      "passingScore": 85,
+      "timeLimit": 60
+    }
+  ],
+  "multimedia": {
+    "videos": [
+      {
+        "id": "intro_video",
+        "title": "Introduction to Documentation Requirements",
+        "description": "Overview and key concepts",
+        "duration": 300,
+        "url": "/media/videos/insurance_process/documentation_requirements/intro.mp4",
+        "thumbnail": "/media/thumbnails/insurance_process/documentation_requirements/intro.jpg",
+        "captions": true,
+        "interactive": false
+      }
+    ],
+    "images": [
+      {
+        "id": "reference_images",
+        "title": "Reference Images",
+        "description": "Visual examples and references",
+        "gallery": [
+          "/media/images/insurance_process/documentation_requirements/ref1.jpg"
+        ],
+        "interactive": true,
+        "annotations": true
+      }
+    ],
+    "audio": [
+      {
+        "id": "expert_interview",
+        "title": "Expert Interview",
+        "description": "Industry expert insights",
+        "duration": 600,
+        "url": "/media/audio/insurance_process/documentation_requirements/interview.mp3",
+        "transcript": true
+      }
+    ],
+    "interactive": [
+      {
+        "id": "virtual_simulation",
+        "title": "Virtual Inspection Simulation",
+        "description": "Interactive inspection scenario",
+        "type": "simulation",
+        "url": "/media/interactive/insurance_process/documentation_requirements/simulation.html",
+        "duration": 900
+      }
+    ]
+  },
+  "interactiveElements": [
+    {
+      "type": "hotspot_image",
+      "title": "Interactive Roof Diagram",
+      "description": "Click on different areas to learn more",
+      "imageUrl": "/media/interactive/insurance_process/documentation_requirements/roof_diagram.jpg",
+      "hotspots": [
+        {
+          "x": 100,
+          "y": 150,
+          "title": "Shingles",
+          "content": "Learn about shingle types and common issues"
+        }
+      ]
+    },
+    {
+      "type": "drag_drop",
+      "title": "Damage Classification Exercise",
+      "description": "Drag damage types to the correct categories",
+      "items": [
+        "Storm damage",
+        "Wear and tear",
+        "Manufacturing defect"
+      ],
+      "categories": [
+        "Covered",
+        "Not covered",
+        "Requires investigation"
+      ]
+    },
+    {
+      "type": "virtual_walkthrough",
+      "title": "360° Property Inspection",
+      "description": "Navigate through a virtual property inspection",
+      "scenes": [
+        {
+          "id": "exterior",
+          "title": "Exterior View",
+          "url": "/media/360/exterior.jpg"
+        },
+        {
+          "id": "roof",
+          "title": "Roof View",
+          "url": "/media/360/roof.jpg"
+        }
+      ]
+    }
+  ],
+  "susanIntegration": {
+    "susanFeatures": [
+      {
+        "feature": "voice_commands",
+        "integration": "Practice using Susan voice commands during training",
+        "commands": [
+          "Hey Susan, analyze this roof photo",
+          "Susan, create damage report"
+        ],
+        "availability": "throughout_module"
+      },
+      {
+        "feature": "ai_feedback",
+        "integration": "Get real-time feedback from Susan AI",
+        "triggers": [
+          "lesson_completion",
+          "quiz_submission",
+          "practical_task"
+        ],
+        "personalization": true
+      },
+      {
+        "feature": "smart_recommendations",
+        "integration": "Susan suggests next best actions and learning paths",
+        "based_on": [
+          "performance",
+          "learning_style",
+          "goals"
+        ],
+        "frequency": "adaptive"
+      }
+    ],
+    "practiceMode": {
+      "enabled": true,
+      "description": "Practice with Susan AI in realistic scenarios",
+      "scenarios": [
+        "Client consultation simulation",
+        "Insurance adjuster meeting",
+        "Damage assessment walkthrough"
+      ]
+    },
+    "integration_points": [
+      "lesson_start",
+      "concept_explanation",
+      "practical_exercise",
+      "assessment_review",
+      "module_completion"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "requirements": {
+      "module_completion": true,
+      "passing_score": 85,
+      "practical_assessment": true,
+      "time_requirement": 75
+    },
+    "certificate": {
+      "type": "digital",
+      "issuer": "Susan AI Training Academy",
+      "validFor": "2 years",
+      "renewalRequired": true,
+      "industryRecognition": true
+    },
+    "benefits": [
+      "Professional credential",
+      "Industry recognition",
+      "Career advancement",
+      "Continued education credits"
+    ]
+  },
+  "version": "1.0.0",
+  "createdAt": "2025-09-11T01:53:19.833Z",
+  "updatedAt": "2025-09-11T01:53:19.833Z"
+}

@@ -1,0 +1,217 @@
+{
+  "data": [
+    {
+      "input": "“Any questions so far, sir/ma’am?”",
+      "output": "Answer any questions “Great! Again, I am glad that we were able to make this happen for you, now you get to experience the quality that Roof ER always delivers, at only the cost of your deductible after your whole project is complete!” Potentially mention additional work that they may want to add. Answer any additional questions or engage in any conversation the HO starts.",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "If you haven’t already put up a yard sign: “Would you mind if I put up a yard sign next time I’m in your area? This will definitely help other companies already know that you’re working with someone and hopefully eliminate anyone else from knocking your door asking about your roof/siding.”",
+      "output": "“Look out for the communication from one of our Project Coordinators so you can get that Project Meeting scheduled to go over all the next steps and your full scope of work.  Congratulations again and have a great day!”",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "“Hello sir/ma’am! It’s [YOUR NAME] with Roof ER. How’s it going?”",
+      "output": "“Great, well we just received the decision from the insurance company.  We’re going to have to take some steps to get this turned around.  I have already submitted my photo report that demonstrates the damage to your property and the need to replace your whole roof, so hopefully they review and approve that.  Could you please reach out to the adjuster to see if they were able to review my report?” After HO answers. “Thank you! During that call, please let them know that you disagree with their current decision and would like to have your property reinspected if they are not able to update their current decision to a full approval based on the photo report that I sent them.” If there are some approved shingles:",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "“Great, well we just received the decision from the insurance company.  We’re going to have to take some steps to get this turned around.  I have already submitted my photo report that demonstrates the damage to your property and the need to replace your whole roof, so hopefully they review and approve that.  Could you please reach out to the adjuster to see if they were able to review my report?”",
+      "output": "After HO answers. “Thank you! During that call, please let them know that you disagree with their current decision and would like to have your property reinspected if they are not able to update their current decision to a full approval based on the photo report that I sent them.” If there are some approved shingles: “So we will also be conducting an iTel and Repair Attempt.",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "“Great! The Adjuster/Ladder Assist identified all the same damage as me.  You will be receiving an email from us shortly saying that you’ve been fully approved.  Within a few days you should receive the itemized estimate from the Insurance Company.  Once you receive that, you can forward that to me. This is going to include every line item that the insurance company believes is needed to make you whole again. To you this is going to look like gibberish. But, don’t worry, that’s what we’re here for. If for some weird reason the desk adjuster does not write it for a full approval after this inspection, I will take the steps necessary to get it turned around! Any questions on that, sir/ma’am?”",
+      "output": "Answer any questions “When the insurance company generates their estimate, it will also typically trigger the release of the first payment. The insurance company refers to this payment as the ACV. Which stands for Actual Cash Value. That amount will be used as your down payment.  The remaining funds are held by the insurance company until we complete the work. They refer to these remaining funds as Depreciation. Which is not “depreciation” as most would think about it, it’s just their way of holding on to some of the funds to make sure the work gets done. “At the same time our office will be reviewing your entire project along with my photos and the insurance estimate. As I’ve mentioned, insurance companies are always trying to save money.  We usually find specific line items that are missing. Most commonly, code items like IWS and Drip Edge. We will supplement for all the items needed to complete your project to code and our manufacturer’s specifications. Don’t worry, like we have agreed to from the beginning, we guarantee you that you would not have to cover any of these costs even if the insurance company were to deny our supplement. [Which does not happen.]",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "“A great way for me to help assist some of your neighbors, would be if I could put up a yard sign! Would you mind if I put one up? Thank you, sir/ma’am!”",
+      "output": "Submit your Photo Report and Claim Authorization to the adjuster with an effective email.  Use Post-AM-Email-Template if you need to. If moving to Decision Pending: “So, we just finished our inspection.  The Adjuster/Ladder Assist will be sending their report to a desk adjuster and will be making a final decision. Once they make a decision, they will write up an itemized estimate and should send that over to you.  Once you receive that, please forward that over to me.  They can be a bit hard to read, so I’ll be able to walk through all of that with you.",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "Is the house livable?",
+      "output": "Was there any personal property damaged? Did they lose power? Have you selected a contractor? (yes, we want them to know ASAP that you are working with me)",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "Was there any personal property damaged?",
+      "output": "Did they lose power? Have you selected a contractor? (yes, we want them to know ASAP that you are working with me) Do they have an estimate? (always no)",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "Have you selected a contractor? (yes, we want them to know ASAP that you are working with me)",
+      "output": "Do they have an estimate? (always no) Is your roof steeper than an average staircase? How high is the roof/is it difficult to access with most ladders?",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "“Hi, how are you? My Name is ________ with Roof- ER we’re a local roofing company that specializes in helping homeowners get their roof (and siding) replaced, paid for by their insurance!”",
+      "output": "Generic: “We’ve had a lot of storms here in Northern Virginia/Philadelphia/Maryland over the past few months that have done a lot of damage! “We’re already working with your neighbors. We’ve been able to help them get fully approved through their insurance company to have their roof  and/or siding replaced.”",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "If yes “It was pretty crazy right?! Wait for answer",
+      "output": "If no: “Oh no worries at all, we get that all the time. If yes move on to next line marked with * If no “That’s good! It was a pretty bad one!”",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "Go in for a handshake. What was your name again? [Their name] great to meet you, again I am (your name).  Oh and by the way do you know who your insurance company is”? Wait for their answer, “Great! We work with those guys all the time.”",
+      "output": "“Here’s my card/flier, look us up while I’m conducting the inspection! I will give you a knock when I finish up and show you what I’ve found.” Without any hesitation, move into inspection. (See Inspection and Post-Inspection Script for detailed next steps.)",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "As you approach back to the house/homeowner ask “Is there a place we could sit down for 5-10  Minutes”?",
+      "output": "Once you are in the house, spend some time building rapport as you get settled. “Okay, so first I am going to grab some of your basic information for our system. Then we can let your insurance company know about the damagel”. Gather information from the homeowner:",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "“Do you happen to know your deductible? If not, no big deal at all”!",
+      "output": "After you have collected all the information: Ask if they have the app or if they have the login to the website.",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "Name | Insurance/Inspection Company | Inspector or Adjuster? | Hover required? (Y/N) | Mark roof prior? (Y/N) | Notes on Adjuster/Inspector |  |  |  |  |  |  |  |  |  |  |  |  |  |",
+      "output": "Christian Ballester | USAA/Progressive/Liberty | Adjuster | Y | Y | Always looking to buy. Appreciates when the roof/siding/exterior is already marked up. Get Hover ESX file so he can write estimate easily |  |  |  |  |  |  |  |  |  |  |  |  |  | Badou Hadidane | USAA | Adjuster | N | N | Terrible. Try to get HO to call to get this claim reassigned instead. Spends 10 minutes on the roof and gets off not looking to buy. Most of the time will deny it and you will need to get the reinspection. Will only buy if there's lots of signs. Wants Hover report, but it wont change his decision if you give it to him or not. Might be a waste of time and money giving him the Hover report. Do not supplement his approvals  |  |  |  |  |  |  |  |  |  |  |  |  |  | Vicki Henry | Homesite (Afics) | Adjuster | Y | Y | Very easy to work with. Will use a ladder assist but buys most of the time if the roof is marked up well and damage makes sense. Get Hover ESX for her |  |  |  |  |  |  |  |  |  |  |  |  |  |",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "Fatima  | Liberty | Desk adjuster  | Y | N | Well she was adamant about still inspecting the elevations and exterior while it was raining since she was already there. Ofcourse the hail hits looked distorted and not really as visible and then when I tried to wipe the water away she told me don't wipe it -_- like tf? How are you going to see it then? Then she pulled the ehh I'm seeing a pattern here that's not looking consistent with hail and then I was like are you serious? This is definitely hail and if you were to see the roof metals you wouldn't be doubting this and if it wasn't raining you wouldn't be doubting this. She was pretty difficult but none the less I'm not worried I know there's fire hail damage there and my photo report is great so just gotta get her when it's dry and show her some quality stuff and I'm sure she will buy. She will try to pull the whole \"wind driven\" thing with hail and you tell her NO hail is not always wind driven and does coke straight down and can most absolutely affect four sides of elevation metals. Don't let her outsmart you because she really is clearly just dumb and probably shouldn't be out inspecting for storm damage. Have a bad ass photo report and you will go far with her  |  |  |  |  |  |  |  |  |  |  |  |  |  |",
+      "output": "Stran | USAA | IA Texas Boy! | Y | Y | Dude is out here from Texas literally to buy any and everything you definitely want this guy!! |  |  |  |  |  |  |  |  |  |  |  |  |  | Warner | Seek now | IA | N | Y | Pretty criminal, talked down on our ownership because we are not taught how to vandalize. Plus is he is pushing for the buy negative is it's not honest. May need to redo phot report if done prior to adjuster meeting due to new \"damages\" |  |  |  |  |  |  |  |  |  |  |  |  |  | John  | Hancock  | Ladder assist  | N | Y | This dude is absolutely the boy as long as you give him some good collateral and your test squares look really good and you're not marking any hail on shingles that have fibers inside he will agree and help you win that shit every time we see each other and a hug and a big what's up my boy! This dude is super cool you want him for sure just don't show him bullshit |  |  |  |  |  |  |  |  |  |  |  |  |  |",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "Nick ? | Seeknow | Ladder Assist | N | N | Chalked wood, from Texas, made the inspection as short as possible. I showed him damage to the gutter and he did not acknowledge it in his report. Not mean but unprofessional. Did not want to talk to me at all. He started getting an attitude while I asked questions. |  |  |  |  |  |  |  |  |  |  |  |  |  |",
+      "output": "Billy Murphy | Seeknow  | Ladder assist  | N | N | Guy was a contractor prior to Seeknow. Really cool dude, very detailed.  |  |  |  |  |  |  |  |  |  |  |  |  |  | Patrick (Reed) | Seeknow | Ladder assist | N | N | I've had him twice, makes own squares lets you mark inside them. Do not mark without him being in roof/without permission. Easy to work with. Got along with him well. |  |  |  |  |  |  |  |  |  |  |  |  |  | William  | Patriot claims  | Ladder assist  | N | Y | Been doing this a while. He’s easy going though and somewhat talkative. I got two approvals with him. Sent him photos he added to his file that we forgot to take pics of and he did so. He will lookout. If it’s Allstate let him do the test squares just mark the hail once done. He’s good |  |  |  |  |  |  |  |  |  |  |  |  |  |",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "o “Do you have any questions at all?”",
+      "output": "o “Okay great! Congrats again and I will be on the lookout for that estimate!",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "o Probably ask, ok, what's the process with reinspection then?",
+      "output": "o \"Great question. So  you, as the policyholder, will have to contact your claims department requesting a reinspection with a DIFFERENT adjuster. Typically they request photos and an estimate from your contractor before agreeing to a reinspection. So we  will put together a  detailed estimate which includes all the damaged items I found broken down",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "“Hi, how are you? My Name is ________ with Roof- ER we’re a local roofing company that specializes in helping homeowners get their roof replaced, paid for by their insurance!”",
+      "output": "Reach in for handshake (at your discretion) Non-Storm Environment: “We’ve had a lot of storms here in Northern Virginia/Maryland over the past few months that have done a lot of damage!",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "Go in for a handshake. “What was your name again? [Their name] great to meet you, again I am (your name).  Oh and by the way do you know who your insurance company is”? Wait for their answer, “Great! We work with those guys all the time.”",
+      "output": "“I will give you a knock when I finish up and show you what I’ve found.” Without any hesitation, move into inspection. (See Inspection and Post-Inspection Script for detailed next steps.)",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "If yes “It was pretty crazy right?! Wait for answer",
+      "output": "If no: “Oh no worries at all, we get that all the time. If yes move on to next line marked with * If no “That’s good! It was a pretty bad one.”",
+      "context": "damage_assessment",
+      "confidence": 0.9
+    },
+    {
+      "input": "hail",
+      "output": "Small ice balls that fall from storm clouds and can damage your roof by creating dents and removing protective granules",
+      "context": "technical_explanation",
+      "confidence": 0.95
+    },
+    {
+      "input": "granule",
+      "output": "The small rock particles on shingles that protect them from UV rays and weather",
+      "context": "technical_explanation",
+      "confidence": 0.95
+    },
+    {
+      "input": "impact",
+      "output": "Damage caused when something hits your roof, like hail or falling branches",
+      "context": "technical_explanation",
+      "confidence": 0.95
+    },
+    {
+      "input": "hail",
+      "output": "Small ice balls that fall from storm clouds and can damage your roof by creating dents and removing protective granules",
+      "context": "technical_explanation",
+      "confidence": 0.95
+    },
+    {
+      "input": "granule",
+      "output": "The small rock particles on shingles that protect them from UV rays and weather",
+      "context": "technical_explanation",
+      "confidence": 0.95
+    },
+    {
+      "input": "impact",
+      "output": "Damage caused when something hits your roof, like hail or falling branches",
+      "context": "technical_explanation",
+      "confidence": 0.95
+    },
+    {
+      "input": "hail",
+      "output": "Small ice balls that fall from storm clouds and can damage your roof by creating dents and removing protective granules",
+      "context": "technical_explanation",
+      "confidence": 0.95
+    },
+    {
+      "input": "granule",
+      "output": "The small rock particles on shingles that protect them from UV rays and weather",
+      "context": "technical_explanation",
+      "confidence": 0.95
+    },
+    {
+      "input": "impact",
+      "output": "Damage caused when something hits your roof, like hail or falling branches",
+      "context": "technical_explanation",
+      "confidence": 0.95
+    },
+    {
+      "input": "hail",
+      "output": "Small ice balls that fall from storm clouds and can damage your roof by creating dents and removing protective granules",
+      "context": "technical_explanation",
+      "confidence": 0.95
+    },
+    {
+      "input": "granule",
+      "output": "The small rock particles on shingles that protect them from UV rays and weather",
+      "context": "technical_explanation",
+      "confidence": 0.95
+    },
+    {
+      "input": "impact",
+      "output": "Damage caused when something hits your roof, like hail or falling branches",
+      "context": "technical_explanation",
+      "confidence": 0.95
+    },
+    {
+      "input": "hail",
+      "output": "Small ice balls that fall from storm clouds and can damage your roof by creating dents and removing protective granules",
+      "context": "technical_explanation",
+      "confidence": 0.95
+    }
+  ],
+  "size": 35,
+  "format": "question_answer_pairs",
+  "use_case": "conversational_ai_training"
+}

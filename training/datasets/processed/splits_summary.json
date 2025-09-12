@@ -1,0 +1,21 @@
+{
+  "total_samples": 304,
+  "train_samples": 212,
+  "validation_samples": 61,
+  "test_samples": 31,
+  "splits_created": "2025-08-23T21:03:37.376208",
+  "label_distribution": {
+    "train": {
+      "hail": 113,
+      "no_damage": 99
+    },
+    "validation": {
+      "hail": 32,
+      "no_damage": 29
+    },
+    "test": {
+      "hail": 17,
+      "no_damage": 14
+    }
+  }
+}

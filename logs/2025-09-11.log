@@ -1,0 +1,171 @@
+{"timestamp":"2025-09-11T01:53:18.659Z","level":"WARN","message":"OpenAI API key not found. Voice features will be limited."}
+{"timestamp":"2025-09-11T01:53:18.683Z","level":"INFO","message":"Company context setup completed","departments":8,"terminology":9,"escalationContacts":4}
+{"timestamp":"2025-09-11T01:53:18.684Z","level":"INFO","message":"Webhook handlers setup completed"}
+{"timestamp":"2025-09-11T01:53:18.684Z","level":"INFO","message":"Sync schedules started"}
+{"timestamp":"2025-09-11T01:53:18.684Z","level":"INFO","message":"Knowledge processing services initialized successfully"}
+{"timestamp":"2025-09-11T01:53:19.328Z","level":"WARN","message":"OpenAI client not configured. Voice features will be limited."}
+{"timestamp":"2025-09-11T01:53:19.328Z","level":"INFO","message":"🎬 Initializing Video Generation Service..."}
+{"timestamp":"2025-09-11T01:53:19.328Z","level":"INFO","message":"📋 Loaded 4 video templates"}
+{"timestamp":"2025-09-11T01:53:19.329Z","level":"INFO","message":"AnythingLLM Service initialized","baseUrl":"http://localhost:3001","workspace":"susan-ai","autoSync":false}
+{"timestamp":"2025-09-11T01:53:19.329Z","level":"INFO","message":"AnythingLLM API services initialized successfully"}
+{"timestamp":"2025-09-11T01:53:19.331Z","level":"INFO","message":"🎥 FFmpeg initialized successfully"}
+{"timestamp":"2025-09-11T01:53:19.331Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/susan-ai"}
+{"timestamp":"2025-09-11T01:53:19.362Z","level":"INFO","message":"🔤 Fonts registered for video generation"}
+{"timestamp":"2025-09-11T01:53:19.368Z","level":"INFO","message":"✅ Video Generation Service initialized successfully"}
+{"timestamp":"2025-09-11T01:53:19.382Z","level":"INFO","message":"AnythingLLM Service initialized","baseUrl":"http://localhost:3001","workspace":"roofer21","autoSync":true}
+{"timestamp":"2025-09-11T01:53:19.383Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-09-11T01:53:19.384Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspaces"}
+{"timestamp":"2025-09-11T01:53:19.404Z","level":"INFO","message":"Loaded existing vector memory","entriesLoaded":0}
+{"timestamp":"2025-09-11T01:53:19.405Z","level":"INFO","message":"Existing knowledge loaded","documentsLoaded":0,"topicClusters":0,"terminology":9}
+{"timestamp":"2025-09-11T01:53:19.406Z","level":"INFO","message":"Loaded existing RBAC data","roles":0,"permissions":0}
+{"timestamp":"2025-09-11T01:53:19.406Z","level":"INFO","message":"Loaded existing RBAC data","roles":0,"permissions":0}
+{"timestamp":"2025-09-11T01:53:19.406Z","level":"INFO","message":"Loaded existing RBAC data","roles":0,"permissions":0}
+{"timestamp":"2025-09-11T01:53:19.409Z","level":"INFO","message":"Plugin system initialized","pluginsLoaded":0,"sandboxDirectory":"/Users/a21/Desktop/Susan AI 21/sandboxes"}
+{"timestamp":"2025-09-11T01:53:19.409Z","level":"INFO","message":"Spanish language pack initialized successfully"}
+{"timestamp":"2025-09-11T01:53:19.416Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/workspaces"}
+{"timestamp":"2025-09-11T01:53:19.416Z","level":"INFO","message":"AnythingLLM connection successful","workspaceCount":3}
+{"timestamp":"2025-09-11T01:53:19.416Z","level":"INFO","message":"Auto sync started","interval":300000}
+{"timestamp":"2025-09-11T01:53:19.416Z","level":"INFO","message":"Quality monitoring started"}
+{"timestamp":"2025-09-11T01:53:19.416Z","level":"INFO","message":"Employee profiles loaded","profilesLoaded":0}
+{"timestamp":"2025-09-11T01:53:19.416Z","level":"INFO","message":"Historical quality data loaded"}
+{"timestamp":"2025-09-11T01:53:19.417Z","level":"WARN","message":"Google Translate API key not configured. Translation features will use fallback methods."}
+{"timestamp":"2025-09-11T01:53:19.418Z","level":"INFO","message":"Loading language data for: es"}
+{"timestamp":"2025-09-11T01:53:19.418Z","level":"INFO","message":"MultiLanguageService initialized successfully"}
+{"timestamp":"2025-09-11T01:53:19.418Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/workspace/susan-ai"}
+{"timestamp":"2025-09-11T01:53:19.418Z","level":"INFO","message":"Workspace 'susan-ai' initialized"}
+{"timestamp":"2025-09-11T01:53:19.462Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-09-11T01:53:19.462Z","level":"INFO","message":"Workspace 'roofer21' initialized"}
+{"timestamp":"2025-09-11T01:53:19.511Z","level":"INFO","message":"Voice commands initialized for multiple languages"}
+{"timestamp":"2025-09-11T01:53:19.526Z","level":"INFO","message":"Integration services initialized successfully"}
+{"timestamp":"2025-09-11T01:53:19.527Z","level":"INFO","message":"Cultural adaptations initialized"}
+{"timestamp":"2025-09-11T01:53:19.649Z","level":"INFO","message":"Loaded existing enterprise data","organizations":3,"teams":0,"users":5}
+{"timestamp":"2025-09-11T01:53:20.270Z","level":"INFO","message":"Training modules initialized successfully","categoriesCount":6,"totalModules":48}
+{"timestamp":"2025-09-11T01:53:21.436Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:53:42.018Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:53:42.018Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"0b92ffb0-ac2c-495e-a354-653c98f6d6a6","workspace":"roofer21","contentLength":961}
+{"timestamp":"2025-09-11T01:53:42.019Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:53:52.112Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:53:57.054Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:53:57.054Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"e62d3720-89bb-4975-8b2d-8600207bac2e","workspace":"roofer21","contentLength":904}
+{"timestamp":"2025-09-11T01:53:57.055Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:54:09.490Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:54:09.490Z","level":"INFO","message":"Context retrieval completed","query":"talk to her","workspace":"roofer21","resultsFound":1}
+{"timestamp":"2025-09-11T01:54:12.586Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:54:25.414Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:54:25.414Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"a140cfcf-34d2-4f77-ae15-af98d02f5d99","workspace":"roofer21","contentLength":1100}
+{"timestamp":"2025-09-11T01:54:25.415Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:54:37.415Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:54:37.416Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"3e5d961a-e0b6-4f7f-90f2-fb15894907d0","workspace":"roofer21","contentLength":426}
+{"timestamp":"2025-09-11T01:54:46.803Z","level":"WARN","message":"OpenAI API key not found. Voice features will be limited."}
+{"timestamp":"2025-09-11T01:54:46.828Z","level":"INFO","message":"Company context setup completed","departments":8,"terminology":9,"escalationContacts":4}
+{"timestamp":"2025-09-11T01:54:46.829Z","level":"INFO","message":"Webhook handlers setup completed"}
+{"timestamp":"2025-09-11T01:54:46.829Z","level":"INFO","message":"Sync schedules started"}
+{"timestamp":"2025-09-11T01:54:46.829Z","level":"INFO","message":"Knowledge processing services initialized successfully"}
+{"timestamp":"2025-09-11T01:54:47.137Z","level":"WARN","message":"OpenAI client not configured. Voice features will be limited."}
+{"timestamp":"2025-09-11T01:54:47.137Z","level":"INFO","message":"🎬 Initializing Video Generation Service..."}
+{"timestamp":"2025-09-11T01:54:47.137Z","level":"INFO","message":"📋 Loaded 4 video templates"}
+{"timestamp":"2025-09-11T01:54:47.138Z","level":"INFO","message":"AnythingLLM Service initialized","baseUrl":"http://localhost:3001","workspace":"susan-ai","autoSync":false}
+{"timestamp":"2025-09-11T01:54:47.138Z","level":"INFO","message":"AnythingLLM API services initialized successfully"}
+{"timestamp":"2025-09-11T01:54:47.140Z","level":"INFO","message":"🎥 FFmpeg initialized successfully"}
+{"timestamp":"2025-09-11T01:54:47.140Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/susan-ai"}
+{"timestamp":"2025-09-11T01:54:47.171Z","level":"INFO","message":"🔤 Fonts registered for video generation"}
+{"timestamp":"2025-09-11T01:54:47.178Z","level":"INFO","message":"✅ Video Generation Service initialized successfully"}
+{"timestamp":"2025-09-11T01:54:47.192Z","level":"INFO","message":"AnythingLLM Service initialized","baseUrl":"http://localhost:3001","workspace":"roofer21","autoSync":true}
+{"timestamp":"2025-09-11T01:54:47.194Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-09-11T01:54:47.195Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspaces"}
+{"timestamp":"2025-09-11T01:54:47.218Z","level":"INFO","message":"Loaded existing vector memory","entriesLoaded":0}
+{"timestamp":"2025-09-11T01:54:52.887Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:54:52.887Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"9a954092-b4f7-47c2-bf71-3ed2938605a9","workspace":"roofer21","contentLength":1205}
+{"timestamp":"2025-09-11T01:54:52.888Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:55:10.797Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:55:10.798Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"aed96d14-2f97-483c-a0a0-0fa420cd85c0","workspace":"roofer21","contentLength":1333}
+{"timestamp":"2025-09-11T01:55:10.798Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:55:21.483Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:55:21.484Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"d71ecd16-a35a-4a3e-a27c-6bf13c62a3d3","workspace":"roofer21","contentLength":162}
+{"timestamp":"2025-09-11T01:55:21.485Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:55:43.967Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:55:43.967Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"337c19d9-7265-429d-a167-8c35de762a31","workspace":"roofer21","contentLength":2273}
+{"timestamp":"2025-09-11T01:55:43.968Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:55:56.190Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:55:56.191Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"6a1993df-37d9-4b63-9268-9d066144bec8","workspace":"roofer21","contentLength":408}
+{"timestamp":"2025-09-11T01:55:56.192Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:56:08.880Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:56:08.881Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"15a61398-0b0f-4353-8bb1-1637ce4ac9f7","workspace":"roofer21","contentLength":323}
+{"timestamp":"2025-09-11T01:56:08.883Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:56:21.958Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:56:21.960Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"ee801384-d5c5-4dfa-ba41-c989e6e5043e","workspace":"roofer21","contentLength":564}
+{"timestamp":"2025-09-11T01:56:21.961Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:56:39.674Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:56:39.676Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"74ffc3ed-ea29-46a5-bb4b-e4a26c656f0d","workspace":"roofer21","contentLength":1184}
+{"timestamp":"2025-09-11T01:56:39.676Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:56:53.612Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:56:53.613Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"fe287472-eba1-4913-8a98-31f30db54268","workspace":"roofer21","contentLength":426}
+{"timestamp":"2025-09-11T01:56:53.613Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:57:08.254Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:57:08.254Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"5227e47f-347c-4b88-90fe-972bec1ce772","workspace":"roofer21","contentLength":514}
+{"timestamp":"2025-09-11T01:57:08.255Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:57:21.557Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:57:21.557Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"644efaec-2c62-49ad-a5b4-a6d292b74a8d","workspace":"roofer21","contentLength":416}
+{"timestamp":"2025-09-11T01:57:21.557Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:57:34.009Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:57:34.009Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"419ee47e-6802-4d61-98c0-a7bb4f4d9a64","workspace":"roofer21","contentLength":58}
+{"timestamp":"2025-09-11T01:57:34.010Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:57:37.336Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:57:37.337Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"fe050f7c-83e5-41b3-b3bd-7d59ed3412a4","workspace":"roofer21","contentLength":82}
+{"timestamp":"2025-09-11T01:57:37.337Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:57:52.166Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:57:52.167Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"11e4318f-ea43-4d42-966c-d693b2510536","workspace":"roofer21","contentLength":236}
+{"timestamp":"2025-09-11T01:57:52.167Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:58:07.803Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:58:07.804Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"390625f4-d108-46ac-ba41-c20392636397","workspace":"roofer21","contentLength":446}
+{"timestamp":"2025-09-11T01:58:07.804Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:58:19.416Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-09-11T01:58:19.418Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-09-11T01:58:19.419Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-09-11T01:58:29.580Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:58:29.580Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"88570122-b3c1-42a8-8e4a-c36edffec59e","workspace":"roofer21","contentLength":1090}
+{"timestamp":"2025-09-11T01:58:29.581Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:58:49.846Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:58:49.847Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"3d5289d9-2b78-4ae3-906d-8bfe9d1cca2e","workspace":"roofer21","contentLength":982}
+{"timestamp":"2025-09-11T01:58:49.847Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:59:13.885Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:59:13.886Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"5b435aed-6c15-4075-90d4-0a266ab91c3b","workspace":"roofer21","contentLength":1192}
+{"timestamp":"2025-09-11T01:59:13.886Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:59:35.226Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:59:35.226Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"3d1a3d72-11b6-493b-8047-ec759c12c4eb","workspace":"roofer21","contentLength":1112}
+{"timestamp":"2025-09-11T01:59:35.226Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T01:59:58.768Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T01:59:58.769Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"32683d38-d78d-487a-b76a-ff7699acc9a9","workspace":"roofer21","contentLength":1614}
+{"timestamp":"2025-09-11T01:59:58.769Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T02:00:20.809Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T02:00:20.810Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"04651cd5-895e-48ba-ad34-6f3f4293e22c","workspace":"roofer21","contentLength":1190}
+{"timestamp":"2025-09-11T02:00:20.810Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-09-11T02:00:45.421Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-09-11T02:00:45.422Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"f68743a9-63dc-499c-9144-450f1d78767e","workspace":"roofer21","contentLength":1498}
+{"timestamp":"2025-09-11T02:03:19.416Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-09-11T02:03:19.418Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-09-11T02:03:19.419Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-09-11T02:08:19.416Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-09-11T02:08:19.421Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-09-11T02:08:19.421Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-09-11T02:13:19.466Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-09-11T02:13:19.468Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-09-11T02:13:19.468Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-09-11T02:18:19.470Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-09-11T02:18:19.471Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-09-11T02:18:19.472Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-09-11T02:23:19.475Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-09-11T02:23:19.477Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-09-11T02:23:19.477Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-09-11T02:30:31.410Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-09-11T02:30:31.412Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-09-11T02:30:31.413Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-09-11T02:35:31.414Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-09-11T02:35:31.414Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-09-11T02:35:31.414Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-09-11T02:40:31.418Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-09-11T02:40:31.419Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-09-11T02:40:31.421Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-09-11T02:58:28.114Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-09-11T02:58:28.114Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-09-11T02:58:28.115Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}

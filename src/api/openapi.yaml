@@ -1,0 +1,2066 @@
+openapi: 3.0.3
+info:
+  title: Susan AI - Enterprise JARVIS-level Assistant API
+  description: |
+    A comprehensive enterprise-grade RESTful API system for Susan AI that supports all advanced features 
+    and provides a robust foundation for a JARVIS-level assistant with enterprise capabilities.
+    
+    Core Features:
+    - Streaming response support with Server-Sent Events and WebSocket
+    - Advanced voice processing with batch operations and enhanced Whisper integration
+    - Multimodal capabilities for images, documents, and file processing
+    - Secure plugin architecture with sandboxing and runtime isolation
+    - Vector-based memory system with semantic search and embedding management
+    - Real-time collaboration with multi-user sessions and presence tracking
+    - Comprehensive analytics and performance monitoring
+    - Enterprise authentication with SSO, multi-tenancy, and audit logging
+    - Advanced rate limiting and quota management
+    - Scalable architecture supporting high-volume enterprise workloads
+    
+    Security Features:
+    - Role-based access control (RBAC)
+    - API key and JWT authentication
+    - Request signing and validation
+    - Audit logging and compliance tracking
+    - Data encryption in transit and at rest
+  version: 2.0.0
+  contact:
+    name: Susan AI Team
+    email: support@susan-ai.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: http://localhost:3001/api/v2
+    description: Development server
+  - url: https://api.susan-ai.com/v2
+    description: Production server
+  - url: https://staging-api.susan-ai.com/v2
+    description: Staging server
+  - url: https://enterprise.susan-ai.com/v2
+    description: Enterprise server
+
+security:
+  - ApiKeyAuth: []
+  - BearerAuth: []
+  - OAuth2: []
+  - SignedRequest: []
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: API key for service authentication
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT token for user authentication
+    OAuth2:
+      type: oauth2
+      description: OAuth2 authentication for enterprise SSO
+      flows:
+        authorizationCode:
+          authorizationUrl: https://auth.susan-ai.com/oauth/authorize
+          tokenUrl: https://auth.susan-ai.com/oauth/token
+          scopes:
+            read: Read access to resources
+            write: Write access to resources
+            admin: Administrative access
+            enterprise: Enterprise features access
+    SignedRequest:
+      type: apiKey
+      in: header
+      name: X-Signature
+      description: Request signature for high-security operations
+
+  schemas:
+    Error:
+      type: object
+      required:
+        - error
+        - message
+        - timestamp
+        - requestId
+      properties:
+        error:
+          type: string
+          description: Error type
+          enum: [validation_error, authentication_error, authorization_error, rate_limit_error, service_unavailable, internal_error]
+        message:
+          type: string
+          description: Human-readable error message
+        details:
+          type: object
+          description: Additional error details and context
+        timestamp:
+          type: string
+          format: date-time
+        requestId:
+          type: string
+          description: Unique request identifier for tracking
+        correlationId:
+          type: string
+          description: Correlation ID for distributed tracing
+        retryAfter:
+          type: integer
+          description: Seconds to wait before retrying (for rate limit errors)
+
+    SuccessResponse:
+      type: object
+      required:
+        - success
+        - data
+        - timestamp
+        - requestId
+      properties:
+        success:
+          type: boolean
+          example: true
+        data:
+          type: object
+          description: Response data
+        message:
+          type: string
+          description: Optional success message
+        timestamp:
+          type: string
+          format: date-time
+        requestId:
+          type: string
+          description: Unique request identifier
+        correlationId:
+          type: string
+          description: Correlation ID for distributed tracing
+        processingTime:
+          type: number
+          description: Processing time in milliseconds
+        version:
+          type: string
+          description: API version used
+
+    PaginatedResponse:
+      allOf:
+        - $ref: '#/components/schemas/SuccessResponse'
+        - type: object
+          properties:
+            pagination:
+              type: object
+              properties:
+                page:
+                  type: integer
+                  minimum: 1
+                limit:
+                  type: integer
+                  minimum: 1
+                  maximum: 100
+                total:
+                  type: integer
+                  minimum: 0
+                totalPages:
+                  type: integer
+                  minimum: 0
+
+    # Streaming Response Schemas
+    StreamEvent:
+      type: object
+      required:
+        - type
+        - timestamp
+      properties:
+        type:
+          type: string
+          enum: [start, data, end, error, metadata]
+        data:
+          type: object
+          description: Event data
+        timestamp:
+          type: string
+          format: date-time
+        sequenceId:
+          type: integer
+          description: Sequence number for ordered processing
+        requestId:
+          type: string
+
+    StreamingMessage:
+      type: object
+      required:
+        - id
+        - content
+        - role
+        - streaming
+      properties:
+        id:
+          type: string
+        content:
+          type: string
+        role:
+          type: string
+          enum: [user, assistant, system]
+        streaming:
+          type: boolean
+          default: true
+        delta:
+          type: string
+          description: Content delta for streaming
+        finishReason:
+          type: string
+          enum: [stop, length, content_filter, function_call]
+        metadata:
+          type: object
+
+    # Multimodal Schemas
+    MultimodalContent:
+      type: object
+      required:
+        - type
+        - data
+      properties:
+        type:
+          type: string
+          enum: [text, image, audio, video, document, file]
+        data:
+          oneOf:
+            - type: string
+              description: Text content or file URL
+            - type: object
+              description: Structured data content
+        mimeType:
+          type: string
+        size:
+          type: integer
+        metadata:
+          type: object
+          properties:
+            width:
+              type: integer
+            height:
+              type: integer
+            duration:
+              type: number
+            format:
+              type: string
+
+    # Analytics and Monitoring Schemas
+    UsageMetrics:
+      type: object
+      required:
+        - requests
+        - tokens
+        - cost
+        - period
+      properties:
+        requests:
+          type: integer
+          description: Number of API requests
+        tokens:
+          type: object
+          properties:
+            input:
+              type: integer
+            output:
+              type: integer
+            total:
+              type: integer
+        cost:
+          type: object
+          properties:
+            amount:
+              type: number
+            currency:
+              type: string
+        period:
+          type: object
+          properties:
+            start:
+              type: string
+              format: date-time
+            end:
+              type: string
+              format: date-time
+        breakdown:
+          type: object
+          additionalProperties:
+            type: object
+
+    # Enterprise Schemas
+    Tenant:
+      type: object
+      required:
+        - id
+        - name
+        - plan
+        - status
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        domain:
+          type: string
+        plan:
+          type: string
+          enum: [starter, professional, enterprise, custom]
+        status:
+          type: string
+          enum: [active, suspended, trial, expired]
+        limits:
+          type: object
+          properties:
+            requests:
+              type: integer
+            tokens:
+              type: integer
+            storage:
+              type: integer
+            users:
+              type: integer
+        features:
+          type: array
+          items:
+            type: string
+        createdAt:
+          type: string
+          format: date-time
+        expiresAt:
+          type: string
+          format: date-time
+
+    AuditLog:
+      type: object
+      required:
+        - id
+        - action
+        - userId
+        - timestamp
+      properties:
+        id:
+          type: string
+        action:
+          type: string
+        userId:
+          type: string
+        userEmail:
+          type: string
+        tenantId:
+          type: string
+        resourceType:
+          type: string
+        resourceId:
+          type: string
+        details:
+          type: object
+        ipAddress:
+          type: string
+        userAgent:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        success:
+          type: boolean\n\n    # Core Conversation Schemas
+    Message:
+      type: object
+      required:
+        - id
+        - content
+        - role
+        - timestamp
+      properties:
+        id:
+          type: string
+          description: Unique message identifier
+        content:
+          type: string
+          description: Message content
+        role:
+          type: string
+          enum: [user, assistant, system]
+        timestamp:
+          type: string
+          format: date-time
+        metadata:
+          type: object
+          properties:
+            model:
+              type: string
+            tokens:
+              type: integer
+            cost:
+              type: number
+            processingTime:
+              type: number
+
+    Conversation:
+      type: object
+      required:
+        - id
+        - title
+        - createdAt
+        - updatedAt
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        messages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Message'
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        metadata:
+          type: object
+
+    # AI Model Schemas
+    AIModel:
+      type: object
+      required:
+        - id
+        - name
+        - provider
+        - capabilities
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        provider:
+          type: string
+          enum: [openai, anthropic, google, custom]
+        capabilities:
+          type: array
+          items:
+            type: string
+            enum: [text, vision, audio, code, function_calling]
+        cost:
+          type: object
+          properties:
+            input:
+              type: number
+            output:
+              type: number
+            currency:
+              type: string
+        limits:
+          type: object
+          properties:
+            maxTokens:
+              type: integer
+            contextWindow:
+              type: integer
+            rateLimit:
+              type: integer
+
+    # User Management Schemas
+    User:
+      type: object
+      required:
+        - id
+        - email
+        - createdAt
+      properties:
+        id:
+          type: string
+        email:
+          type: string
+          format: email
+        name:
+          type: string
+        avatar:
+          type: string
+          format: uri
+        preferences:
+          type: object
+        createdAt:
+          type: string
+          format: date-time
+        lastLoginAt:
+          type: string
+          format: date-time
+
+    # Enhanced Plugin Schemas
+    Plugin:
+      type: object
+      required:
+        - id
+        - name
+        - version
+        - status
+        - securityLevel
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        version:
+          type: string
+        status:
+          type: string
+          enum: [active, inactive, error, pending_approval, sandboxed]
+        securityLevel:
+          type: string
+          enum: [trusted, sandboxed, restricted, isolated]
+        capabilities:
+          type: array
+          items:
+            type: string
+        permissions:
+          type: array
+          items:
+            type: string
+            enum: [read_conversations, write_conversations, access_files, network_access, system_access, user_data]
+        configuration:
+          type: object
+        sandbox:
+          type: object
+          properties:
+            enabled:
+              type: boolean
+            memoryLimit:
+              type: integer
+            timeoutSeconds:
+              type: integer
+            networkAccess:
+              type: boolean
+            fileSystemAccess:
+              type: boolean
+        author:
+          type: object
+          properties:
+            name:
+              type: string
+            email:
+              type: string
+            verified:
+              type: boolean
+        installSource:
+          type: string
+          enum: [marketplace, git, local, enterprise]
+        dependencies:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              version:
+                type: string
+              required:
+                type: boolean
+        metadata:
+          type: object
+
+    PluginExecution:
+      type: object
+      required:
+        - id
+        - pluginId
+        - function
+        - status
+      properties:
+        id:
+          type: string
+        pluginId:
+          type: string
+        function:
+          type: string
+        parameters:
+          type: object
+        result:
+          type: object
+        status:
+          type: string
+          enum: [pending, running, completed, failed, timeout]
+        startTime:
+          type: string
+          format: date-time
+        endTime:
+          type: string
+          format: date-time
+        duration:
+          type: number
+        resourceUsage:
+          type: object
+          properties:
+            memory:
+              type: integer
+            cpu:
+              type: number
+        logs:
+          type: array
+          items:
+            type: object
+
+    # Enhanced Voice Processing Schemas
+    VoiceTranscription:
+      type: object
+      required:
+        - id
+        - text
+        - confidence
+        - language
+      properties:
+        id:
+          type: string
+        text:
+          type: string
+        confidence:
+          type: number
+          minimum: 0
+          maximum: 1
+        language:
+          type: string
+        model:
+          type: string
+        segments:
+          type: array
+          items:
+            type: object
+            properties:
+              start:
+                type: number
+              end:
+                type: number
+              text:
+                type: string
+              confidence:
+                type: number
+        speaker:
+          type: object
+          properties:
+            id:
+              type: string
+            name:
+              type: string
+            confidence:
+              type: number
+        metadata:
+          type: object
+          properties:
+            duration:
+              type: number
+            sampleRate:
+              type: integer
+            channels:
+              type: integer
+            format:
+              type: string
+
+    VoiceSynthesis:
+      type: object
+      required:
+        - id
+        - text
+        - voice
+        - audioUrl
+      properties:
+        id:
+          type: string
+        text:
+          type: string
+        voice:
+          type: object
+          properties:
+            id:
+              type: string
+            name:
+              type: string
+            language:
+              type: string
+            gender:
+              type: string
+              enum: [male, female, neutral]
+            accent:
+              type: string
+        audioUrl:
+          type: string
+          format: uri
+        format:
+          type: string
+          enum: [mp3, wav, ogg, m4a]
+        speed:
+          type: number
+          minimum: 0.25
+          maximum: 4.0
+        pitch:
+          type: number
+          minimum: -20
+          maximum: 20
+        volume:
+          type: number
+          minimum: 0
+          maximum: 1
+        metadata:
+          type: object
+
+    BatchVoiceJob:
+      type: object
+      required:
+        - id
+        - type
+        - status
+        - files
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [transcription, synthesis, translation, enhancement]
+        status:
+          type: string
+          enum: [pending, processing, completed, failed, cancelled]
+        files:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              url:
+                type: string
+              status:
+                type: string
+        progress:
+          type: object
+          properties:
+            completed:
+              type: integer
+            total:
+              type: integer
+            percentage:
+              type: number
+        results:
+          type: array
+          items:
+            type: object
+        createdAt:
+          type: string
+          format: date-time
+        completedAt:
+          type: string
+          format: date-time
+        estimatedDuration:
+          type: number
+
+    # Enhanced Memory and Vector Search Schemas
+    MemoryEntry:
+      type: object
+      required:
+        - id
+        - content
+        - embedding
+        - timestamp
+      properties:
+        id:
+          type: string
+        content:
+          type: string
+        embedding:
+          type: array
+          items:
+            type: number
+        metadata:
+          type: object
+          properties:
+            conversationId:
+              type: string
+            userId:
+              type: string
+            tags:
+              type: array
+              items:
+                type: string
+            importance:
+              type: number
+              minimum: 0
+              maximum: 1
+            context:
+              type: object
+        timestamp:
+          type: string
+          format: date-time
+        lastAccessed:
+          type: string
+          format: date-time
+        accessCount:
+          type: integer
+
+    SemanticSearchResult:
+      type: object
+      required:
+        - id
+        - content
+        - score
+        - metadata
+      properties:
+        id:
+          type: string
+        content:
+          type: string
+        score:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: Similarity score
+        metadata:
+          type: object
+        highlights:
+          type: array
+          items:
+            type: object
+            properties:
+              field:
+                type: string
+              text:
+                type: string
+              start:
+                type: integer
+              end:
+                type: integer
+
+    VectorIndex:
+      type: object
+      required:
+        - id
+        - name
+        - dimensions
+        - status
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        dimensions:
+          type: integer
+        status:
+          type: string
+          enum: [creating, active, updating, error]
+        entryCount:
+          type: integer
+        lastUpdated:
+          type: string
+          format: date-time
+        configuration:
+          type: object
+          properties:
+            metric:
+              type: string
+              enum: [cosine, euclidean, dot_product]
+            indexType:
+              type: string
+            parameters:
+              type: object
+
+    # Enhanced File & Media Schemas
+    FileUpload:
+      type: object
+      required:
+        - id
+        - filename
+        - mimeType
+        - size
+        - uploadedAt
+        - status
+      properties:
+        id:
+          type: string
+        filename:
+          type: string
+        originalName:
+          type: string
+        mimeType:
+          type: string
+        size:
+          type: integer
+        url:
+          type: string
+          format: uri
+        thumbnailUrl:
+          type: string
+          format: uri
+        status:
+          type: string
+          enum: [uploading, processing, ready, error]
+        uploadedAt:
+          type: string
+          format: date-time
+        processedAt:
+          type: string
+          format: date-time
+        checksum:
+          type: string
+        encryption:
+          type: object
+          properties:
+            enabled:
+              type: boolean
+            algorithm:
+              type: string
+            keyId:
+              type: string
+        analysis:
+          type: object
+          properties:
+            text:
+              type: string
+            objects:
+              type: array
+              items:
+                type: object
+            faces:
+              type: array
+              items:
+                type: object
+            sentiment:
+              type: object
+            topics:
+              type: array
+              items:
+                type: string
+        metadata:
+          type: object
+          properties:
+            width:
+              type: integer
+            height:
+              type: integer
+            duration:
+              type: number
+            format:
+              type: string
+            quality:
+              type: string
+            location:
+              type: object
+              properties:
+                latitude:
+                  type: number
+                longitude:
+                  type: number
+            camera:
+              type: object
+              properties:
+                make:
+                  type: string
+                model:
+                  type: string
+                settings:
+                  type: object
+
+    # Real-time Collaboration Schemas
+    CollaborationSession:
+      type: object
+      required:
+        - id
+        - conversationId
+        - participants
+        - status
+      properties:
+        id:
+          type: string
+        conversationId:
+          type: string
+        participants:
+          type: array
+          items:
+            type: object
+            properties:
+              userId:
+                type: string
+              role:
+                type: string
+                enum: [owner, editor, viewer]
+              joinedAt:
+                type: string
+                format: date-time
+              lastSeen:
+                type: string
+                format: date-time
+              status:
+                type: string
+                enum: [online, away, offline]
+        status:
+          type: string
+          enum: [active, paused, ended]
+        features:
+          type: object
+          properties:
+            sharedCursor:
+              type: boolean
+            voiceChat:
+              type: boolean
+            screenShare:
+              type: boolean
+            fileSharing:
+              type: boolean
+        createdAt:
+          type: string
+          format: date-time
+        endedAt:
+          type: string
+          format: date-time
+
+    PresenceUpdate:
+      type: object
+      required:
+        - userId
+        - status
+        - timestamp
+      properties:
+        userId:
+          type: string
+        status:
+          type: string
+          enum: [online, away, busy, offline]
+        location:
+          type: object
+          properties:
+            conversationId:
+              type: string
+            messageId:
+              type: string
+            cursorPosition:
+              type: integer
+        device:
+          type: object
+          properties:
+            type:
+              type: string
+              enum: [desktop, mobile, tablet, web]
+            userAgent:
+              type: string
+        timestamp:
+          type: string
+          format: date-time
+
+paths:
+  # Health Check
+  /health:
+    get:
+      tags: [System]
+      summary: Health check endpoint
+      description: Check API health and status
+      security: []
+      responses:
+        '200':
+          description: API is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: healthy
+                  timestamp:
+                    type: string
+                    format: date-time
+                  version:
+                    type: string
+                  services:
+                    type: object
+
+  # Core Conversation API
+  /conversations:
+    get:
+      tags: [Conversations]
+      summary: List conversations
+      description: Retrieve paginated list of user conversations
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 20
+        - name: search
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Conversations retrieved successfully
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          conversations:
+                            type: array
+                            items:
+                              $ref: '#/components/schemas/Conversation'
+
+    post:
+      tags: [Conversations]
+      summary: Create new conversation
+      description: Start a new conversation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                initialMessage:
+                  type: string
+                metadata:
+                  type: object
+      responses:
+        '201':
+          description: Conversation created successfully
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessResponse'
+                  - type: object
+                    properties:
+                      data:
+                        $ref: '#/components/schemas/Conversation'
+
+  /conversations/{conversationId}:
+    get:
+      tags: [Conversations]
+      summary: Get conversation
+      description: Retrieve a specific conversation with its messages
+      parameters:
+        - name: conversationId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Conversation retrieved successfully
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessResponse'
+                  - type: object
+                    properties:
+                      data:
+                        $ref: '#/components/schemas/Conversation'
+
+    put:
+      tags: [Conversations]
+      summary: Update conversation
+      description: Update conversation metadata
+      parameters:
+        - name: conversationId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                metadata:
+                  type: object
+      responses:
+        '200':
+          description: Conversation updated successfully
+
+    delete:
+      tags: [Conversations]
+      summary: Delete conversation
+      description: Delete a conversation and all its messages
+      parameters:
+        - name: conversationId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Conversation deleted successfully
+
+  /conversations/{conversationId}/messages:
+    post:
+      tags: [Conversations]
+      summary: Send message
+      description: Send a message and get AI response
+      parameters:
+        - name: conversationId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - content
+              properties:
+                content:
+                  type: string
+                model:
+                  type: string
+                stream:
+                  type: boolean
+                  default: false
+                options:
+                  type: object
+                  properties:
+                    temperature:
+                      type: number
+                      minimum: 0
+                      maximum: 2
+                    maxTokens:
+                      type: integer
+      responses:
+        '200':
+          description: Message processed successfully
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessResponse'
+                  - type: object
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          userMessage:
+                            $ref: '#/components/schemas/Message'
+                          assistantMessage:
+                            $ref: '#/components/schemas/Message'
+
+  /conversations/{conversationId}/messages/stream:
+    post:
+      tags: [Conversations]
+      summary: Stream message response
+      description: Send a message and stream the AI response
+      parameters:
+        - name: conversationId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - content
+              properties:
+                content:
+                  type: string
+                model:
+                  type: string
+                options:
+                  type: object
+      responses:
+        '200':
+          description: Streaming response
+          content:
+            text/event-stream:
+              schema:
+                type: string
+
+  # Voice/Audio API
+  /voice/transcribe:
+    post:
+      tags: [Voice]
+      summary: Transcribe audio
+      description: Transcribe audio to text
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                audio:
+                  type: string
+                  format: binary
+                language:
+                  type: string
+                model:
+                  type: string
+      responses:
+        '200':
+          description: Audio transcribed successfully
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessResponse'
+                  - type: object
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          text:
+                            type: string
+                          confidence:
+                            type: number
+                          language:
+                            type: string
+
+  /voice/synthesize:
+    post:
+      tags: [Voice]
+      summary: Synthesize speech
+      description: Convert text to speech
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - text
+              properties:
+                text:
+                  type: string
+                voice:
+                  type: string
+                speed:
+                  type: number
+                  minimum: 0.25
+                  maximum: 4.0
+      responses:
+        '200':
+          description: Speech synthesized successfully
+          content:
+            audio/mpeg:
+              schema:
+                type: string
+                format: binary
+
+  # AI Model Management API
+  /models:
+    get:
+      tags: [AI Models]
+      summary: List available models
+      description: Get list of available AI models
+      responses:
+        '200':
+          description: Models retrieved successfully
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessResponse'
+                  - type: object
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          models:
+                            type: array
+                            items:
+                              $ref: '#/components/schemas/AIModel'
+
+  /models/{modelId}/metrics:
+    get:
+      tags: [AI Models]
+      summary: Get model metrics
+      description: Retrieve performance metrics for a specific model
+      parameters:
+        - name: modelId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: timeframe
+          in: query
+          schema:
+            type: string
+            enum: [hour, day, week, month]
+            default: day
+      responses:
+        '200':
+          description: Model metrics retrieved successfully
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessResponse'
+                  - type: object
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          usage:
+                            type: object
+                          performance:
+                            type: object
+                          costs:
+                            type: object
+
+  # Memory & Context API
+  /memory/search:
+    post:
+      tags: [Memory]
+      summary: Search memory
+      description: Search through conversation history and context
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - query
+              properties:
+                query:
+                  type: string
+                filters:
+                  type: object
+                limit:
+                  type: integer
+                  minimum: 1
+                  maximum: 100
+                  default: 10
+      responses:
+        '200':
+          description: Search completed successfully
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessResponse'
+                  - type: object
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          results:
+                            type: array
+                            items:
+                              type: object
+
+  /memory/context:
+    get:
+      tags: [Memory]
+      summary: Get context
+      description: Retrieve current context and relevant memories
+      parameters:
+        - name: conversationId
+          in: query
+          schema:
+            type: string
+        - name: depth
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 50
+            default: 10
+      responses:
+        '200':
+          description: Context retrieved successfully
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessResponse'
+                  - type: object
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          context:
+                            type: array
+                            items:
+                              type: object
+
+  # Plugin System API
+  /plugins:
+    get:
+      tags: [Plugins]
+      summary: List plugins
+      description: Get list of available and installed plugins
+      parameters:
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [all, active, inactive, available]
+            default: all
+      responses:
+        '200':
+          description: Plugins retrieved successfully
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessResponse'
+                  - type: object
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          plugins:
+                            type: array
+                            items:
+                              $ref: '#/components/schemas/Plugin'
+
+    post:
+      tags: [Plugins]
+      summary: Install plugin
+      description: Install a new plugin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - source
+              properties:
+                source:
+                  type: string
+                  description: Plugin source (URL, package name, etc.)
+                configuration:
+                  type: object
+      responses:
+        '201':
+          description: Plugin installed successfully
+
+  /plugins/{pluginId}:
+    get:
+      tags: [Plugins]
+      summary: Get plugin details
+      description: Retrieve detailed information about a plugin
+      parameters:
+        - name: pluginId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Plugin details retrieved successfully
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessResponse'
+                  - type: object
+                    properties:
+                      data:
+                        $ref: '#/components/schemas/Plugin'
+
+    put:
+      tags: [Plugins]
+      summary: Update plugin
+      description: Update plugin configuration or status
+      parameters:
+        - name: pluginId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+                  enum: [active, inactive]
+                configuration:
+                  type: object
+      responses:
+        '200':
+          description: Plugin updated successfully
+
+    delete:
+      tags: [Plugins]
+      summary: Uninstall plugin
+      description: Remove a plugin from the system
+      parameters:
+        - name: pluginId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Plugin uninstalled successfully
+
+  /plugins/{pluginId}/execute:
+    post:
+      tags: [Plugins]
+      summary: Execute plugin function
+      description: Execute a specific function within a plugin
+      parameters:
+        - name: pluginId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - function
+              properties:
+                function:
+                  type: string
+                parameters:
+                  type: object
+      responses:
+        '200':
+          description: Plugin function executed successfully
+
+  # Real-time Data API
+  /data/weather:
+    get:
+      tags: [Real-time Data]
+      summary: Get weather data
+      description: Retrieve current weather information
+      parameters:
+        - name: location
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: units
+          in: query
+          schema:
+            type: string
+            enum: [metric, imperial]
+            default: metric
+      responses:
+        '200':
+          description: Weather data retrieved successfully
+
+  /data/news:
+    get:
+      tags: [Real-time Data]
+      summary: Get news feed
+      description: Retrieve latest news articles
+      parameters:
+        - name: category
+          in: query
+          schema:
+            type: string
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 50
+            default: 10
+      responses:
+        '200':
+          description: News articles retrieved successfully
+
+  /data/stocks:
+    get:
+      tags: [Real-time Data]
+      summary: Get stock data
+      description: Retrieve stock market information
+      parameters:
+        - name: symbols
+          in: query
+          required: true
+          schema:
+            type: string
+            description: Comma-separated stock symbols
+      responses:
+        '200':
+          description: Stock data retrieved successfully
+
+  # File & Media API
+  /files/upload:
+    post:
+      tags: [Files]
+      summary: Upload file
+      description: Upload a file for processing
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                purpose:
+                  type: string
+                  enum: [analysis, conversation, processing]
+                metadata:
+                  type: object
+      responses:
+        '201':
+          description: File uploaded successfully
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessResponse'
+                  - type: object
+                    properties:
+                      data:
+                        $ref: '#/components/schemas/FileUpload'
+
+  /files/{fileId}:
+    get:
+      tags: [Files]
+      summary: Get file info
+      description: Retrieve file information and metadata
+      parameters:
+        - name: fileId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: File information retrieved successfully
+
+    delete:
+      tags: [Files]
+      summary: Delete file
+      description: Delete an uploaded file
+      parameters:
+        - name: fileId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: File deleted successfully
+
+  /files/{fileId}/analyze:
+    post:
+      tags: [Files]
+      summary: Analyze file
+      description: Perform analysis on uploaded file (OCR, content extraction, etc.)
+      parameters:
+        - name: fileId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                analysisType:
+                  type: string
+                  enum: [ocr, content_extraction, image_analysis, document_parsing]
+                options:
+                  type: object
+      responses:
+        '200':
+          description: File analysis completed successfully
+
+  # User Management API
+  /users/profile:
+    get:
+      tags: [Users]
+      summary: Get user profile
+      description: Retrieve current user's profile information
+      responses:
+        '200':
+          description: User profile retrieved successfully
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessResponse'
+                  - type: object
+                    properties:
+                      data:
+                        $ref: '#/components/schemas/User'
+
+    put:
+      tags: [Users]
+      summary: Update user profile
+      description: Update user profile information
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                  format: email
+                preferences:
+                  type: object
+      responses:
+        '200':
+          description: User profile updated successfully
+
+  /users/preferences:
+    get:
+      tags: [Users]
+      summary: Get user preferences
+      description: Retrieve user preferences and settings
+      responses:
+        '200':
+          description: User preferences retrieved successfully
+
+    put:
+      tags: [Users]
+      summary: Update user preferences
+      description: Update user preferences and settings
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                preferences:
+                  type: object
+      responses:
+        '200':
+          description: User preferences updated successfully
+
+  /users/usage:
+    get:
+      tags: [Users]
+      summary: Get usage analytics
+      description: Retrieve user's API usage and analytics
+      parameters:
+        - name: timeframe
+          in: query
+          schema:
+            type: string
+            enum: [day, week, month, year]
+            default: month
+      responses:
+        '200':
+          description: Usage analytics retrieved successfully
+
+  # Authentication API
+  /auth/login:
+    post:
+      tags: [Authentication]
+      summary: User login
+      description: Authenticate user and return JWT token
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                  refreshToken:
+                    type: string
+                  user:
+                    $ref: '#/components/schemas/User'
+
+  /auth/refresh:
+    post:
+      tags: [Authentication]
+      summary: Refresh token
+      description: Refresh JWT token using refresh token
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - refreshToken
+              properties:
+                refreshToken:
+                  type: string
+      responses:
+        '200':
+          description: Token refreshed successfully
+
+  /auth/logout:
+    post:
+      tags: [Authentication]
+      summary: User logout
+      description: Logout user and invalidate tokens
+      responses:
+        '200':
+          description: Logout successful
+
+  # System Administration API
+  /admin/system/status:
+    get:
+      tags: [Administration]
+      summary: Get system status
+      description: Retrieve comprehensive system status and health
+      responses:
+        '200':
+          description: System status retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  services:
+                    type: object
+                  metrics:
+                    type: object
+                  timestamp:
+                    type: string
+                    format: date-time
+
+  /admin/system/metrics:
+    get:
+      tags: [Administration]
+      summary: Get system metrics
+      description: Retrieve detailed system performance metrics
+      parameters:
+        - name: timeframe
+          in: query
+          schema:
+            type: string
+            enum: [hour, day, week, month]
+            default: hour
+      responses:
+        '200':
+          description: System metrics retrieved successfully
+
+  /admin/system/logs:
+    get:
+      tags: [Administration]
+      summary: Get system logs
+      description: Retrieve system logs with filtering options
+      parameters:
+        - name: level
+          in: query
+          schema:
+            type: string
+            enum: [error, warn, info, debug]
+        - name: service
+          in: query
+          schema:
+            type: string
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+            default: 100
+      responses:
+        '200':
+          description: System logs retrieved successfully
+
+  /admin/config:
+    get:
+      tags: [Administration]
+      summary: Get configuration
+      description: Retrieve system configuration
+      responses:
+        '200':
+          description: Configuration retrieved successfully
+
+    put:
+      tags: [Administration]
+      summary: Update configuration
+      description: Update system configuration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                configuration:
+                  type: object
+      responses:
+        '200':
+          description: Configuration updated successfully
+
+tags:
+  - name: System
+    description: System health and status endpoints
+  - name: Conversations
+    description: Core conversation management
+  - name: Voice
+    description: Voice and audio processing
+  - name: AI Models
+    description: AI model management and metrics
+  - name: Memory
+    description: Memory and context management
+  - name: Plugins
+    description: Plugin system management
+  - name: Real-time Data
+    description: Real-time data integration
+  - name: Files
+    description: File upload and processing
+  - name: Users
+    description: User management and preferences
+  - name: Authentication
+    description: User authentication and authorization
+  - name: Administration
+    description: System administration and monitoring

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "act_1755738173953_f0915ff93b3b",
+    "type": "user_created",
+    "userId": "user_1755738173952_47e1d5a8d19b69fb",
+    "organizationId": "org_1755738173950_9669ace9f97b7840",
+    "timestamp": "2025-08-21T01:02:53.953Z",
+    "metadata": {
+      "role": "admin",
+      "isOrgAdmin": true
+    },
+    "context": {
+      "ipAddress": null,
+      "userAgent": null,
+      "source": "enterprise_system"
+    }
+  },
+  {
+    "id": "act_1755738173954_9296ea6f9478",
+    "type": "user_created",
+    "userId": "user_1755738173954_6fd537e5af32738c",
+    "organizationId": "org_1755738173950_9669ace9f97b7840",
+    "timestamp": "2025-08-21T01:02:53.954Z",
+    "metadata": {
+      "role": "adjuster",
+      "isOrgAdmin": false
+    },
+    "context": {
+      "ipAddress": null,
+      "userAgent": null,
+      "source": "enterprise_system"
+    }
+  },
+  {
+    "id": "act_1755738200855_75eddd966a61",
+    "type": "user_created",
+    "userId": "user_1755738200854_086ae36784e9d188",
+    "organizationId": "org_1755738200852_9f80cf0018427ee2",
+    "timestamp": "2025-08-21T01:03:20.855Z",
+    "metadata": {
+      "role": "admin",
+      "isOrgAdmin": true
+    },
+    "context": {
+      "ipAddress": null,
+      "userAgent": null,
+      "source": "enterprise_system"
+    }
+  },
+  {
+    "id": "act_1755738215642_3aeec6d463b6",
+    "type": "user_created",
+    "userId": "user_1755738215641_a11be746f3e50f94",
+    "organizationId": "org_1755738215638_5fc5cd8bd8d0be06",
+    "timestamp": "2025-08-21T01:03:35.642Z",
+    "metadata": {
+      "role": "admin",
+      "isOrgAdmin": true
+    },
+    "context": {
+      "ipAddress": null,
+      "userAgent": null,
+      "source": "enterprise_system"
+    }
+  },
+  {
+    "id": "act_1755738215643_3f561f579479",
+    "type": "user_created",
+    "userId": "user_1755738215643_6c965dbdd727ae0a",
+    "organizationId": "org_1755738215638_5fc5cd8bd8d0be06",
+    "timestamp": "2025-08-21T01:03:35.643Z",
+    "metadata": {
+      "role": "adjuster",
+      "isOrgAdmin": false
+    },
+    "context": {
+      "ipAddress": null,
+      "userAgent": null,
+      "source": "enterprise_system"
+    }
+  }
+]

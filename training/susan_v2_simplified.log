@@ -1,0 +1,174 @@
+2025-08-23 23:38:30,052 - INFO - ============================================================
+2025-08-23 23:38:30,052 - INFO - SUSAN AI V2.0 SIMPLIFIED TRAINING PIPELINE
+2025-08-23 23:38:30,052 - INFO - ============================================================
+2025-08-23 23:38:30,052 - INFO - Creating datasets...
+2025-08-23 23:38:30,052 - INFO - Loading HuggingFace roof damage dataset...
+2025-08-23 23:38:34,051 - INFO - Loaded 323 HuggingFace samples
+2025-08-23 23:38:34,051 - INFO - Loading sales training data...
+2025-08-23 23:38:34,052 - ERROR - Error loading sales data: unhashable type: 'slice'
+2025-08-23 23:38:34,194 - INFO - Training model...
+2025-08-23 23:38:34,194 - INFO - Starting training for 20 epochs...
+2025-08-23 23:38:45,615 - INFO - Epoch [1/20], Batch [1/57], Loss: 2.2721
+2025-08-23 23:38:51,118 - INFO - Epoch [1/20], Batch [11/57], Loss: 1.5777
+2025-08-23 23:38:56,406 - INFO - Epoch [1/20], Batch [21/57], Loss: 1.4003
+2025-08-23 23:39:01,714 - INFO - Epoch [1/20], Batch [31/57], Loss: 1.0862
+2025-08-23 23:39:06,927 - INFO - Epoch [1/20], Batch [41/57], Loss: 0.8213
+2025-08-23 23:39:12,313 - INFO - Epoch [1/20], Batch [51/57], Loss: 0.8688
+2025-08-23 23:39:17,135 - INFO - Epoch [1/20] Train Acc: 76.99% | Val Acc: 100.00%
+2025-08-23 23:39:18,625 - INFO - New best model saved: 100.00%
+2025-08-23 23:39:19,174 - INFO - Epoch [2/20], Batch [1/57], Loss: 0.9497
+2025-08-23 23:39:24,637 - INFO - Epoch [2/20], Batch [11/57], Loss: 0.6904
+2025-08-23 23:39:29,947 - INFO - Epoch [2/20], Batch [21/57], Loss: 0.6710
+2025-08-23 23:39:35,266 - INFO - Epoch [2/20], Batch [31/57], Loss: 0.8221
+2025-08-23 23:39:40,612 - INFO - Epoch [2/20], Batch [41/57], Loss: 0.4717
+2025-08-23 23:39:45,842 - INFO - Epoch [2/20], Batch [51/57], Loss: 0.8045
+2025-08-23 23:39:50,586 - INFO - Epoch [2/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:39:51,091 - INFO - Epoch [3/20], Batch [1/57], Loss: 0.7014
+2025-08-23 23:39:56,420 - INFO - Epoch [3/20], Batch [11/57], Loss: 0.8457
+2025-08-23 23:40:01,694 - INFO - Epoch [3/20], Batch [21/57], Loss: 0.7396
+2025-08-23 23:40:06,863 - INFO - Epoch [3/20], Batch [31/57], Loss: 0.5836
+2025-08-23 23:40:39,371 - INFO - Epoch [3/20], Batch [41/57], Loss: 0.9351
+2025-08-23 23:40:44,939 - INFO - Epoch [3/20], Batch [51/57], Loss: 0.7766
+2025-08-23 23:40:49,531 - INFO - Epoch [3/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:40:50,094 - INFO - Epoch [4/20], Batch [1/57], Loss: 0.7679
+2025-08-23 23:40:55,249 - INFO - Epoch [4/20], Batch [11/57], Loss: 0.6954
+2025-08-23 23:41:00,594 - INFO - Epoch [4/20], Batch [21/57], Loss: 0.7243
+2025-08-23 23:41:05,850 - INFO - Epoch [4/20], Batch [31/57], Loss: 0.5294
+2025-08-23 23:41:11,110 - INFO - Epoch [4/20], Batch [41/57], Loss: 0.5267
+2025-08-23 23:41:16,494 - INFO - Epoch [4/20], Batch [51/57], Loss: 0.6396
+2025-08-23 23:41:21,247 - INFO - Epoch [4/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:41:21,830 - INFO - Epoch [5/20], Batch [1/57], Loss: 0.8342
+2025-08-23 23:41:26,990 - INFO - Epoch [5/20], Batch [11/57], Loss: 0.5887
+2025-08-23 23:41:32,250 - INFO - Epoch [5/20], Batch [21/57], Loss: 0.6164
+2025-08-23 23:41:37,516 - INFO - Epoch [5/20], Batch [31/57], Loss: 0.6766
+2025-08-23 23:41:42,842 - INFO - Epoch [5/20], Batch [41/57], Loss: 0.6419
+2025-08-23 23:41:48,056 - INFO - Epoch [5/20], Batch [51/57], Loss: 0.6486
+2025-08-23 23:41:52,566 - INFO - Epoch [5/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:41:53,074 - INFO - Epoch [6/20], Batch [1/57], Loss: 0.7520
+2025-08-23 23:41:58,311 - INFO - Epoch [6/20], Batch [11/57], Loss: 0.7028
+2025-08-23 23:42:03,672 - INFO - Epoch [6/20], Batch [21/57], Loss: 0.4585
+2025-08-23 23:42:08,924 - INFO - Epoch [6/20], Batch [31/57], Loss: 0.4866
+2025-08-23 23:42:14,194 - INFO - Epoch [6/20], Batch [41/57], Loss: 0.4519
+2025-08-23 23:42:19,567 - INFO - Epoch [6/20], Batch [51/57], Loss: 0.5603
+2025-08-23 23:42:24,183 - INFO - Epoch [6/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:42:24,674 - INFO - Epoch [7/20], Batch [1/57], Loss: 0.5181
+2025-08-23 23:42:29,658 - INFO - Epoch [7/20], Batch [11/57], Loss: 0.8896
+2025-08-23 23:42:34,958 - INFO - Epoch [7/20], Batch [21/57], Loss: 0.5425
+2025-08-23 23:42:40,100 - INFO - Epoch [7/20], Batch [31/57], Loss: 0.4894
+2025-08-23 23:42:45,303 - INFO - Epoch [7/20], Batch [41/57], Loss: 0.4470
+2025-08-23 23:42:50,477 - INFO - Epoch [7/20], Batch [51/57], Loss: 0.5642
+2025-08-23 23:42:55,287 - INFO - Epoch [7/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:42:55,868 - INFO - Epoch [8/20], Batch [1/57], Loss: 0.4201
+2025-08-23 23:43:01,740 - INFO - Epoch [8/20], Batch [11/57], Loss: 0.5292
+2025-08-23 23:43:07,650 - INFO - Epoch [8/20], Batch [21/57], Loss: 0.4551
+2025-08-23 23:43:13,358 - INFO - Epoch [8/20], Batch [31/57], Loss: 0.6398
+2025-08-23 23:43:19,115 - INFO - Epoch [8/20], Batch [41/57], Loss: 0.6584
+2025-08-23 23:43:24,907 - INFO - Epoch [8/20], Batch [51/57], Loss: 0.6774
+2025-08-23 23:43:30,274 - INFO - Epoch [8/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:43:30,813 - INFO - Epoch [9/20], Batch [1/57], Loss: 0.7133
+2025-08-23 23:43:36,504 - INFO - Epoch [9/20], Batch [11/57], Loss: 0.8204
+2025-08-23 23:43:42,390 - INFO - Epoch [9/20], Batch [21/57], Loss: 0.3537
+2025-08-23 23:43:47,967 - INFO - Epoch [9/20], Batch [31/57], Loss: 0.4871
+2025-08-23 23:43:53,900 - INFO - Epoch [9/20], Batch [41/57], Loss: 0.4680
+2025-08-23 23:43:59,685 - INFO - Epoch [9/20], Batch [51/57], Loss: 0.6913
+2025-08-23 23:44:04,518 - INFO - Epoch [9/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:44:05,063 - INFO - Epoch [10/20], Batch [1/57], Loss: 0.3730
+2025-08-23 23:44:11,067 - INFO - Epoch [10/20], Batch [11/57], Loss: 0.4338
+2025-08-23 23:44:16,739 - INFO - Epoch [10/20], Batch [21/57], Loss: 0.3836
+2025-08-23 23:44:22,644 - INFO - Epoch [10/20], Batch [31/57], Loss: 0.4589
+2025-08-23 23:44:28,490 - INFO - Epoch [10/20], Batch [41/57], Loss: 0.4466
+2025-08-23 23:44:34,325 - INFO - Epoch [10/20], Batch [51/57], Loss: 0.3392
+2025-08-23 23:44:39,391 - INFO - Epoch [10/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:44:39,982 - INFO - Epoch [11/20], Batch [1/57], Loss: 0.3922
+2025-08-23 23:44:45,790 - INFO - Epoch [11/20], Batch [11/57], Loss: 0.3921
+2025-08-23 23:44:52,060 - INFO - Epoch [11/20], Batch [21/57], Loss: 0.5430
+2025-08-23 23:44:57,878 - INFO - Epoch [11/20], Batch [31/57], Loss: 0.2536
+2025-08-23 23:45:03,719 - INFO - Epoch [11/20], Batch [41/57], Loss: 0.5553
+2025-08-23 23:45:10,013 - INFO - Epoch [11/20], Batch [51/57], Loss: 0.5083
+2025-08-23 23:45:16,248 - INFO - Epoch [11/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:45:17,006 - INFO - Epoch [12/20], Batch [1/57], Loss: 0.3273
+2025-08-23 23:45:23,295 - INFO - Epoch [12/20], Batch [11/57], Loss: 0.5051
+2025-08-23 23:45:29,161 - INFO - Epoch [12/20], Batch [21/57], Loss: 0.2279
+2025-08-23 23:45:35,047 - INFO - Epoch [12/20], Batch [31/57], Loss: 0.7708
+2025-08-23 23:45:41,345 - INFO - Epoch [12/20], Batch [41/57], Loss: 0.3928
+2025-08-23 23:45:47,279 - INFO - Epoch [12/20], Batch [51/57], Loss: 0.5302
+2025-08-23 23:45:52,633 - INFO - Epoch [12/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:45:53,358 - INFO - Epoch [13/20], Batch [1/57], Loss: 0.2187
+2025-08-23 23:46:00,154 - INFO - Epoch [13/20], Batch [11/57], Loss: 0.2439
+2025-08-23 23:46:06,596 - INFO - Epoch [13/20], Batch [21/57], Loss: 0.5778
+2025-08-23 23:46:12,371 - INFO - Epoch [13/20], Batch [31/57], Loss: 0.4565
+2025-08-23 23:46:18,224 - INFO - Epoch [13/20], Batch [41/57], Loss: 0.0824
+2025-08-23 23:46:25,170 - INFO - Epoch [13/20], Batch [51/57], Loss: 0.2399
+2025-08-23 23:46:30,963 - INFO - Epoch [13/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:46:31,569 - INFO - Epoch [14/20], Batch [1/57], Loss: 0.2615
+2025-08-23 23:46:37,709 - INFO - Epoch [14/20], Batch [11/57], Loss: 0.1318
+2025-08-23 23:46:43,944 - INFO - Epoch [14/20], Batch [21/57], Loss: 0.1606
+2025-08-23 23:46:50,758 - INFO - Epoch [14/20], Batch [31/57], Loss: 0.1538
+2025-08-23 23:46:56,919 - INFO - Epoch [14/20], Batch [41/57], Loss: 0.1531
+2025-08-23 23:47:03,106 - INFO - Epoch [14/20], Batch [51/57], Loss: 0.2066
+2025-08-23 23:47:08,947 - INFO - Epoch [14/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:47:09,694 - INFO - Epoch [15/20], Batch [1/57], Loss: 0.1608
+2025-08-23 23:47:16,458 - INFO - Epoch [15/20], Batch [11/57], Loss: 0.2770
+2025-08-23 23:47:22,357 - INFO - Epoch [15/20], Batch [21/57], Loss: 0.0708
+2025-08-23 23:47:28,205 - INFO - Epoch [15/20], Batch [31/57], Loss: 0.2932
+2025-08-23 23:47:35,007 - INFO - Epoch [15/20], Batch [41/57], Loss: 0.3409
+2025-08-23 23:47:41,095 - INFO - Epoch [15/20], Batch [51/57], Loss: 0.1970
+2025-08-23 23:47:46,147 - INFO - Epoch [15/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:47:46,726 - INFO - Epoch [16/20], Batch [1/57], Loss: 0.1048
+2025-08-23 23:47:52,848 - INFO - Epoch [16/20], Batch [11/57], Loss: 0.0577
+2025-08-23 23:47:59,979 - INFO - Epoch [16/20], Batch [21/57], Loss: 0.0777
+2025-08-23 23:48:05,984 - INFO - Epoch [16/20], Batch [31/57], Loss: 0.1002
+2025-08-23 23:48:11,897 - INFO - Epoch [16/20], Batch [41/57], Loss: 0.1474
+2025-08-23 23:48:18,385 - INFO - Epoch [16/20], Batch [51/57], Loss: 0.8757
+2025-08-23 23:48:24,403 - INFO - Epoch [16/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:48:25,014 - INFO - Epoch [17/20], Batch [1/57], Loss: 0.1353
+2025-08-23 23:48:30,855 - INFO - Epoch [17/20], Batch [11/57], Loss: 0.2617
+2025-08-23 23:48:36,813 - INFO - Epoch [17/20], Batch [21/57], Loss: 0.1556
+2025-08-23 23:48:43,437 - INFO - Epoch [17/20], Batch [31/57], Loss: 0.1517
+2025-08-23 23:48:49,728 - INFO - Epoch [17/20], Batch [41/57], Loss: 0.0767
+2025-08-23 23:48:55,628 - INFO - Epoch [17/20], Batch [51/57], Loss: 0.2090
+2025-08-23 23:49:00,902 - INFO - Epoch [17/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:49:01,548 - INFO - Epoch [18/20], Batch [1/57], Loss: 0.2278
+2025-08-23 23:49:07,776 - INFO - Epoch [18/20], Batch [11/57], Loss: 0.0903
+2025-08-23 23:49:13,536 - INFO - Epoch [18/20], Batch [21/57], Loss: 0.2666
+2025-08-23 23:49:19,487 - INFO - Epoch [18/20], Batch [31/57], Loss: 0.3546
+2025-08-23 23:49:26,076 - INFO - Epoch [18/20], Batch [41/57], Loss: 0.6129
+2025-08-23 23:49:32,711 - INFO - Epoch [18/20], Batch [51/57], Loss: 0.2826
+2025-08-23 23:49:38,014 - INFO - Epoch [18/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:49:38,612 - INFO - Epoch [19/20], Batch [1/57], Loss: 0.0404
+2025-08-23 23:49:44,314 - INFO - Epoch [19/20], Batch [11/57], Loss: 0.0708
+2025-08-23 23:49:50,278 - INFO - Epoch [19/20], Batch [21/57], Loss: 0.3691
+2025-08-23 23:49:56,330 - INFO - Epoch [19/20], Batch [31/57], Loss: 0.1102
+2025-08-23 23:50:02,218 - INFO - Epoch [19/20], Batch [41/57], Loss: 0.9204
+2025-08-23 23:50:11,012 - INFO - Epoch [19/20], Batch [51/57], Loss: 0.1082
+2025-08-23 23:50:23,923 - INFO - Epoch [19/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:50:25,086 - INFO - Epoch [20/20], Batch [1/57], Loss: 0.1893
+2025-08-23 23:50:37,133 - INFO - Epoch [20/20], Batch [11/57], Loss: 0.1030
+2025-08-23 23:50:49,156 - INFO - Epoch [20/20], Batch [21/57], Loss: 0.0541
+2025-08-23 23:51:00,743 - INFO - Epoch [20/20], Batch [31/57], Loss: 0.0123
+2025-08-23 23:51:17,763 - INFO - Epoch [20/20], Batch [41/57], Loss: 0.1006
+2025-08-23 23:51:29,844 - INFO - Epoch [20/20], Batch [51/57], Loss: 0.1871
+2025-08-23 23:51:40,524 - INFO - Epoch [20/20] Train Acc: 100.00% | Val Acc: 100.00%
+2025-08-23 23:51:40,525 - INFO - Evaluating model...
+2025-08-23 23:51:40,525 - INFO - Evaluating final model...
+2025-08-23 23:51:44,431 - INFO - Final Accuracy: 1.000
+2025-08-23 23:51:44,432 - INFO - False Positive Rate: 0.000
+2025-08-23 23:51:44,432 - INFO - Average Inference Time: 0.077s
+2025-08-23 23:51:44,433 - ERROR - Pipeline failed: Object of type bool is not JSON serializable
+2025-08-23 23:51:44,443 - ERROR - Traceback (most recent call last):
+  File "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/susan_ai_v2_simplified_pipeline.py", line 521, in run_complete_pipeline
+    json.dump(results, f, indent=2)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool is not JSON serializable
+

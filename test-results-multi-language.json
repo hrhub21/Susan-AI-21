@@ -1,0 +1,372 @@
+{
+  "summary": {
+    "passed": 13,
+    "failed": 16,
+    "total": 29,
+    "successRate": "44.8%",
+    "timestamp": "2025-08-21T02:01:33.652Z"
+  },
+  "results": [
+    {
+      "name": "English text detection",
+      "passed": true,
+      "message": "Expected: en, Got: en",
+      "data": {
+        "language": "en",
+        "confidence": 0,
+        "isSupported": true,
+        "timestamp": "2025-08-21T02:01:33.643Z"
+      },
+      "timestamp": "2025-08-21T02:01:33.644Z"
+    },
+    {
+      "name": "Spanish text detection",
+      "passed": false,
+      "message": "Expected: es, Got: en",
+      "data": {
+        "language": "en",
+        "confidence": 0,
+        "isSupported": true,
+        "timestamp": "2025-08-21T02:01:33.644Z"
+      },
+      "timestamp": "2025-08-21T02:01:33.644Z"
+    },
+    {
+      "name": "Spanish technical text",
+      "passed": false,
+      "message": "Expected: es, Got: en",
+      "data": {
+        "language": "en",
+        "confidence": 0,
+        "isSupported": true,
+        "timestamp": "2025-08-21T02:01:33.644Z"
+      },
+      "timestamp": "2025-08-21T02:01:33.644Z"
+    },
+    {
+      "name": "English technical text",
+      "passed": true,
+      "message": "Expected: en, Got: en",
+      "data": {
+        "language": "en",
+        "confidence": 0,
+        "isSupported": true,
+        "timestamp": "2025-08-21T02:01:33.644Z"
+      },
+      "timestamp": "2025-08-21T02:01:33.644Z"
+    },
+    {
+      "name": "Basic roofing term translation",
+      "passed": false,
+      "message": "Expected: \"inspección del techo\", Got: \"roof inspection\"",
+      "data": {
+        "originalText": "roof inspection",
+        "translatedText": "roof inspection",
+        "fromLanguage": "en",
+        "toLanguage": "es",
+        "confidence": 0.9,
+        "timestamp": "2025-08-21T02:01:33.644Z",
+        "metadata": {
+          "industryContext": "roofing",
+          "culturallyAdapted": true,
+          "cacheUsed": false
+        }
+      },
+      "timestamp": "2025-08-21T02:01:33.644Z"
+    },
+    {
+      "name": "Complex industry term",
+      "passed": false,
+      "message": "Expected: \"evaluación de daños por granizo\", Got: \"hail damage assessment\"",
+      "data": {
+        "originalText": "hail damage assessment",
+        "translatedText": "hail damage assessment",
+        "fromLanguage": "en",
+        "toLanguage": "es",
+        "confidence": 0.9,
+        "timestamp": "2025-08-21T02:01:33.644Z",
+        "metadata": {
+          "industryContext": "roofing",
+          "culturallyAdapted": true,
+          "cacheUsed": false
+        }
+      },
+      "timestamp": "2025-08-21T02:01:33.644Z"
+    },
+    {
+      "name": "Insurance terminology",
+      "passed": false,
+      "message": "Expected: \"ajustador de seguros\", Got: \"insurance adjuster\"",
+      "data": {
+        "originalText": "insurance adjuster",
+        "translatedText": "insurance adjuster",
+        "fromLanguage": "en",
+        "toLanguage": "es",
+        "confidence": 0.9,
+        "timestamp": "2025-08-21T02:01:33.644Z",
+        "metadata": {
+          "industryContext": "roofing",
+          "culturallyAdapted": true,
+          "cacheUsed": false
+        }
+      },
+      "timestamp": "2025-08-21T02:01:33.645Z"
+    },
+    {
+      "name": "Spanish to English",
+      "passed": false,
+      "message": "Expected: \"repair estimate\", Got: \"presupuesto de reparación\"",
+      "data": {
+        "originalText": "presupuesto de reparación",
+        "translatedText": "presupuesto de reparación",
+        "fromLanguage": "es",
+        "toLanguage": "en",
+        "confidence": 0.9,
+        "timestamp": "2025-08-21T02:01:33.645Z",
+        "metadata": {
+          "industryContext": "roofing",
+          "culturallyAdapted": true,
+          "cacheUsed": false
+        }
+      },
+      "timestamp": "2025-08-21T02:01:33.645Z"
+    },
+    {
+      "name": "Spanish terminology loaded",
+      "passed": "daño",
+      "message": "Found 53 terms",
+      "data": {
+        "termCount": 53
+      },
+      "timestamp": "2025-08-21T02:01:33.645Z"
+    },
+    {
+      "name": "Spanish voice commands loaded",
+      "message": "Found 0 commands",
+      "data": {
+        "commandCount": 0
+      },
+      "timestamp": "2025-08-21T02:01:33.645Z"
+    },
+    {
+      "name": "Spanish cultural adaptations configured",
+      "message": "Cultural settings loaded",
+      "data": null,
+      "timestamp": "2025-08-21T02:01:33.645Z"
+    },
+    {
+      "name": "Spanish voice activation",
+      "passed": false,
+      "message": "Voice commands not available for es or en",
+      "data": null,
+      "timestamp": "2025-08-21T02:01:33.645Z"
+    },
+    {
+      "name": "Spanish inspection command",
+      "passed": false,
+      "message": "Voice commands not available for es or en",
+      "data": null,
+      "timestamp": "2025-08-21T02:01:33.645Z"
+    },
+    {
+      "name": "English voice activation",
+      "passed": false,
+      "message": "Voice commands not available for en or en",
+      "data": null,
+      "timestamp": "2025-08-21T02:01:33.645Z"
+    },
+    {
+      "name": "English inspection command",
+      "passed": false,
+      "message": "Voice commands not available for en or en",
+      "data": null,
+      "timestamp": "2025-08-21T02:01:33.645Z"
+    },
+    {
+      "name": "Document translation to Spanish",
+      "passed": false,
+      "message": "Document translated (1 chunks)",
+      "data": {
+        "originalLength": 397,
+        "translatedLength": 397
+      },
+      "timestamp": "2025-08-21T02:01:33.646Z"
+    },
+    {
+      "name": "Template Localization",
+      "passed": false,
+      "message": "Template claim_submission not found",
+      "data": null,
+      "timestamp": "2025-08-21T02:01:33.647Z"
+    },
+    {
+      "name": "Cultural adaptation applied",
+      "passed": true,
+      "message": "Translation completed with cultural adaptation",
+      "data": {
+        "originalText": "Hello, we need to inspect your roof immediately.",
+        "adaptedText": "Hello, we need to inspect your roof immediately."
+      },
+      "timestamp": "2025-08-21T02:01:33.647Z"
+    },
+    {
+      "name": "Add industry terminology",
+      "passed": true,
+      "message": "Added 3 new terms",
+      "data": {
+        "language": "es",
+        "addedTerms": 3,
+        "totalTerms": 56,
+        "timestamp": "2025-08-21T02:01:33.650Z"
+      },
+      "timestamp": "2025-08-21T02:01:33.650Z"
+    },
+    {
+      "name": "Retrieve updated terminology",
+      "passed": true,
+      "message": "Retrieved 56 total terms",
+      "data": {
+        "totalTerms": 56
+      },
+      "timestamp": "2025-08-21T02:01:33.650Z"
+    },
+    {
+      "name": "Switch user language to Spanish",
+      "passed": true,
+      "message": "Language switched from en to es",
+      "data": {
+        "userId": "test_user_123",
+        "previousLanguage": "en",
+        "newLanguage": "es",
+        "languageInfo": {
+          "code": "es",
+          "name": "Spanish",
+          "nativeName": "Español",
+          "isDefault": false,
+          "voiceModel": "es-ES",
+          "culturalContext": "respectful",
+          "formality": "formal"
+        },
+        "timestamp": "2025-08-21T02:01:33.650Z"
+      },
+      "timestamp": "2025-08-21T02:01:33.650Z"
+    },
+    {
+      "name": "Retrieve user preferences",
+      "passed": true,
+      "message": "User language set to es",
+      "data": {
+        "language": "es",
+        "updatedAt": "2025-08-21T02:01:33.650Z",
+        "supportedLanguages": [
+          {
+            "code": "en",
+            "name": "English",
+            "nativeName": "English",
+            "isDefault": true,
+            "voiceModel": "en-US",
+            "culturalContext": "direct",
+            "formality": "professional"
+          },
+          {
+            "code": "es",
+            "name": "Spanish",
+            "nativeName": "Español",
+            "isDefault": false,
+            "voiceModel": "es-ES",
+            "culturalContext": "respectful",
+            "formality": "formal"
+          },
+          {
+            "code": "fr",
+            "name": "French",
+            "nativeName": "Français",
+            "isDefault": false,
+            "voiceModel": "fr-FR",
+            "culturalContext": "formal",
+            "formality": "very_formal"
+          }
+        ]
+      },
+      "timestamp": "2025-08-21T02:01:33.651Z"
+    },
+    {
+      "name": "Spanish activation phrase detection",
+      "passed": true,
+      "message": "Activation phrase detected: true",
+      "data": {
+        "phrase": "Hola Susan",
+        "detected": true
+      },
+      "timestamp": "2025-08-21T02:01:33.651Z"
+    },
+    {
+      "name": "Voice command execution",
+      "passed": true,
+      "message": "Command executed successfully",
+      "data": {
+        "success": true,
+        "message": "¡Hola! Soy Susan, su asistente de techado con IA. ¿Cómo puedo ayudarle hoy?",
+        "action": "voice_activated",
+        "nextSteps": [
+          "Ask me about inspections",
+          "Upload photos",
+          "Check claim status"
+        ]
+      },
+      "timestamp": "2025-08-21T02:01:33.651Z"
+    },
+    {
+      "name": "Voice controller status",
+      "passed": true,
+      "message": "Service status: operational",
+      "data": {
+        "voiceService": "active",
+        "multiLanguageService": "active",
+        "supportedLanguages": [
+          "en",
+          "es",
+          "fr"
+        ],
+        "activeUsers": 0,
+        "spanishSupport": true,
+        "voiceActivation": true,
+        "status": "operational"
+      },
+      "timestamp": "2025-08-21T02:01:33.651Z"
+    },
+    {
+      "name": "Batch translation operations",
+      "passed": true,
+      "message": "Successfully translated 5/5 texts",
+      "data": {
+        "successCount": 5,
+        "totalTexts": 5
+      },
+      "timestamp": "2025-08-21T02:01:33.651Z"
+    },
+    {
+      "name": "Unsupported language error",
+      "passed": false,
+      "message": "Should have thrown error",
+      "data": null,
+      "timestamp": "2025-08-21T02:01:33.651Z"
+    },
+    {
+      "name": "Empty text error",
+      "passed": false,
+      "message": "Should have thrown error",
+      "data": null,
+      "timestamp": "2025-08-21T02:01:33.651Z"
+    },
+    {
+      "name": "Invalid voice command error",
+      "passed": true,
+      "message": "Correctly handled invalid command",
+      "data": {
+        "errorType": "ApiError"
+      },
+      "timestamp": "2025-08-21T02:01:33.652Z"
+    }
+  ]
+}

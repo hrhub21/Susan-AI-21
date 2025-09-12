@@ -1,0 +1,499 @@
+# Susan AI Roof Damage Training Configuration
+# Comprehensive configuration for training advanced roof damage detection models
+# Designed for integration with Qwen 2.5 VL and Susan AI ecosystem
+
+# Dataset Configuration
+dataset:
+  # Primary roof damage dataset
+  primary:
+    name: "brendan12009/Roof_Training_Images_2"
+    huggingface_token: null  # Set via environment variable HUGGINGFACE_TOKEN
+    local_cache_dir: "./datasets/cache"
+    processed_data_dir: "./datasets/processed"
+    
+  # Sales training data integration
+  sales_training:
+    enabled: true
+    source_directories:
+      - "/Users/a21/Desktop/Sales Rep Resources"
+      - "/Users/a21/Desktop/Sales Reps"
+    main_presentation: "/Users/a21/Desktop/Roof-ER Sales Training.pptx"
+    processed_data_dir: "./sales_training_data/processed"
+    integration_weight: 0.3  # Weight for sales data in training
+    
+  # Multi-modal training configuration
+  multi_modal:
+    enabled: true
+    text_weight: 0.4  # Sales scripts and documentation
+    image_weight: 0.6  # Visual damage examples
+    combine_strategy: "late_fusion"  # Options: early_fusion, late_fusion, cross_attention
+  
+  # Data splits
+  splits:
+    train: 0.7
+    validation: 0.2
+    test: 0.1
+  
+  # Data validation
+  validation_split: 0.2
+  test_split: 0.1
+  random_seed: 42
+  stratified_split: true
+  
+  # Quality control
+  min_image_size: [200, 160]  # Reduced to be more inclusive of smaller roof images
+  max_file_size_mb: 50
+  allowed_formats: ["jpg", "jpeg", "png", "webp"]
+  corruption_check: true
+  duplicate_detection: true
+
+# Model Architecture Configuration
+model:
+  # Primary model architecture
+  architecture: "multi_task_roof_damage_with_sales"
+  backbone: "efficientnet_b4"  # Options: efficientnet_b3/4/5, resnet50/101, densenet121, timm models
+  pretrained: true
+  
+  # Sales-enhanced model components
+  sales_components:
+    enabled: true
+    conversation_encoder: "bert-base-uncased"  # For sales script analysis
+    customer_intent_classifier: true
+    objection_handler: true
+    explanation_generator: true
+  
+  # Model-specific parameters
+  num_damage_classes: 5  # no_damage, hail, wind, wear, impact
+  num_severity_classes: 4  # none, light, moderate, severe
+  num_feature_classes: 15  # Various damage features
+  dropout_rate: 0.2
+  
+  # Specialized detectors
+  specialized_models:
+    hail_detector:
+      enabled: true
+      backbone: "efficientnet_b4"
+      num_impact_sizes: 5
+      fpn_channels: 256
+    
+    wind_detector:
+      enabled: true
+      backbone: "resnet50"
+      direction_classes: 8
+      unet_decoder: true
+    
+    wear_detector:
+      enabled: true
+      backbone: "densenet121"
+      age_prediction: true
+      texture_analysis: true
+    
+    quantification_model:
+      enabled: true
+      backbone: "efficientnet_v2_s"
+      cost_estimation: true
+      measurement_precision: "high"
+
+# Training Configuration
+training:
+  # Basic training parameters
+  batch_size: 16  # Adjust based on GPU memory
+  num_epochs: 150
+  learning_rate: 1e-4
+  weight_decay: 1e-5
+  gradient_clipping: 1.0
+  
+  # Advanced training techniques
+  mixed_precision: true
+  gradient_accumulation_steps: 2
+  early_stopping_patience: 15
+  
+  # Learning rate scheduling
+  scheduler:
+    type: "cosine_with_warmup"  # Options: cosine, linear, exponential, plateau
+    warmup_epochs: 5
+    warmup_steps: 1000
+    min_lr: 1e-6
+    cosine_restarts: false
+  
+  # Optimizer settings
+  optimizer:
+    type: "adamw"  # Options: adam, adamw, sgd
+    beta1: 0.9
+    beta2: 0.999
+    eps: 1e-8
+    momentum: 0.9  # For SGD
+    nesterov: true  # For SGD
+  
+  # Loss function weights (multi-task learning)
+  loss_weights:
+    damage_classification: 1.0
+    severity_classification: 0.8
+    percentage_regression: 0.6
+    count_regression: 0.4
+    feature_detection: 0.5
+    confidence_estimation: 0.3
+    # Sales training components
+    sales_script_classification: 0.4
+    customer_intent_prediction: 0.3
+    objection_classification: 0.3
+    explanation_quality: 0.2
+  
+  # Class balancing
+  use_class_weights: true
+  focal_loss_alpha: 0.25
+  focal_loss_gamma: 2.0
+  
+  # Regularization
+  label_smoothing: 0.1
+  cutmix_probability: 0.3
+  mixup_alpha: 0.2
+
+# Data Processing Configuration
+data:
+  # Image preprocessing
+  image_size: [512, 512]  # Standard size for training
+  max_image_size: [1024, 1024]  # Maximum allowed size
+  resize_method: "lanczos"  # Options: bilinear, lanczos, nearest
+  
+  # Normalization (ImageNet standards)
+  normalize: true
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+  
+  # Data loading
+  num_workers: 8  # Adjust based on CPU cores
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 2
+  
+  # Caching
+  cache_images: false  # Set to true for faster training with sufficient RAM
+  memory_fraction: 0.8
+
+# Data Augmentation Configuration
+augmentation:
+  # Training augmentation probability
+  augmentation_probability: 0.8
+  
+  # Geometric augmentations
+  horizontal_flip: 0.5
+  vertical_flip: 0.2
+  rotation_range: 15  # degrees
+  scale_range: [0.8, 1.2]
+  translate_range: 0.1
+  shear_range: 5  # degrees
+  
+  # Color augmentations
+  brightness_range: 0.2
+  contrast_range: 0.2
+  saturation_range: 0.2
+  hue_range: 0.1
+  
+  # Advanced augmentations
+  gaussian_blur:
+    enabled: true
+    blur_limit: 3
+    probability: 0.2
+  
+  gaussian_noise:
+    enabled: true
+    var_limit: 0.01
+    probability: 0.2
+  
+  # Weather simulation augmentations
+  weather_effects:
+    enabled: true
+    rain_probability: 0.1
+    shadow_probability: 0.15
+    brightness_variation: 0.3
+  
+  # Cutout/Random erasing
+  cutout:
+    enabled: true
+    probability: 0.3
+    max_holes: 3
+    max_height_ratio: 0.2
+    max_width_ratio: 0.2
+
+# Model Validation and Testing
+validation:
+  # Validation frequency
+  validate_every_n_epochs: 1
+  
+  # Metrics to track
+  primary_metrics:
+    - "damage_accuracy"
+    - "severity_accuracy"
+    - "macro_f1_score"
+    - "percentage_mae"
+  
+  # Threshold optimization
+  optimize_thresholds: true
+  threshold_optimization_metric: "f1_score"
+  
+  # Test-time augmentation
+  tta:
+    enabled: true
+    num_augmentations: 5
+    techniques: ["horizontal_flip", "rotation", "brightness"]
+
+# Sales Training Integration
+sales_integration:
+  # Sales expertise enhancement
+  sales_expertise:
+    enabled: true
+    script_analysis: true
+    customer_pattern_recognition: true
+    objection_handling_training: true
+    pricing_knowledge_integration: true
+    
+  # Damage communication training
+  damage_communication:
+    enabled: true
+    terminology_standardization: true
+    customer_explanation_training: true
+    technical_to_layman_translation: true
+    confidence_communication: true
+    
+  # Process workflow integration
+  workflow_integration:
+    enabled: true
+    inspection_process_training: true
+    estimate_communication_training: true
+    claim_filing_assistance: true
+    follow_up_protocols: true
+    
+  # Training data enhancement
+  training_enhancement:
+    synthetic_conversation_generation: true
+    sales_scenario_simulation: true
+    customer_objection_datasets: true
+    real_world_case_studies: true
+
+# Susan AI Integration
+susan_integration:
+  # Integration with existing Susan AI services
+  qwen_vl_integration:
+    enabled: true
+    model_name: "Qwen2.5-VL-7B-Instruct"
+    fine_tune_layers: 12  # Number of layers to fine-tune
+    freeze_backbone: false
+    adapter_method: "lora"  # Options: lora, adapter, full
+    
+  # LoRA configuration for efficient fine-tuning
+  lora:
+    rank: 32
+    alpha: 64
+    dropout: 0.1
+    target_modules: ["query", "value", "key"]
+  
+  # Real roofing analysis service integration
+  roofing_service_integration:
+    enabled: true
+    enhanced_prompts: true
+    confidence_calibration: true
+    uncertainty_estimation: true
+  
+  # Memory and knowledge integration
+  vector_memory_integration:
+    enabled: true
+    embedding_dimension: 1024
+    similarity_threshold: 0.85
+  
+  # Training data augmentation from Susan's knowledge
+  knowledge_augmentation:
+    enabled: true
+    synthetic_sample_ratio: 0.1
+    prompt_based_generation: true
+    
+  # Sales training integration
+  sales_training_integration:
+    enabled: true
+    conversational_ai_training: true
+    customer_interaction_simulation: true
+    sales_knowledge_base_integration: true
+    multi_language_support: false  # Future enhancement
+    
+  # Enhanced communication capabilities
+  communication_enhancement:
+    damage_explanation_training: true
+    customer_education_protocols: true
+    technical_simplification: true
+    confidence_scoring_integration: true
+
+# Logging and Monitoring
+logging:
+  # Weights & Biases integration
+  use_wandb: true
+  wandb_project: "susan-ai-roof-damage"
+  wandb_entity: null  # Set to your W&B entity
+  
+  # Logging frequencies
+  log_interval: 10  # batches
+  save_interval: 5   # epochs
+  
+  # What to log
+  log_gradients: false
+  log_weights: false
+  log_activations: false
+  log_learning_rate: true
+  log_predictions: true
+  
+  # TensorBoard (alternative to W&B)
+  use_tensorboard: false
+  tensorboard_dir: "./logs/tensorboard"
+  
+  # Console logging
+  console_log_level: "INFO"
+  file_log_level: "DEBUG"
+  log_file: "./logs/training.log"
+
+# Model Checkpointing and Saving
+checkpointing:
+  # Save configuration
+  save_best_only: false
+  save_frequency: 5  # epochs
+  max_checkpoints_to_keep: 10
+  
+  # Checkpoint directory
+  checkpoint_dir: "./checkpoints"
+  
+  # What to save
+  save_optimizer_state: true
+  save_scheduler_state: true
+  save_training_metrics: true
+  
+  # Model export formats
+  export_formats: ["pytorch", "onnx", "torchscript"]
+  
+  # Final model optimization
+  optimize_for_inference: true
+  quantization: false  # Post-training quantization
+
+# Evaluation Configuration
+evaluation:
+  # Evaluation datasets
+  test_on_validation: true
+  test_on_holdout: true
+  
+  # Evaluation metrics
+  detailed_metrics:
+    - "confusion_matrix"
+    - "classification_report"
+    - "precision_recall_curve"
+    - "roc_curve"
+    - "damage_localization_accuracy"
+  
+  # Visualization
+  generate_visualizations: true
+  save_prediction_examples: true
+  num_visualization_samples: 50
+  
+  # Performance analysis
+  analyze_failure_cases: true
+  confidence_analysis: true
+  bias_analysis: true
+
+# Hardware and Performance
+hardware:
+  # GPU configuration
+  use_gpu: true
+  multi_gpu: false
+  gpu_memory_fraction: 0.9
+  
+  # CPU configuration
+  num_cpu_cores: null  # Auto-detect
+  
+  # Memory management
+  max_memory_usage: "16GB"
+  clear_cache_frequency: 100  # batches
+
+# Deployment Configuration
+deployment:
+  # Model serving
+  serving_format: "pytorch"
+  optimize_for_mobile: false
+  
+  # Susan AI service integration
+  integration_endpoint: "http://localhost:3031"
+  api_version: "v1"
+  
+  # Performance requirements
+  max_inference_time: 2.0  # seconds
+  target_accuracy: 0.92
+  min_confidence_threshold: 0.7
+
+# Experimental Features
+experimental:
+  # Advanced techniques
+  self_supervised_pretraining: false
+  contrastive_learning: false
+  meta_learning: false
+  
+  # Model architecture experiments
+  attention_mechanisms: true
+  transformer_blocks: false
+  neural_architecture_search: false
+  
+  # Training experiments
+  curriculum_learning: false
+  progressive_resizing: false
+  knowledge_distillation: false
+
+# Environment Configuration
+environment:
+  # Python environment
+  python_version: "3.9+"
+  torch_version: "2.0+"
+  cuda_version: "11.8+"
+  
+  # Environment variables
+  required_env_vars:
+    - "HUGGINGFACE_TOKEN"
+    - "WANDB_API_KEY"  # Optional
+  
+  # Dependencies
+  verify_dependencies: true
+  auto_install_missing: false
+
+# Quality Assurance
+quality_assurance:
+  # Code quality
+  type_checking: true
+  linting: true
+  
+  # Model quality
+  validate_model_architecture: true
+  check_gradient_flow: true
+  validate_loss_convergence: true
+  
+  # Data quality
+  validate_data_integrity: true
+  check_label_consistency: true
+  detect_data_leakage: false
+
+# Debugging and Development
+debug:
+  # Development mode
+  debug_mode: false
+  verbose_logging: false
+  
+  # Profiling
+  profile_training: false
+  profile_data_loading: false
+  
+  # Testing
+  run_unit_tests: true
+  validate_config: true
+  dry_run_training: false
+
+# Documentation
+documentation:
+  # Auto-generated documentation
+  generate_model_docs: true
+  generate_training_report: true
+  
+  # Export configuration
+  export_final_config: true
+  config_export_path: "./results/final_config.yaml"

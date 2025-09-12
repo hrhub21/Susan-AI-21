@@ -1,0 +1,63 @@
+{
+  "claim_submission": {
+    "subject": "Presentación de Reclamo por Daños al Techo - {{claimNumber}}",
+    "greeting": "Estimado {{adjusterName}},",
+    "body": "Me comunico para presentar un reclamo por daños al techo en la propiedad ubicada en {{propertyAddress}}. Los daños fueron causados por {{damageType}} que ocurrió el {{dateOfLoss}}.\n\nDetalles del reclamo:\n- Número de póliza: {{policyNumber}}\n- Fecha de pérdida: {{dateOfLoss}}\n- Tipo de daño: {{damageType}}\n- Extensión estimada del daño: {{damageExtent}}\n\nHe adjuntado las siguientes documentaciones:\n- Fotos de los daños\n- Informe de inspección inicial\n- Estimación preliminar de reparación\n\nQuedo a su disposición para coordinar la inspección y proporcionar cualquier información adicional que requiera.",
+    "closing": "Atentamente,\n{{contractorName}}\n{{companyName}}\n{{phoneNumber}}\n{{email}}",
+    "attachments_note": "Documentos adjuntos: {{attachmentCount}} archivos"
+  },
+  "inspection_request": {
+    "subject": "Solicitud de Inspección de Daños al Techo - {{propertyAddress}}",
+    "greeting": "Estimado {{adjusterName}},",
+    "body": "Espero que se encuentre bien. Me dirijo a usted para solicitar una inspección de los daños al techo en la propiedad ubicada en {{propertyAddress}}.\n\nInformación de la inspección solicitada:\n- Dirección: {{propertyAddress}}\n- Propietario: {{homeownerName}}\n- Número de reclamo: {{claimNumber}}\n- Tipo de daño reportado: {{damageType}}\n- Fecha preferida de inspección: {{preferredDate}}\n\nEl propietario estará disponible en los siguientes horarios:\n{{availabilitySchedule}}\n\nPor favor, confirme la fecha y hora de la inspección con la mayor brevedad posible.",
+    "closing": "Gracias por su atención.\n\n{{contractorName}}\n{{companyName}}\n{{phoneNumber}}"
+  },
+  "estimate_submission": {
+    "subject": "Estimación de Reparación del Techo - {{claimNumber}}",
+    "greeting": "Estimado {{adjusterName}},",
+    "body": "Adjunto encontrará la estimación detallada para la reparación del techo en {{propertyAddress}}.\n\nResumen de la estimación:\n- Costo total de materiales: ${{materialsCost}}\n- Costo de mano de obra: ${{laborCost}}\n- Gastos adicionales: ${{additionalCosts}}\n- TOTAL: ${{totalCost}}\n\nLa estimación incluye:\n{{scopeOfWork}}\n\nTodos los trabajos se realizarán de acuerdo con los códigos de construcción locales y las mejores prácticas de la industria. El tiempo estimado de finalización es de {{completionTime}}.",
+    "closing": "Quedo a la espera de su aprobación para proceder con los trabajos.\n\n{{contractorName}}\n{{companyName}}\n{{licenseNumber}}"
+  },
+  "progress_update": {
+    "subject": "Actualización del Progreso - Reparación del Techo {{claimNumber}}",
+    "greeting": "Estimado {{adjusterName}},",
+    "body": "Me complace informarle sobre el progreso de la reparación del techo en {{propertyAddress}}.\n\nEstado actual del proyecto:\n- Fecha de inicio: {{startDate}}\n- Progreso completado: {{progressPercentage}}%\n- Trabajos realizados: {{completedWork}}\n- Próximos pasos: {{nextSteps}}\n- Fecha estimada de finalización: {{estimatedCompletion}}\n\nEl proyecto se está desarrollando según lo programado. Todas las reparaciones cumplen con los estándares de calidad requeridos.",
+    "closing": "Continuaré manteniéndole informado sobre el progreso.\n\n{{contractorName}}\n{{companyName}}"
+  },
+  "completion_notice": {
+    "subject": "Reparación del Techo Completada - {{claimNumber}}",
+    "greeting": "Estimado {{adjusterName}},",
+    "body": "Me complace informarle que la reparación del techo en {{propertyAddress}} ha sido completada exitosamente.\n\nDetalles de finalización:\n- Fecha de finalización: {{completionDate}}\n- Trabajos realizados: {{workCompleted}}\n- Materiales utilizados: {{materialsUsed}}\n- Garantía ofrecida: {{warrantyPeriod}}\n\nTodos los trabajos han sido inspeccionados y cumplen con los códigos de construcción locales. El propietario ha expresado su satisfacción con la calidad del trabajo realizado.\n\nAdjunto encontrará:\n- Fotos del trabajo terminado\n- Facturas de materiales\n- Documentación de garantía",
+    "closing": "Gracias por su colaboración durante este proyecto.\n\n{{contractorName}}\n{{companyName}}\n{{phoneNumber}}"
+  },
+  "supplement_request": {
+    "subject": "Solicitud de Suplemento - Daños Adicionales Descubiertos {{claimNumber}}",
+    "greeting": "Estimado {{adjusterName}},",
+    "body": "Durante el proceso de reparación del techo en {{propertyAddress}}, hemos descubierto daños adicionales que no fueron evidentes durante la inspección inicial.\n\nDaños adicionales identificados:\n{{additionalDamages}}\n\nEstos daños requieren trabajo adicional:\n{{additionalWork}}\n\nCosto del suplemento:\n- Materiales adicionales: ${{additionalMaterials}}\n- Mano de obra adicional: ${{additionalLabor}}\n- TOTAL DEL SUPLEMENTO: ${{supplementTotal}}\n\nEsperamos su aprobación para proceder con estos trabajos adicionales necesarios.",
+    "closing": "Quedo a la espera de su respuesta.\n\n{{contractorName}}\n{{companyName}}"
+  },
+  "emergency_notice": {
+    "subject": "URGENTE: Daños Severos al Techo Requieren Atención Inmediata - {{propertyAddress}}",
+    "greeting": "Estimado {{adjusterName}},",
+    "body": "Me comunico urgentemente para informarle sobre daños severos al techo en {{propertyAddress}} que requieren atención inmediata para prevenir daños adicionales a la estructura.\n\nSituación de emergencia:\n- Tipo de daño: {{emergencyDamage}}\n- Riesgo inmediato: {{immediateRisk}}\n- Medidas temporales tomadas: {{temporaryMeasures}}\n\nSolicito autorización inmediata para:\n{{emergencyActions}}\n\nEl costo estimado de las medidas de emergencia es de ${{emergencyCost}}.\n\nEs crítico actuar dentro de las próximas {{timeframe}} horas para evitar daños mayores.",
+    "closing": "Por favor, confirme la autorización lo antes posible.\n\n{{contractorName}}\n{{companyName}}\n{{emergencyPhone}}"
+  },
+  "scheduling_coordination": {
+    "subject": "Coordinación de Horario - Inspección/Trabajo en {{propertyAddress}}",
+    "greeting": "Estimado {{adjusterName}},",
+    "body": "Me dirijo a usted para coordinar los horarios para {{activityType}} en {{propertyAddress}}.\n\nDisponibilidad propuesta:\n{{proposedSchedule}}\n\nFactores a considerar:\n- Condiciones climáticas: {{weatherConditions}}\n- Disponibilidad del propietario: {{homeownerAvailability}}\n- Tiempo estimado requerido: {{estimatedDuration}}\n\nPor favor, confirme su disponibilidad o sugiera horarios alternativos.",
+    "closing": "Agradezco su pronta respuesta.\n\n{{contractorName}}\n{{companyName}}"
+  },
+  "documentation_request": {
+    "subject": "Solicitud de Documentación Adicional - {{claimNumber}}",
+    "greeting": "Estimado {{adjusterName}},",
+    "body": "Para proceder con el procesamiento del reclamo {{claimNumber}}, necesitamos la siguiente documentación adicional:\n\n{{requestedDocuments}}\n\nEsta información es necesaria para:\n{{purposeOfDocuments}}\n\nUna vez que recibamos estos documentos, podremos continuar con el proceso según lo programado.",
+    "closing": "Gracias por su cooperación.\n\n{{contractorName}}\n{{companyName}}"
+  },
+  "quality_assurance": {
+    "subject": "Informe de Control de Calidad - {{claimNumber}}",
+    "greeting": "Estimado {{adjusterName}},",
+    "body": "Como parte de nuestro compromiso con la calidad, adjunto encontrará el informe de control de calidad para el trabajo realizado en {{propertyAddress}}.\n\nPuntos de inspección de calidad:\n{{qualityCheckpoints}}\n\nResultados de la inspección:\n{{inspectionResults}}\n\nTodos los trabajos han sido completados según los estándares de la industria y los códigos de construcción aplicables.",
+    "closing": "Quedamos a su disposición para cualquier consulta.\n\n{{contractorName}}\n{{companyName}}"
+  }
+}

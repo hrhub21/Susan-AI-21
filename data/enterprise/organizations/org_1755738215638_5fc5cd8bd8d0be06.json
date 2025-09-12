@@ -1,0 +1,49 @@
+{
+  "id": "org_1755738215638_5fc5cd8bd8d0be06",
+  "name": "Test Insurance Company 1755738215638",
+  "type": "insurance_company",
+  "domain": "test-insurance-1755738215638.com",
+  "settings": {
+    "timezone": "UTC",
+    "businessHours": {
+      "start": "09:00",
+      "end": "17:00",
+      "days": [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday"
+      ]
+    },
+    "notifications": {
+      "email": true,
+      "sms": false,
+      "push": true
+    },
+    "features": [
+      "claims_processing",
+      "customer_management",
+      "analytics",
+      "compliance"
+    ],
+    "theme": "corporate"
+  },
+  "hierarchy": [
+    "admin",
+    "manager",
+    "adjuster",
+    "inspector"
+  ],
+  "metadata": {
+    "createdAt": "2025-08-21T01:03:35.639Z",
+    "lastUpdated": "2025-08-21T01:03:35.639Z"
+  },
+  "status": "active",
+  "stats": {
+    "totalUsers": 2,
+    "totalTeams": 0,
+    "activeUsers": 2,
+    "lastActivity": null
+  }
+}

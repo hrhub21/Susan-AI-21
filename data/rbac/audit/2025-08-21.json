@@ -1,0 +1,270 @@
+[
+  {
+    "id": "audit_1755738173954_28b21ac311b2",
+    "eventType": "access_attempt",
+    "userId": "user_1755738173954_6fd537e5af32738c",
+    "result": "denied",
+    "details": {
+      "permission": "claims:view_all",
+      "reason": "insufficient_permissions",
+      "context": {
+        "ipAddress": "127.0.0.1",
+        "userAgent": "test-agent"
+      }
+    },
+    "timestamp": "2025-08-21T01:02:53.954Z",
+    "source": "rbac_service"
+  },
+  {
+    "id": "audit_1755738173954_74150e26e067",
+    "eventType": "access_attempt",
+    "userId": "user_1755738173954_6fd537e5af32738c",
+    "result": "denied",
+    "details": {
+      "permission": "users:delete",
+      "reason": "insufficient_permissions",
+      "context": {
+        "ipAddress": "127.0.0.1",
+        "userAgent": "test-agent"
+      }
+    },
+    "timestamp": "2025-08-21T01:02:53.954Z",
+    "source": "rbac_service"
+  },
+  {
+    "id": "audit_1755738173955_f7f6080aee80",
+    "eventType": "access_attempt",
+    "userId": "user_1755738173954_6fd537e5af32738c",
+    "result": "denied",
+    "details": {
+      "permission": "claims:view_own",
+      "reason": "insufficient_permissions",
+      "context": {
+        "tenantId": "test-tenant"
+      }
+    },
+    "timestamp": "2025-08-21T01:02:53.955Z",
+    "source": "rbac_service"
+  },
+  {
+    "id": "audit_1755738173955_3e5f6a56dcfd",
+    "eventType": "feature_access",
+    "userId": "user_1755738173954_6fd537e5af32738c",
+    "result": "denied",
+    "details": {
+      "featureId": "basic_claims",
+      "reason": "insufficient_permissions",
+      "context": {
+        "tenantId": "test-tenant"
+      }
+    },
+    "timestamp": "2025-08-21T01:02:53.956Z",
+    "source": "rbac_service"
+  },
+  {
+    "id": "audit_1755738173956_abb564438c31",
+    "eventType": "access_attempt",
+    "userId": "user_1755738173954_6fd537e5af32738c",
+    "result": "denied",
+    "details": {
+      "permission": "users:*",
+      "reason": "insufficient_permissions",
+      "context": {
+        "tenantId": "test-tenant"
+      }
+    },
+    "timestamp": "2025-08-21T01:02:53.956Z",
+    "source": "rbac_service"
+  },
+  {
+    "id": "audit_1755738173956_7202bb24f744",
+    "eventType": "feature_access",
+    "userId": "user_1755738173954_6fd537e5af32738c",
+    "result": "denied",
+    "details": {
+      "featureId": "system_administration",
+      "reason": "insufficient_permissions",
+      "context": {
+        "tenantId": "test-tenant"
+      }
+    },
+    "timestamp": "2025-08-21T01:02:53.956Z",
+    "source": "rbac_service"
+  },
+  {
+    "id": "audit_1755738173956_03eced98313e",
+    "eventType": "data_access",
+    "userId": "user_1755738173954_6fd537e5af32738c",
+    "result": "applied",
+    "details": {
+      "policyId": "team_data",
+      "query": {
+        "claimId": "12345",
+        "status": "open",
+        "teamId": {
+          "$in": [
+            "team_1",
+            "team_2"
+          ]
+        },
+        "assignedTeam": {
+          "$in": [
+            "team_1",
+            "team_2"
+          ]
+        }
+      },
+      "context": {
+        "organizationId": "org_1755738173950_9669ace9f97b7840"
+      }
+    },
+    "timestamp": "2025-08-21T01:02:53.957Z",
+    "source": "rbac_service"
+  },
+  {
+    "id": "audit_1755738173957_5b927b1c1122",
+    "eventType": "test_event",
+    "userId": "user_1755738173954_6fd537e5af32738c",
+    "result": "success",
+    "details": {
+      "testDescription": "Enterprise system validation test",
+      "timestamp": "2025-08-21T01:02:53.957Z"
+    },
+    "timestamp": "2025-08-21T01:02:53.957Z",
+    "source": "rbac_service"
+  },
+  {
+    "id": "audit_1755738215644_18df8310402f",
+    "eventType": "access_attempt",
+    "userId": "user_1755738215643_6c965dbdd727ae0a",
+    "result": "granted",
+    "details": {
+      "permission": "claims:view_all",
+      "reason": "exact",
+      "context": {
+        "ipAddress": "127.0.0.1",
+        "userAgent": "test-agent"
+      }
+    },
+    "timestamp": "2025-08-21T01:03:35.644Z",
+    "source": "rbac_service"
+  },
+  {
+    "id": "audit_1755738215644_dc8d32fbfa19",
+    "eventType": "access_attempt",
+    "userId": "user_1755738215643_6c965dbdd727ae0a",
+    "result": "denied",
+    "details": {
+      "permission": "users:delete",
+      "reason": "insufficient_permissions",
+      "context": {
+        "ipAddress": "127.0.0.1",
+        "userAgent": "test-agent"
+      }
+    },
+    "timestamp": "2025-08-21T01:03:35.644Z",
+    "source": "rbac_service"
+  },
+  {
+    "id": "audit_1755738215645_ebb894d01cf4",
+    "eventType": "access_attempt",
+    "userId": "user_1755738215643_6c965dbdd727ae0a",
+    "result": "denied",
+    "details": {
+      "permission": "claims:view_own",
+      "reason": "insufficient_permissions",
+      "context": {
+        "tenantId": "test-tenant"
+      }
+    },
+    "timestamp": "2025-08-21T01:03:35.645Z",
+    "source": "rbac_service"
+  },
+  {
+    "id": "audit_1755738215645_fc99d9e20193",
+    "eventType": "feature_access",
+    "userId": "user_1755738215643_6c965dbdd727ae0a",
+    "result": "denied",
+    "details": {
+      "featureId": "basic_claims",
+      "reason": "insufficient_permissions",
+      "context": {
+        "tenantId": "test-tenant"
+      }
+    },
+    "timestamp": "2025-08-21T01:03:35.645Z",
+    "source": "rbac_service"
+  },
+  {
+    "id": "audit_1755738215645_9655097ab4d4",
+    "eventType": "access_attempt",
+    "userId": "user_1755738215643_6c965dbdd727ae0a",
+    "result": "denied",
+    "details": {
+      "permission": "users:*",
+      "reason": "insufficient_permissions",
+      "context": {
+        "tenantId": "test-tenant"
+      }
+    },
+    "timestamp": "2025-08-21T01:03:35.645Z",
+    "source": "rbac_service"
+  },
+  {
+    "id": "audit_1755738215645_27a70b080d89",
+    "eventType": "feature_access",
+    "userId": "user_1755738215643_6c965dbdd727ae0a",
+    "result": "denied",
+    "details": {
+      "featureId": "system_administration",
+      "reason": "insufficient_permissions",
+      "context": {
+        "tenantId": "test-tenant"
+      }
+    },
+    "timestamp": "2025-08-21T01:03:35.645Z",
+    "source": "rbac_service"
+  },
+  {
+    "id": "audit_1755738215646_c6b518fa9a4f",
+    "eventType": "data_access",
+    "userId": "user_1755738215643_6c965dbdd727ae0a",
+    "result": "applied",
+    "details": {
+      "policyId": "team_data",
+      "query": {
+        "claimId": "12345",
+        "status": "open",
+        "teamId": {
+          "$in": [
+            "team_1",
+            "team_2"
+          ]
+        },
+        "assignedTeam": {
+          "$in": [
+            "team_1",
+            "team_2"
+          ]
+        }
+      },
+      "context": {
+        "organizationId": "org_1755738215638_5fc5cd8bd8d0be06"
+      }
+    },
+    "timestamp": "2025-08-21T01:03:35.646Z",
+    "source": "rbac_service"
+  },
+  {
+    "id": "audit_1755738215646_36d173a34b1f",
+    "eventType": "test_event",
+    "userId": "user_1755738215643_6c965dbdd727ae0a",
+    "result": "success",
+    "details": {
+      "testDescription": "Enterprise system validation test",
+      "timestamp": "2025-08-21T01:03:35.646Z"
+    },
+    "timestamp": "2025-08-21T01:03:35.646Z",
+    "source": "rbac_service"
+  }
+]

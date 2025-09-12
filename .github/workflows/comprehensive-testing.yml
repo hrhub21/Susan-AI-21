@@ -1,0 +1,614 @@
+name: Comprehensive Testing Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    # Run full test suite daily at 2 AM UTC
+    - cron: '0 2 * * *'
+
+env:
+  NODE_VERSION: '18.x'
+  CACHE_VERSION: v1
+
+jobs:
+  # Job 1: Code Quality and Static Analysis
+  code-quality:
+    name: Code Quality & Static Analysis
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+    
+    - name: Install Dependencies
+      run: npm ci
+    
+    - name: Run ESLint
+      run: npm run lint || true
+    
+    - name: Run Prettier Check
+      run: npm run format:check || true
+    
+    - name: Run JSDoc Validation
+      run: npm run docs:validate || true
+    
+    - name: Dependency Security Audit
+      run: npm audit --audit-level moderate
+    
+    - name: Check for Outdated Dependencies
+      run: npm outdated || true
+
+  # Job 2: Unit Tests with Coverage
+  unit-tests:
+    name: Unit Tests & Coverage
+    runs-on: ubuntu-latest
+    needs: code-quality
+    
+    strategy:
+      matrix:
+        node-version: ['16.x', '18.x', '20.x']
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    
+    - name: Install Dependencies
+      run: npm ci
+    
+    - name: Run Unit Tests
+      run: npm run test:unit -- --coverage
+      env:
+        NODE_ENV: test
+        MOCK_EXTERNAL_SERVICES: true
+    
+    - name: Upload Coverage to Codecov
+      if: matrix.node-version == '18.x'
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage/lcov.info
+        flags: unit
+        name: unit-tests
+    
+    - name: Store Coverage Artifacts
+      if: matrix.node-version == '18.x'
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-unit
+        path: coverage/
+
+  # Job 3: Integration Tests
+  integration-tests:
+    name: Integration Tests
+    runs-on: ubuntu-latest
+    needs: unit-tests
+    
+    services:
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+    
+    - name: Install Dependencies
+      run: npm ci
+    
+    - name: Setup Test Environment
+      run: |
+        cp .env.example .env.test
+        echo "REDIS_URL=redis://localhost:6379" >> .env.test
+        echo "NODE_ENV=test" >> .env.test
+    
+    - name: Run Integration Tests
+      run: npm run test:integration
+      env:
+        NODE_ENV: test
+        REDIS_URL: redis://localhost:6379
+    
+    - name: Upload Integration Test Results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: integration-test-results
+        path: tests/integration/results/
+
+  # Job 4: API Tests
+  api-tests:
+    name: API Endpoint Tests
+    runs-on: ubuntu-latest
+    needs: unit-tests
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+    
+    - name: Install Dependencies
+      run: npm ci
+    
+    - name: Start API Server
+      run: |
+        npm run start:api &
+        sleep 10
+      env:
+        NODE_ENV: test
+        PORT: 3001
+    
+    - name: Wait for API Health Check
+      run: |
+        timeout 60s bash -c 'until curl -f http://localhost:3001/api/v1/health; do sleep 2; done'
+    
+    - name: Run API Tests
+      run: npm run test:api
+      env:
+        API_BASE_URL: http://localhost:3001
+    
+    - name: Upload API Test Results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: api-test-results
+        path: tests/api/results/
+
+  # Job 5: End-to-End Tests
+  e2e-tests:
+    name: End-to-End Tests
+    runs-on: ubuntu-latest
+    needs: [unit-tests, integration-tests]
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+    
+    - name: Install Dependencies
+      run: npm ci
+    
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+    
+    - name: Start Application
+      run: |
+        npm run build
+        npm start &
+        sleep 15
+      env:
+        NODE_ENV: test
+        PORT: 3000
+    
+    - name: Run End-to-End Tests
+      run: npm run test:e2e
+      env:
+        BASE_URL: http://localhost:3000
+    
+    - name: Upload E2E Test Screenshots
+      uses: actions/upload-artifact@v3
+      if: failure()
+      with:
+        name: e2e-screenshots
+        path: tests/e2e/screenshots/
+    
+    - name: Upload E2E Test Videos
+      uses: actions/upload-artifact@v3
+      if: failure()
+      with:
+        name: e2e-videos
+        path: tests/e2e/videos/
+
+  # Job 6: Performance Tests
+  performance-tests:
+    name: Performance & Load Tests
+    runs-on: ubuntu-latest
+    needs: [api-tests]
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+    
+    - name: Install Dependencies
+      run: npm ci
+    
+    - name: Start API Server for Load Testing
+      run: |
+        npm run start:api &
+        sleep 10
+      env:
+        NODE_ENV: test
+        PORT: 3001
+    
+    - name: Run Performance Tests
+      run: npm run test:performance
+      env:
+        TARGET_URL: http://localhost:3001
+    
+    - name: Run Load Tests
+      run: npm run test:load
+      timeout-minutes: 15
+    
+    - name: Generate Performance Report
+      run: npm run performance:report
+    
+    - name: Upload Performance Results
+      uses: actions/upload-artifact@v3
+      with:
+        name: performance-results
+        path: tests/performance/reports/
+    
+    - name: Performance Regression Check
+      run: npm run performance:compare
+      continue-on-error: true
+
+  # Job 7: Security Tests
+  security-tests:
+    name: Security & Vulnerability Tests
+    runs-on: ubuntu-latest
+    needs: unit-tests
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+    
+    - name: Install Dependencies
+      run: npm ci
+    
+    - name: Run Security Tests
+      run: npm run test:security
+      env:
+        NODE_ENV: test
+    
+    - name: Run OWASP ZAP Security Scan
+      uses: zaproxy/action-full-scan@v0.7.0
+      if: github.event_name == 'schedule'
+      with:
+        target: 'http://localhost:3001'
+        cmd_options: '-a'
+    
+    - name: Run Snyk Security Scan
+      uses: snyk/actions/node@master
+      continue-on-error: true
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+    
+    - name: Upload Security Test Results
+      uses: actions/upload-artifact@v3
+      with:
+        name: security-results
+        path: tests/security/results/
+
+  # Job 8: Voice Processing Tests
+  voice-tests:
+    name: Voice Processing Tests
+    runs-on: ubuntu-latest
+    needs: unit-tests
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+    
+    - name: Install Dependencies
+      run: npm ci
+    
+    - name: Install Audio Processing Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ffmpeg sox
+    
+    - name: Generate Test Audio Files
+      run: npm run test:voice:setup
+    
+    - name: Run Voice Processing Tests
+      run: npm run test:voice
+      env:
+        NODE_ENV: test
+        SKIP_REAL_AUDIO_TESTS: true
+    
+    - name: Upload Voice Test Results
+      uses: actions/upload-artifact@v3
+      with:
+        name: voice-test-results
+        path: tests/voice/results/
+
+  # Job 9: WebSocket Tests
+  websocket-tests:
+    name: WebSocket & Real-time Tests
+    runs-on: ubuntu-latest
+    needs: unit-tests
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+    
+    - name: Install Dependencies
+      run: npm ci
+    
+    - name: Start WebSocket Server
+      run: |
+        npm run start:websocket &
+        sleep 5
+      env:
+        NODE_ENV: test
+        WS_PORT: 3002
+    
+    - name: Run WebSocket Tests
+      run: npm run test:websocket
+      env:
+        WS_URL: ws://localhost:3002
+    
+    - name: Upload WebSocket Test Results
+      uses: actions/upload-artifact@v3
+      with:
+        name: websocket-test-results
+        path: tests/websocket/results/
+
+  # Job 10: Cross-browser Testing
+  cross-browser-tests:
+    name: Cross-browser Compatibility
+    runs-on: ubuntu-latest
+    needs: e2e-tests
+    if: github.event_name == 'schedule' || github.event_name == 'push'
+    
+    strategy:
+      matrix:
+        browser: [chromium, firefox, webkit]
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+    
+    - name: Install Dependencies
+      run: npm ci
+    
+    - name: Install Playwright Browser - ${{ matrix.browser }}
+      run: npx playwright install ${{ matrix.browser }} --with-deps
+    
+    - name: Start Application
+      run: |
+        npm start &
+        sleep 15
+      env:
+        NODE_ENV: test
+        PORT: 3000
+    
+    - name: Run Tests on ${{ matrix.browser }}
+      run: npm run test:e2e -- --project=${{ matrix.browser }}
+      env:
+        BASE_URL: http://localhost:3000
+    
+    - name: Upload Browser Test Results
+      uses: actions/upload-artifact@v3
+      if: failure()
+      with:
+        name: ${{ matrix.browser }}-test-results
+        path: tests/e2e/results/${{ matrix.browser }}/
+
+  # Job 11: Test Results Consolidation
+  consolidate-results:
+    name: Consolidate Test Results
+    runs-on: ubuntu-latest
+    needs: [unit-tests, integration-tests, api-tests, e2e-tests, performance-tests, security-tests, voice-tests, websocket-tests]
+    if: always()
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    
+    - name: Download All Test Artifacts
+      uses: actions/download-artifact@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+    
+    - name: Install Dependencies
+      run: npm ci
+    
+    - name: Generate Comprehensive Test Report
+      run: npm run test:report:comprehensive
+    
+    - name: Upload Comprehensive Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: comprehensive-test-report
+        path: reports/comprehensive/
+    
+    - name: Publish Test Results
+      uses: dorny/test-reporter@v1
+      if: success() || failure()
+      with:
+        name: Susan AI Test Results
+        path: 'reports/comprehensive/junit-results.xml'
+        reporter: java-junit
+    
+    - name: Comment Test Results on PR
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          const reportPath = 'reports/comprehensive/summary.md';
+          if (fs.existsSync(reportPath)) {
+            const report = fs.readFileSync(reportPath, 'utf8');
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## Test Results Summary\n\n${report}`
+            });
+          }
+
+  # Job 12: Deployment Readiness Check
+  deployment-readiness:
+    name: Deployment Readiness Check
+    runs-on: ubuntu-latest
+    needs: consolidate-results
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    
+    - name: Download Test Reports
+      uses: actions/download-artifact@v3
+      with:
+        name: comprehensive-test-report
+        path: reports/
+    
+    - name: Check Deployment Criteria
+      run: |
+        echo "Checking deployment readiness criteria..."
+        
+        # Check test coverage
+        COVERAGE=$(cat reports/coverage-summary.json | jq '.total.lines.pct')
+        if (( $(echo "$COVERAGE < 80" | bc -l) )); then
+          echo "❌ Coverage below 80%: $COVERAGE%"
+          exit 1
+        fi
+        echo "✅ Coverage: $COVERAGE%"
+        
+        # Check for security vulnerabilities
+        if [ -f "reports/security-issues.json" ]; then
+          HIGH_VULN=$(cat reports/security-issues.json | jq '.high')
+          if [ "$HIGH_VULN" != "0" ]; then
+            echo "❌ High security vulnerabilities found: $HIGH_VULN"
+            exit 1
+          fi
+        fi
+        echo "✅ No high security vulnerabilities"
+        
+        # Check performance benchmarks
+        if [ -f "reports/performance-metrics.json" ]; then
+          P95_RESPONSE=$(cat reports/performance-metrics.json | jq '.p95ResponseTime')
+          if (( $(echo "$P95_RESPONSE > 2000" | bc -l) )); then
+            echo "❌ P95 response time too high: ${P95_RESPONSE}ms"
+            exit 1
+          fi
+        fi
+        echo "✅ Performance benchmarks passed"
+        
+        echo "🚀 All deployment criteria met!"
+    
+    - name: Create Deployment Tag
+      if: success()
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git tag -a "deploy-$(date +'%Y%m%d-%H%M%S')" -m "Deployment ready: $(date)"
+        git push origin --tags
+
+  # Job 13: Nightly Full System Test
+  nightly-full-test:
+    name: Nightly Full System Test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+    
+    - name: Install Dependencies
+      run: npm ci
+    
+    - name: Run Full Test Suite
+      run: npm run test:full
+      timeout-minutes: 60
+      env:
+        NODE_ENV: test
+        FULL_SYSTEM_TEST: true
+        REAL_API_TESTS: true
+    
+    - name: Generate Nightly Report
+      run: npm run test:report:nightly
+    
+    - name: Upload Nightly Results
+      uses: actions/upload-artifact@v3
+      with:
+        name: nightly-test-results
+        path: reports/nightly/
+    
+    - name: Send Slack Notification
+      if: always()
+      uses: 8398a7/action-slack@v3
+      with:
+        status: ${{ job.status }}
+        channel: '#susan-ai-alerts'
+        text: 'Nightly test suite completed with status: ${{ job.status }}'
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

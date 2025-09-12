@@ -1,0 +1,518 @@
+{"timestamp":"2025-08-22T00:16:23.565Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T00:16:23.567Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T00:16:23.567Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T00:33:33.361Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T00:33:33.362Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T00:33:33.362Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T00:49:52.153Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T00:49:52.155Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T00:49:52.155Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T01:14:54.389Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T01:14:54.390Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T01:14:54.391Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T01:30:38.123Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T01:30:38.124Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T01:30:38.125Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T01:48:05.951Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T01:48:05.953Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T01:48:05.953Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T02:07:21.199Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T02:07:21.199Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T02:07:21.200Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T02:47:59.390Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T02:47:59.391Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T02:47:59.392Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T03:01:05.203Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T03:01:05.204Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T03:01:05.205Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T03:15:20.703Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T03:15:20.704Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T03:15:20.709Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T03:32:53.330Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T03:32:53.331Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T03:32:53.331Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T03:37:53.303Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T03:37:53.306Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T03:37:53.307Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T03:42:53.304Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T03:42:53.306Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T03:42:53.307Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T03:47:53.300Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T03:47:53.300Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T03:47:53.301Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T03:52:53.296Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T03:52:53.297Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T03:52:53.298Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T03:57:54.751Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T03:57:54.752Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T03:57:54.753Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T04:02:54.764Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T04:02:54.765Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T04:02:54.765Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T04:07:54.765Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T04:07:54.767Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T04:07:54.768Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T04:12:54.765Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T04:12:54.806Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T04:12:54.806Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T04:17:54.766Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T04:17:54.769Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T04:17:54.770Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T04:22:54.769Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T04:22:54.779Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T04:22:54.780Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T04:37:26.887Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T04:37:26.891Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T04:37:26.892Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T05:10:32.234Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T05:10:32.236Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T05:10:32.236Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T05:27:47.912Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T05:27:47.914Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T05:27:47.915Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T05:43:46.717Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T05:43:46.718Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T05:43:46.719Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T06:01:48.552Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T06:01:48.554Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T06:01:48.555Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T06:19:47.384Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T06:19:47.386Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T06:19:47.387Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T06:36:47.172Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T06:36:47.174Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T06:36:47.174Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T07:15:10.798Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T07:15:10.799Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T07:15:10.800Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T08:13:17.184Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T08:13:17.185Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T08:13:17.186Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T08:30:18.919Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T08:30:18.920Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T08:30:18.921Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T08:41:25.724Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T08:41:25.726Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T08:41:25.726Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T08:57:43.108Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T08:57:43.109Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T08:57:43.110Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T09:13:42.868Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T09:13:42.870Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T09:13:42.871Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T09:36:38.991Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T09:36:38.992Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T09:36:38.993Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T09:58:28.143Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T09:58:28.146Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T09:58:28.147Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T10:15:41.936Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T10:15:41.937Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T10:15:41.937Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T10:36:58.688Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T10:36:58.689Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T10:36:58.690Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T10:59:53.584Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T10:59:53.585Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T10:59:53.586Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T11:16:43.369Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T11:16:43.372Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T11:16:43.373Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T11:33:54.153Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T11:33:54.155Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T11:33:54.155Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T11:56:28.027Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T11:56:28.028Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T11:56:28.028Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T12:06:38.086Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T12:06:38.087Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T12:06:38.088Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T12:19:35.167Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T12:19:35.167Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T12:19:35.168Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T12:26:47.273Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T12:26:47.275Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T12:26:47.275Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T12:39:22.992Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T12:39:22.993Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T12:39:22.993Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T12:45:45.965Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T12:45:45.967Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T12:45:45.967Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T13:05:40.431Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T13:05:40.433Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T13:05:40.434Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T13:22:41.355Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T13:22:41.357Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T13:22:41.357Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T13:39:09.842Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T13:39:09.843Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T13:39:09.844Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T13:46:23.712Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T13:46:23.714Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T13:46:23.714Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T13:52:27.091Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T13:52:27.094Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T13:52:27.094Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T13:57:27.106Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T13:57:27.108Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T13:57:27.109Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:02:27.106Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T14:02:27.108Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T14:02:27.108Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:07:27.107Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T14:07:27.108Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T14:07:27.108Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:12:27.108Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T14:12:27.111Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T14:12:27.112Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:17:27.109Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T14:17:27.109Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T14:17:27.110Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:22:27.111Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T14:22:27.111Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T14:22:27.112Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:27:27.114Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T14:27:27.114Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T14:27:27.115Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:32:27.114Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T14:32:27.116Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T14:32:27.117Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:37:27.115Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T14:37:27.116Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T14:37:27.116Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:42:27.117Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T14:42:27.118Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T14:42:27.119Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:47:27.121Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T14:47:27.124Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T14:47:27.124Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:50:04.497Z","level":"INFO","message":"AnythingLLM Service initialized","baseUrl":"http://localhost:3001","workspace":"roofer21","autoSync":true}
+{"timestamp":"2025-08-22T14:50:04.499Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T14:50:04.504Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspaces"}
+{"timestamp":"2025-08-22T14:50:04.506Z","level":"INFO","message":"Loaded existing vector memory","entriesLoaded":0}
+{"timestamp":"2025-08-22T14:50:06.492Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T14:50:06.492Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:50:06.492Z","level":"ERROR","message":"Failed to initialize workspace","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:50:06.494Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspaces"}
+{"timestamp":"2025-08-22T14:50:06.494Z","level":"ERROR","message":"AnythingLLM connection failed","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:51:28.008Z","level":"INFO","message":"AnythingLLM Service initialized","baseUrl":"http://localhost:3001","workspace":"roofer21","autoSync":true}
+{"timestamp":"2025-08-22T14:51:28.012Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T14:51:28.016Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspaces"}
+{"timestamp":"2025-08-22T14:51:28.018Z","level":"INFO","message":"Loaded existing vector memory","entriesLoaded":0}
+{"timestamp":"2025-08-22T14:51:28.046Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T14:51:28.047Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:51:28.047Z","level":"ERROR","message":"Failed to initialize workspace","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:51:28.047Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspaces"}
+{"timestamp":"2025-08-22T14:51:28.047Z","level":"ERROR","message":"AnythingLLM connection failed","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:53:01.386Z","level":"INFO","message":"AnythingLLM Service initialized","baseUrl":"http://localhost:3001","workspace":"roofer21","autoSync":true}
+{"timestamp":"2025-08-22T14:53:01.388Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T14:53:01.392Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspaces"}
+{"timestamp":"2025-08-22T14:53:01.393Z","level":"INFO","message":"Loaded existing vector memory","entriesLoaded":0}
+{"timestamp":"2025-08-22T14:53:01.414Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T14:53:01.415Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:53:01.415Z","level":"ERROR","message":"Failed to initialize workspace","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T14:53:01.416Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspaces"}
+{"timestamp":"2025-08-22T14:53:01.416Z","level":"ERROR","message":"AnythingLLM connection failed","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T15:28:27.895Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T15:28:27.999Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T15:28:27.999Z","level":"ERROR","message":"Failed to retrieve context","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T15:28:28.000Z","level":"WARN","message":"Returning empty context due to retrieval failure"}
+{"timestamp":"2025-08-22T15:28:29.958Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T15:28:29.985Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T15:28:29.985Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T15:28:29.985Z","level":"ERROR","message":"Failed to store document","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T15:28:29.985Z","level":"ERROR","message":"Failed to store conversation","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T15:40:21.491Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T15:40:21.525Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T15:40:21.526Z","level":"ERROR","message":"Failed to retrieve context","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T15:40:21.526Z","level":"WARN","message":"Returning empty context due to retrieval failure"}
+{"timestamp":"2025-08-22T15:40:23.387Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T15:40:23.426Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T15:40:23.427Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T15:40:23.427Z","level":"ERROR","message":"Failed to store document","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T15:40:23.427Z","level":"ERROR","message":"Failed to store conversation","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:28.838Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T16:21:28.888Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T16:21:28.889Z","level":"ERROR","message":"Failed to retrieve context","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:28.889Z","level":"WARN","message":"Returning empty context due to retrieval failure"}
+{"timestamp":"2025-08-22T16:21:32.759Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T16:21:32.767Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T16:21:32.791Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T16:21:32.791Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:32.791Z","level":"ERROR","message":"Failed to store document","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:32.792Z","level":"ERROR","message":"Failed to store conversation","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:32.794Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T16:21:32.794Z","level":"ERROR","message":"Failed to retrieve context","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:32.794Z","level":"WARN","message":"Returning empty context due to retrieval failure"}
+{"timestamp":"2025-08-22T16:21:37.948Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T16:21:37.957Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T16:21:37.991Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T16:21:37.991Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:37.991Z","level":"ERROR","message":"Failed to store document","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:37.991Z","level":"ERROR","message":"Failed to store conversation","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:37.992Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T16:21:37.992Z","level":"ERROR","message":"Failed to retrieve context","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:37.992Z","level":"WARN","message":"Returning empty context due to retrieval failure"}
+{"timestamp":"2025-08-22T16:21:42.902Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T16:21:42.910Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T16:21:42.938Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T16:21:42.938Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:42.938Z","level":"ERROR","message":"Failed to store document","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:42.939Z","level":"ERROR","message":"Failed to store conversation","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:42.943Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T16:21:42.943Z","level":"ERROR","message":"Failed to retrieve context","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:42.944Z","level":"WARN","message":"Returning empty context due to retrieval failure"}
+{"timestamp":"2025-08-22T16:21:46.708Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T16:21:46.723Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T16:21:46.723Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:46.723Z","level":"ERROR","message":"Failed to store document","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T16:21:46.723Z","level":"ERROR","message":"Failed to store conversation","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:30:05.045Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T19:30:05.147Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T19:30:05.147Z","level":"ERROR","message":"Failed to retrieve context","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:30:05.147Z","level":"WARN","message":"Returning empty context due to retrieval failure"}
+{"timestamp":"2025-08-22T19:30:10.751Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T19:30:10.780Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T19:30:10.781Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:30:10.781Z","level":"ERROR","message":"Failed to store document","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:30:10.781Z","level":"ERROR","message":"Failed to store conversation","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:36:38.109Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T19:36:38.139Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T19:36:38.139Z","level":"ERROR","message":"Failed to retrieve context","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:36:38.139Z","level":"WARN","message":"Returning empty context due to retrieval failure"}
+{"timestamp":"2025-08-22T19:36:42.197Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T19:36:42.217Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T19:36:42.218Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:36:42.218Z","level":"ERROR","message":"Failed to store document","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:36:42.218Z","level":"ERROR","message":"Failed to store conversation","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:53:16.387Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T19:53:16.500Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T19:53:16.501Z","level":"ERROR","message":"Failed to retrieve context","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:53:16.501Z","level":"WARN","message":"Returning empty context due to retrieval failure"}
+{"timestamp":"2025-08-22T19:53:25.184Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T19:53:25.188Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T19:53:25.209Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T19:53:25.210Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:53:25.210Z","level":"ERROR","message":"Failed to store document","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:53:25.210Z","level":"ERROR","message":"Failed to store conversation","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:53:25.211Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T19:53:25.211Z","level":"ERROR","message":"Failed to retrieve context","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:53:25.211Z","level":"WARN","message":"Returning empty context due to retrieval failure"}
+{"timestamp":"2025-08-22T19:53:29.969Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T19:53:29.974Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T19:53:30.009Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T19:53:30.009Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:53:30.010Z","level":"ERROR","message":"Failed to store document","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:53:30.010Z","level":"ERROR","message":"Failed to store conversation","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:53:30.011Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T19:53:30.012Z","level":"ERROR","message":"Failed to retrieve context","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:53:30.012Z","level":"WARN","message":"Returning empty context due to retrieval failure"}
+{"timestamp":"2025-08-22T19:53:35.135Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T19:53:35.159Z","level":"ERROR","message":"Request failed with status code 404","status":404,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T19:53:35.160Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":404,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:53:35.160Z","level":"ERROR","message":"Failed to store document","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T19:53:35.160Z","level":"ERROR","message":"Failed to store conversation","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T21:15:40.707Z","level":"INFO","message":"Company context setup completed","departments":8,"terminology":9,"escalationContacts":4}
+{"timestamp":"2025-08-22T21:15:40.709Z","level":"INFO","message":"Webhook handlers setup completed"}
+{"timestamp":"2025-08-22T21:15:40.709Z","level":"INFO","message":"Sync schedules started"}
+{"timestamp":"2025-08-22T21:15:40.709Z","level":"INFO","message":"Knowledge processing services initialized successfully"}
+{"timestamp":"2025-08-22T21:15:41.256Z","level":"INFO","message":"🔧 Initializing Real Roofing Damage Analysis AI..."}
+{"timestamp":"2025-08-22T21:15:41.314Z","level":"INFO","message":"🎬 Initializing Video Generation Service..."}
+{"timestamp":"2025-08-22T21:15:41.314Z","level":"INFO","message":"📋 Loaded 4 video templates"}
+{"timestamp":"2025-08-22T21:15:41.320Z","level":"INFO","message":"🎥 FFmpeg initialized successfully"}
+{"timestamp":"2025-08-22T21:15:41.349Z","level":"INFO","message":"🔤 Fonts registered for video generation"}
+{"timestamp":"2025-08-22T21:15:41.350Z","level":"INFO","message":"✅ Video Generation Service initialized successfully"}
+{"timestamp":"2025-08-22T21:36:08.137Z","level":"WARN","message":"No AI providers configured. Set OPENAI_API_KEY or ANTHROPIC_API_KEY environment variables."}
+{"timestamp":"2025-08-22T21:36:08.152Z","level":"WARN","message":"No AI providers configured. Set OPENAI_API_KEY or ANTHROPIC_API_KEY environment variables."}
+{"timestamp":"2025-08-22T21:36:08.152Z","level":"WARN","message":"OpenAI API key not found. Voice features will be limited."}
+{"timestamp":"2025-08-22T21:36:08.152Z","level":"WARN","message":"No AI providers configured. Set OPENAI_API_KEY or ANTHROPIC_API_KEY environment variables."}
+{"timestamp":"2025-08-22T21:36:08.198Z","level":"WARN","message":"No AI providers configured for knowledge processing"}
+{"timestamp":"2025-08-22T21:36:08.199Z","level":"INFO","message":"Company context setup completed","departments":8,"terminology":9,"escalationContacts":4}
+{"timestamp":"2025-08-22T21:36:08.200Z","level":"INFO","message":"Webhook handlers setup completed"}
+{"timestamp":"2025-08-22T21:36:08.200Z","level":"INFO","message":"Sync schedules started"}
+{"timestamp":"2025-08-22T21:36:08.200Z","level":"INFO","message":"Knowledge processing services initialized successfully"}
+{"timestamp":"2025-08-22T21:37:18.403Z","level":"INFO","message":"Company context setup completed","departments":8,"terminology":9,"escalationContacts":4}
+{"timestamp":"2025-08-22T21:37:18.405Z","level":"INFO","message":"Webhook handlers setup completed"}
+{"timestamp":"2025-08-22T21:37:18.405Z","level":"INFO","message":"Sync schedules started"}
+{"timestamp":"2025-08-22T21:37:18.405Z","level":"INFO","message":"Knowledge processing services initialized successfully"}
+{"timestamp":"2025-08-22T21:37:18.604Z","level":"INFO","message":"🔧 Initializing Real Roofing Damage Analysis AI..."}
+{"timestamp":"2025-08-22T21:37:18.668Z","level":"INFO","message":"🎬 Initializing Video Generation Service..."}
+{"timestamp":"2025-08-22T21:37:18.668Z","level":"INFO","message":"📋 Loaded 4 video templates"}
+{"timestamp":"2025-08-22T21:37:18.674Z","level":"INFO","message":"🎥 FFmpeg initialized successfully"}
+{"timestamp":"2025-08-22T21:37:18.702Z","level":"INFO","message":"🔤 Fonts registered for video generation"}
+{"timestamp":"2025-08-22T21:37:18.704Z","level":"INFO","message":"✅ Video Generation Service initialized successfully"}
+{"timestamp":"2025-08-22T21:37:54.867Z","level":"INFO","message":"Company context setup completed","departments":8,"terminology":9,"escalationContacts":4}
+{"timestamp":"2025-08-22T21:37:54.868Z","level":"INFO","message":"Webhook handlers setup completed"}
+{"timestamp":"2025-08-22T21:37:54.868Z","level":"INFO","message":"Sync schedules started"}
+{"timestamp":"2025-08-22T21:37:54.868Z","level":"INFO","message":"Knowledge processing services initialized successfully"}
+{"timestamp":"2025-08-22T21:37:55.007Z","level":"INFO","message":"🔧 Initializing Real Roofing Damage Analysis AI..."}
+{"timestamp":"2025-08-22T21:37:55.038Z","level":"INFO","message":"🎬 Initializing Video Generation Service..."}
+{"timestamp":"2025-08-22T21:37:55.038Z","level":"INFO","message":"📋 Loaded 4 video templates"}
+{"timestamp":"2025-08-22T21:37:55.043Z","level":"INFO","message":"AnythingLLM Service initialized","baseUrl":"http://localhost:3001","workspace":"roofer21","autoSync":false}
+{"timestamp":"2025-08-22T21:37:55.043Z","level":"INFO","message":"AnythingLLM API services initialized successfully"}
+{"timestamp":"2025-08-22T21:37:55.045Z","level":"INFO","message":"🎥 FFmpeg initialized successfully"}
+{"timestamp":"2025-08-22T21:37:55.045Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T21:37:55.074Z","level":"INFO","message":"🔤 Fonts registered for video generation"}
+{"timestamp":"2025-08-22T21:37:55.080Z","level":"INFO","message":"✅ Video Generation Service initialized successfully"}
+{"timestamp":"2025-08-22T21:37:55.093Z","level":"INFO","message":"AnythingLLM Service initialized","baseUrl":"http://localhost:3001","workspace":"roofer21","autoSync":true}
+{"timestamp":"2025-08-22T21:37:55.094Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T21:37:55.100Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspaces"}
+{"timestamp":"2025-08-22T21:37:55.118Z","level":"INFO","message":"Existing knowledge loaded","documentsLoaded":0,"topicClusters":0,"terminology":9}
+{"timestamp":"2025-08-22T21:37:55.119Z","level":"INFO","message":"Loaded existing vector memory","entriesLoaded":0}
+{"timestamp":"2025-08-22T21:37:55.119Z","level":"ERROR","message":"Failed to initialize training modules","error":"ENOENT: no such file or directory, open '/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/data/training/modules/roofing_inspection_basic_inspection_techniques.json'"}
+{"timestamp":"2025-08-22T21:39:26.279Z","level":"INFO","message":"Company context setup completed","departments":8,"terminology":9,"escalationContacts":4}
+{"timestamp":"2025-08-22T21:39:26.281Z","level":"INFO","message":"Webhook handlers setup completed"}
+{"timestamp":"2025-08-22T21:39:26.281Z","level":"INFO","message":"Sync schedules started"}
+{"timestamp":"2025-08-22T21:39:26.281Z","level":"INFO","message":"Knowledge processing services initialized successfully"}
+{"timestamp":"2025-08-22T21:39:26.424Z","level":"INFO","message":"🔧 Initializing Real Roofing Damage Analysis AI..."}
+{"timestamp":"2025-08-22T21:39:26.453Z","level":"INFO","message":"🎬 Initializing Video Generation Service..."}
+{"timestamp":"2025-08-22T21:39:26.453Z","level":"INFO","message":"📋 Loaded 4 video templates"}
+{"timestamp":"2025-08-22T21:39:26.459Z","level":"INFO","message":"AnythingLLM Service initialized","baseUrl":"http://localhost:3001","workspace":"roofer21","autoSync":false}
+{"timestamp":"2025-08-22T21:39:26.459Z","level":"INFO","message":"AnythingLLM API services initialized successfully"}
+{"timestamp":"2025-08-22T21:39:26.460Z","level":"INFO","message":"🎥 FFmpeg initialized successfully"}
+{"timestamp":"2025-08-22T21:39:26.460Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T21:39:26.491Z","level":"INFO","message":"🔤 Fonts registered for video generation"}
+{"timestamp":"2025-08-22T21:39:26.494Z","level":"INFO","message":"✅ Video Generation Service initialized successfully"}
+{"timestamp":"2025-08-22T21:39:26.507Z","level":"INFO","message":"AnythingLLM Service initialized","baseUrl":"http://localhost:3001","workspace":"roofer21","autoSync":true}
+{"timestamp":"2025-08-22T21:39:26.509Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T21:39:26.515Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspaces"}
+{"timestamp":"2025-08-22T21:39:26.533Z","level":"INFO","message":"Existing knowledge loaded","documentsLoaded":0,"topicClusters":0,"terminology":9}
+{"timestamp":"2025-08-22T21:39:26.533Z","level":"INFO","message":"Loaded existing vector memory","entriesLoaded":0}
+{"timestamp":"2025-08-22T21:39:26.535Z","level":"INFO","message":"Loaded existing RBAC data","roles":0,"permissions":0}
+{"timestamp":"2025-08-22T21:39:26.535Z","level":"INFO","message":"Loaded existing RBAC data","roles":0,"permissions":0}
+{"timestamp":"2025-08-22T21:39:26.536Z","level":"INFO","message":"Loaded existing RBAC data","roles":0,"permissions":0}
+{"timestamp":"2025-08-22T21:39:26.536Z","level":"INFO","message":"Plugin system initialized","pluginsLoaded":0,"sandboxDirectory":"/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/sandboxes"}
+{"timestamp":"2025-08-22T21:39:26.540Z","level":"INFO","message":"Spanish language pack initialized successfully"}
+{"timestamp":"2025-08-22T21:39:26.541Z","level":"INFO","message":"Quality monitoring started"}
+{"timestamp":"2025-08-22T21:39:26.541Z","level":"INFO","message":"Employee profiles loaded","profilesLoaded":0}
+{"timestamp":"2025-08-22T21:39:26.541Z","level":"INFO","message":"Historical quality data loaded"}
+{"timestamp":"2025-08-22T21:39:26.542Z","level":"WARN","message":"Google Translate API key not configured. Translation features will use fallback methods."}
+{"timestamp":"2025-08-22T21:39:26.542Z","level":"INFO","message":"Loading language data for: es"}
+{"timestamp":"2025-08-22T21:39:26.542Z","level":"INFO","message":"MultiLanguageService initialized successfully"}
+{"timestamp":"2025-08-22T21:39:26.634Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/workspaces"}
+{"timestamp":"2025-08-22T21:39:26.634Z","level":"INFO","message":"AnythingLLM connection successful","workspaceCount":3}
+{"timestamp":"2025-08-22T21:39:26.634Z","level":"INFO","message":"Auto sync started","interval":300000}
+{"timestamp":"2025-08-22T21:39:26.635Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T21:39:26.635Z","level":"INFO","message":"Workspace 'roofer21' initialized"}
+{"timestamp":"2025-08-22T21:39:26.635Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-22T21:39:26.635Z","level":"INFO","message":"Workspace 'roofer21' initialized"}
+{"timestamp":"2025-08-22T21:39:26.636Z","level":"INFO","message":"Voice commands initialized for multiple languages"}
+{"timestamp":"2025-08-22T21:39:26.695Z","level":"INFO","message":"Cultural adaptations initialized"}
+{"timestamp":"2025-08-22T21:39:26.696Z","level":"INFO","message":"Integration services initialized successfully"}
+{"timestamp":"2025-08-22T21:39:26.771Z","level":"INFO","message":"Loaded existing enterprise data","organizations":3,"teams":0,"users":5}
+{"timestamp":"2025-08-22T21:39:27.352Z","level":"INFO","message":"Training modules initialized successfully","categoriesCount":6,"totalModules":48}
+{"timestamp":"2025-08-22T21:39:28.635Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:39:28.637Z","level":"INFO","message":"🔗 Claude AI connection verified for roofing analysis"}
+{"timestamp":"2025-08-22T21:39:28.637Z","level":"INFO","message":"✅ Real Roofing Damage Analysis AI initialized successfully"}
+{"timestamp":"2025-08-22T21:39:50.427Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:39:50.428Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"9cb8a4f3-b28a-495c-8666-1587a2ae2e9d","workspace":"roofer21","contentLength":391}
+{"timestamp":"2025-08-22T21:39:50.430Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:40:02.297Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:40:02.297Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"896bcb73-3d55-4a85-bdf1-fe72fc08dca2","workspace":"roofer21","contentLength":64}
+{"timestamp":"2025-08-22T21:40:02.298Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:40:16.375Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:40:16.376Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"64b88a74-e641-47bc-a266-60da9ae6bcc7","workspace":"roofer21","contentLength":293}
+{"timestamp":"2025-08-22T21:40:16.377Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:40:29.838Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:40:29.839Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"fa4c1c2e-50ae-44a7-9a47-1c5cea197674","workspace":"roofer21","contentLength":169}
+{"timestamp":"2025-08-22T21:40:29.840Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:40:43.865Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:40:43.865Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"23d34381-84b1-4dbc-bdbb-953e4bc9fa0e","workspace":"roofer21","contentLength":548}
+{"timestamp":"2025-08-22T21:40:43.866Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:40:56.140Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:40:56.140Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"b3cff716-eaa6-481a-b003-fc3ecf0dbb69","workspace":"roofer21","contentLength":169}
+{"timestamp":"2025-08-22T21:40:56.141Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:41:09.129Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:41:09.130Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"cbf7566c-ff39-4acc-a3d8-9302802aa5b8","workspace":"roofer21","contentLength":294}
+{"timestamp":"2025-08-22T21:41:09.131Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:41:22.007Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:41:22.007Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"7b404643-f060-426e-b825-595960648c2b","workspace":"roofer21","contentLength":302}
+{"timestamp":"2025-08-22T21:41:22.010Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:41:34.617Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:41:34.617Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"9e4e8f60-c01e-44bb-a319-165cf2cce3b6","workspace":"roofer21","contentLength":220}
+{"timestamp":"2025-08-22T21:41:34.618Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:41:48.390Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:41:48.390Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"c7ad3348-e518-4cc7-bdd1-c38159accab5","workspace":"roofer21","contentLength":544}
+{"timestamp":"2025-08-22T21:41:48.391Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:42:02.394Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:42:02.395Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"93c91afb-4444-45ee-b757-f282a7565a9a","workspace":"roofer21","contentLength":578}
+{"timestamp":"2025-08-22T21:42:02.396Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:42:14.806Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:42:14.807Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"548e45ce-591d-42cb-8cb8-0b63e93a1868","workspace":"roofer21","contentLength":212}
+{"timestamp":"2025-08-22T21:42:14.808Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:42:33.946Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:42:33.946Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"900fd842-2f8f-4610-94a1-f78c6e2842a6","workspace":"roofer21","contentLength":1349}
+{"timestamp":"2025-08-22T21:42:33.947Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:42:58.722Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:42:58.722Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"eb4a7459-e8bd-4da1-b142-ff6e77bc9aea","workspace":"roofer21","contentLength":2157}
+{"timestamp":"2025-08-22T21:42:58.723Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:43:12.421Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:43:12.422Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"b654f69c-9395-4ef6-82aa-cd77765d8ec2","workspace":"roofer21","contentLength":219}
+{"timestamp":"2025-08-22T21:43:12.422Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:43:26.037Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:43:26.037Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"73c45d29-99d8-4d25-8958-ba51c67cd0a7","workspace":"roofer21","contentLength":211}
+{"timestamp":"2025-08-22T21:43:26.038Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:43:40.591Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:43:40.592Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"f618f8f8-7643-4b75-8b5e-8e3b6e204a86","workspace":"roofer21","contentLength":363}
+{"timestamp":"2025-08-22T21:43:40.593Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:43:59.006Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:43:59.007Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"3607d0d7-bd7a-4656-b36b-29d99a254e3f","workspace":"roofer21","contentLength":996}
+{"timestamp":"2025-08-22T21:43:59.007Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:44:16.923Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:44:16.924Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"297e8850-fa6f-4c2d-a0c5-75ca361a4e43","workspace":"roofer21","contentLength":954}
+{"timestamp":"2025-08-22T21:44:16.924Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:44:26.651Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T21:44:26.653Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T21:44:26.653Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T21:44:34.901Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:44:34.901Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"44679ee0-66d7-4218-af07-bc4824f8f3db","workspace":"roofer21","contentLength":827}
+{"timestamp":"2025-08-22T21:44:34.901Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:44:54.487Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:44:54.487Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"d9671c54-5fbb-46cb-85b8-6002ceafe3f0","workspace":"roofer21","contentLength":961}
+{"timestamp":"2025-08-22T21:44:54.488Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:45:13.449Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:45:13.449Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"e63a0077-23a8-4068-ad01-24b4a0a83834","workspace":"roofer21","contentLength":904}
+{"timestamp":"2025-08-22T21:45:13.449Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:45:33.263Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:45:33.264Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"be703367-6ee1-4a70-a18d-068c0359ff3e","workspace":"roofer21","contentLength":1100}
+{"timestamp":"2025-08-22T21:45:33.264Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:45:52.791Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:45:52.792Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"2dba6f1c-fcbb-4cc0-b3ae-edf45ad25d15","workspace":"roofer21","contentLength":1205}
+{"timestamp":"2025-08-22T21:45:52.792Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:46:13.514Z","level":"DEBUG","message":"AnythingLLM Response","status":200,"url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:46:13.515Z","level":"INFO","message":"Document stored in AnythingLLM","documentId":"6b5a3cf2-049c-43d6-8b53-3b4cb07b26d3","workspace":"roofer21","contentLength":1333}
+{"timestamp":"2025-08-22T21:49:26.654Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T21:49:26.655Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T21:49:26.656Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T21:53:15.052Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:53:15.053Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:53:45.058Z","level":"ERROR","message":"timeout of 30000ms exceeded","url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:53:45.060Z","level":"ERROR","message":"Failed to retrieve context","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T21:53:45.060Z","level":"WARN","message":"Returning empty context due to retrieval failure"}
+{"timestamp":"2025-08-22T21:53:45.084Z","level":"ERROR","message":"timeout of 30000ms exceeded","url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:53:45.084Z","level":"ERROR","message":"Failed to retrieve context","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T21:53:45.084Z","level":"WARN","message":"Returning empty context due to retrieval failure"}
+{"timestamp":"2025-08-22T21:53:50.951Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:53:53.982Z","level":"DEBUG","message":"AnythingLLM Request","method":"POST","url":"/api/v1/workspace/roofer21/chat","data":"[DATA]"}
+{"timestamp":"2025-08-22T21:54:20.953Z","level":"ERROR","message":"timeout of 30000ms exceeded","url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:54:20.955Z","level":"ERROR","message":"Failed to store document","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T21:54:20.955Z","level":"ERROR","message":"Failed to store conversation","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T21:54:23.984Z","level":"ERROR","message":"timeout of 30000ms exceeded","url":"/api/v1/workspace/roofer21/chat"}
+{"timestamp":"2025-08-22T21:54:23.985Z","level":"ERROR","message":"Failed to store document","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T21:54:23.986Z","level":"ERROR","message":"Failed to store conversation","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T21:54:26.657Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T21:54:26.657Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T21:54:26.657Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T21:59:26.691Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T21:59:26.692Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T21:59:26.692Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T22:09:35.379Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T22:09:35.500Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T22:09:35.501Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T22:29:06.387Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T22:29:06.502Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T22:29:06.502Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-22T22:44:59.379Z","level":"INFO","message":"Starting memory sync with AnythingLLM"}
+{"timestamp":"2025-08-22T22:44:59.498Z","level":"ERROR","message":"Failed to sync memory"}
+{"timestamp":"2025-08-22T22:44:59.498Z","level":"ERROR","message":"Auto sync failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}

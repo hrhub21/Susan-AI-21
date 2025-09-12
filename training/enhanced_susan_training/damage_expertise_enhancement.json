@@ -1,0 +1,59 @@
+{
+  "visual_damage_descriptions": {
+    "How to do a Repair Attempt [EXAMPLE].docx": {
+      "description": "This image shows storm damage to roofing materials",
+      "damage_type": "storm",
+      "severity": "moderate",
+      "repair_needed": true
+    },
+    "Sample Photo Report 4.pdf": {
+      "description": "This image shows roof damage requiring professional assessment",
+      "damage_type": "damage",
+      "severity": "moderate",
+      "repair_needed": true
+    },
+    "Sample Photo Report 3.pdf": {
+      "description": "This image shows roof damage requiring professional assessment",
+      "damage_type": "damage",
+      "severity": "moderate",
+      "repair_needed": true
+    },
+    "Sample Photo Report 2.pdf": {
+      "description": "This image shows roof damage requiring professional assessment",
+      "damage_type": "damage",
+      "severity": "moderate",
+      "repair_needed": true
+    },
+    "Sample Photo Report 1.pdf": {
+      "description": "This image shows roof damage requiring professional assessment",
+      "damage_type": "damage",
+      "severity": "moderate",
+      "repair_needed": true
+    }
+  },
+  "damage_severity_mapping": {},
+  "repair_recommendations": {
+    "roof": [
+      "Full roof replacement recommended based on damage assessment",
+      "Full roof replacement recommended based on damage assessment",
+      "Full roof replacement recommended based on damage assessment",
+      "Full roof replacement recommended based on damage assessment",
+      "Full roof replacement recommended based on damage assessment"
+    ],
+    "shingle": [
+      "Full roof replacement recommended based on damage assessment",
+      "Full roof replacement recommended based on damage assessment",
+      "Full roof replacement recommended based on damage assessment"
+    ],
+    "wind": [
+      "Replace missing shingles and inspect for additional wind damage",
+      "Replace missing shingles and inspect for additional wind damage"
+    ],
+    "hail": [
+      "Full roof replacement recommended for extensive hail damage",
+      "Full roof replacement recommended for extensive hail damage"
+    ]
+  },
+  "cost_estimation_guidance": {},
+  "insurance_claim_support": {}
+}

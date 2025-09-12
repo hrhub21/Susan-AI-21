@@ -1,0 +1,870 @@
+[
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      980,
+      654
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": -2148223009926184446,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_-2148223009926184446.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "no_damage",
+      "severity": "none",
+      "confidence": 0.9,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      1311,
+      874
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": -1438443073287608108,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_-1438443073287608108.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      1024,
+      768
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": -3266411850787070563,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_-3266411850787070563.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      1200,
+      628
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": -9080819931298543616,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_-9080819931298543616.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      1800,
+      1013
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": -543500325348322292,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_-543500325348322292.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "no_damage",
+      "severity": "none",
+      "confidence": 0.9,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      580,
+      743
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": -2935210655086507692,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_-2935210655086507692.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      1080,
+      675
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 3389202370732588302,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_3389202370732588302.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "no_damage",
+      "severity": "none",
+      "confidence": 0.9,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      1024,
+      683
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 2257477662755923342,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_2257477662755923342.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "no_damage",
+      "severity": "none",
+      "confidence": 0.9,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      1200,
+      628
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 7939008224527303948,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_7939008224527303948.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "no_damage",
+      "severity": "none",
+      "confidence": 0.9,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      275,
+      183
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 8686444173296568793,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_8686444173296568793.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "no_damage",
+      "severity": "none",
+      "confidence": 0.9,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      1024,
+      1024
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": -3679665258171198939,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_-3679665258171198939.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      1500,
+      844
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": -7031934366197071866,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_-7031934366197071866.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "no_damage",
+      "severity": "none",
+      "confidence": 0.9,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      840,
+      630
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": -2498792999424196377,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_-2498792999424196377.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      225,
+      225
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 8398720267522034587,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_8398720267522034587.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "no_damage",
+      "severity": "none",
+      "confidence": 0.9,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      1080,
+      1440
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 6964271127007852543,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_6964271127007852543.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      225,
+      225
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 6071758339387383036,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_6071758339387383036.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "no_damage",
+      "severity": "none",
+      "confidence": 0.9,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      310,
+      163
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 6012572654649797481,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_6012572654649797481.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "no_damage",
+      "severity": "none",
+      "confidence": 0.9,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      375,
+      500
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": -3597428045735811221,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_-3597428045735811221.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      312,
+      162
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 580084668533587384,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_580084668533587384.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      1510,
+      1079
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": -8472396052501306573,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_-8472396052501306573.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      780,
+      536
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 4262336153626833605,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_4262336153626833605.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      800,
+      533
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 3686273094846763530,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_3686273094846763530.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "no_damage",
+      "severity": "none",
+      "confidence": 0.9,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      500,
+      375
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 6882277916164520741,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_6882277916164520741.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      1440,
+      1000
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 1293148022210070563,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_1293148022210070563.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      1024,
+      1024
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": -3172082116579201155,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_-3172082116579201155.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "no_damage",
+      "severity": "none",
+      "confidence": 0.9,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      275,
+      183
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 8967789371826723241,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_8967789371826723241.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "no_damage",
+      "severity": "none",
+      "confidence": 0.9,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      610,
+      610
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 4514980829643060859,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_4514980829643060859.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      1209,
+      720
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": -5589109536163701353,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_-5589109536163701353.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "no_damage",
+      "severity": "none",
+      "confidence": 0.9,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      600,
+      400
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 6040571455638844089,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_6040571455638844089.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      275,
+      183
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": 7483042375340226297,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_7483042375340226297.npy"
+  },
+  {
+    "labels": {
+      "primary_damage": "hail",
+      "severity": "moderate",
+      "confidence": 0.7,
+      "damage_features": [],
+      "quantification": {
+        "affected_percentage": 0.0,
+        "damage_count": 0,
+        "repair_priority": "low"
+      },
+      "metadata": {
+        "weather_related": false,
+        "age_related": false,
+        "impact_related": false
+      }
+    },
+    "original_size": [
+      290,
+      174
+    ],
+    "preprocessed_size": [
+      512,
+      512
+    ],
+    "sample_id": -305283571273554976,
+    "image_file": "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/datasets/processed/train_-305283571273554976.npy"
+  }
+]

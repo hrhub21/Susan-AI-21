@@ -1,0 +1,19 @@
+{
+  "hola susan": "voice_activation",
+  "oye susan": "voice_activation",
+  "susan": "voice_activation",
+  "iniciar inspección": "start_inspection",
+  "crear informe": "create_report",
+  "programar cita": "schedule_appointment",
+  "verificar estado del reclamo": "check_claim_status",
+  "subir fotos": "upload_photos",
+  "generar presupuesto": "generate_estimate",
+  "llamar ajustador": "call_adjuster",
+  "revisar documentos": "review_documents",
+  "guardar progreso": "save_progress",
+  "ir al panel": "navigate_dashboard",
+  "ayúdame": "show_help",
+  "qué puedes hacer": "show_capabilities",
+  "adiós": "end_session",
+  "gracias": "acknowledge"
+}

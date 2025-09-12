@@ -1,0 +1,83 @@
+2025-08-23 23:36:44,717 - SusanV2Pipeline - INFO - Starting Susan AI v2.0 Complete Training Pipeline
+2025-08-23 23:36:44,717 - SusanV2Pipeline - INFO - ============================================================
+2025-08-23 23:36:44,717 - SusanV2Pipeline - INFO - PHASE 1: Vision Pre-training - Advanced roof damage detection
+2025-08-23 23:36:44,717 - SusanV2Pipeline - INFO - ============================================================
+2025-08-23 23:36:44,717 - SusanV2Pipeline - INFO - Starting Phase 1: Vision Pre-training...
+2025-08-23 23:36:44,717 - SusanV2Pipeline - INFO - Loading HuggingFace roof damage dataset...
+2025-08-23 23:36:49,147 - SusanV2Pipeline - INFO - Loaded 323 samples from HuggingFace dataset
+2025-08-23 23:36:51,652 - SusanV2Pipeline - ERROR - Phase 1 failed: 'Sequential' object has no attribute 'in_features'
+Traceback (most recent call last):
+  File "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/susan_ai_v2_complete_training_pipeline.py", line 438, in phase1_vision_pretraining
+    self.model = MultiModalSusanV2(self.config).to(self.config.device)
+  File "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/susan_ai_v2_complete_training_pipeline.py", line 188, in __init__
+    vision_features = self.vision_backbone.classifier.in_features
+  File "/Users/a21/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1962, in __getattr__
+    raise AttributeError(
+AttributeError: 'Sequential' object has no attribute 'in_features'
+
+2025-08-23 23:36:51,676 - SusanV2Pipeline - INFO - ============================================================
+2025-08-23 23:36:51,676 - SusanV2Pipeline - INFO - PHASE 2: Language Adaptation - Sales training integration
+2025-08-23 23:36:51,676 - SusanV2Pipeline - INFO - ============================================================
+2025-08-23 23:36:51,676 - SusanV2Pipeline - INFO - Starting Phase 2: Language Adaptation...
+2025-08-23 23:36:51,676 - SusanV2Pipeline - INFO - Loading sales training data...
+2025-08-23 23:36:51,677 - SusanV2Pipeline - ERROR - Error loading sales training data: 'str' object has no attribute 'get'
+2025-08-23 23:36:51,678 - SusanV2Pipeline - ERROR - Phase 2 failed: No sales training data available
+Traceback (most recent call last):
+  File "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/susan_ai_v2_complete_training_pipeline.py", line 613, in phase2_language_adaptation
+    raise ValueError("No sales training data available")
+ValueError: No sales training data available
+
+2025-08-23 23:36:51,678 - SusanV2Pipeline - INFO - ============================================================
+2025-08-23 23:36:51,678 - SusanV2Pipeline - INFO - PHASE 3: Multi-modal Fusion - Combined vision + language system
+2025-08-23 23:36:51,678 - SusanV2Pipeline - INFO - ============================================================
+2025-08-23 23:36:51,678 - SusanV2Pipeline - INFO - Starting Phase 3: Multi-modal Fusion...
+2025-08-23 23:36:51,678 - SusanV2Pipeline - INFO - Loading HuggingFace roof damage dataset...
+2025-08-23 23:36:54,949 - SusanV2Pipeline - INFO - Loaded 323 samples from HuggingFace dataset
+2025-08-23 23:36:54,950 - SusanV2Pipeline - INFO - Loading sales training data...
+2025-08-23 23:36:54,950 - SusanV2Pipeline - ERROR - Error loading sales training data: 'str' object has no attribute 'get'
+2025-08-23 23:36:55,279 - SusanV2Pipeline - ERROR - Phase 3 failed: 'Sequential' object has no attribute 'in_features'
+Traceback (most recent call last):
+  File "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/susan_ai_v2_complete_training_pipeline.py", line 866, in phase3_multimodal_fusion
+    self.model = MultiModalSusanV2(self.config).to(self.config.device)
+  File "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/susan_ai_v2_complete_training_pipeline.py", line 188, in __init__
+    vision_features = self.vision_backbone.classifier.in_features
+  File "/Users/a21/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1962, in __getattr__
+    raise AttributeError(
+AttributeError: 'Sequential' object has no attribute 'in_features'
+
+2025-08-23 23:36:55,305 - SusanV2Pipeline - INFO - ============================================================
+2025-08-23 23:36:55,305 - SusanV2Pipeline - INFO - PHASE 4: Customer Fine-tuning - Production optimization
+2025-08-23 23:36:55,305 - SusanV2Pipeline - INFO - ============================================================
+2025-08-23 23:36:55,305 - SusanV2Pipeline - INFO - Starting Phase 4: Customer Fine-tuning...
+2025-08-23 23:36:55,305 - SusanV2Pipeline - INFO - Loading sales training data...
+2025-08-23 23:36:55,305 - SusanV2Pipeline - ERROR - Error loading sales training data: 'str' object has no attribute 'get'
+2025-08-23 23:36:55,306 - SusanV2Pipeline - INFO - Loading HuggingFace roof damage dataset...
+2025-08-23 23:36:58,503 - SusanV2Pipeline - INFO - Loaded 323 samples from HuggingFace dataset
+2025-08-23 23:36:58,890 - SusanV2Pipeline - ERROR - Phase 4 failed: 'Sequential' object has no attribute 'in_features'
+Traceback (most recent call last):
+  File "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/susan_ai_v2_complete_training_pipeline.py", line 1099, in phase4_customer_finetuning
+    self.model = MultiModalSusanV2(self.config).to(self.config.device)
+  File "/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/susan_ai_v2_complete_training_pipeline.py", line 188, in __init__
+    vision_features = self.vision_backbone.classifier.in_features
+  File "/Users/a21/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1962, in __getattr__
+    raise AttributeError(
+AttributeError: 'Sequential' object has no attribute 'in_features'
+
+2025-08-23 23:36:58,917 - SusanV2Pipeline - INFO - ============================================================
+2025-08-23 23:36:58,917 - SusanV2Pipeline - INFO - Creating Final Deployment Package
+2025-08-23 23:36:58,917 - SusanV2Pipeline - INFO - ============================================================
+2025-08-23 23:36:58,917 - SusanV2Pipeline - INFO - Creating final deployment package...
+2025-08-23 23:36:58,917 - SusanV2Pipeline - ERROR - Failed to create deployment package: No trained model found
+2025-08-23 23:36:58,917 - SusanV2Pipeline - INFO - ============================================================
+2025-08-23 23:36:58,917 - SusanV2Pipeline - INFO - Final Performance Validation
+2025-08-23 23:36:58,917 - SusanV2Pipeline - INFO - ============================================================
+2025-08-23 23:36:58,917 - SusanV2Pipeline - INFO - Validating final model performance...
+2025-08-23 23:36:58,917 - SusanV2Pipeline - ERROR - Performance validation failed: Final model not found
+2025-08-23 23:36:58,918 - SusanV2Pipeline - INFO - ============================================================
+2025-08-23 23:36:58,918 - SusanV2Pipeline - INFO - SUSAN AI V2.0 TRAINING PIPELINE COMPLETED
+2025-08-23 23:36:58,918 - SusanV2Pipeline - INFO - ============================================================
+2025-08-23 23:36:58,918 - SusanV2Pipeline - INFO - Total Duration: 0.24 minutes (0.00 hours)
+2025-08-23 23:36:58,918 - SusanV2Pipeline - INFO - Final Accuracy: 0.000
+2025-08-23 23:36:58,918 - SusanV2Pipeline - INFO - False Positive Rate: 0.000
+2025-08-23 23:36:58,918 - SusanV2Pipeline - INFO - Average Inference Time: 0.000s
+2025-08-23 23:36:58,918 - SusanV2Pipeline - INFO - Results saved to: results/susan_v2/susan_v2_pipeline_results_20250823_233658.json

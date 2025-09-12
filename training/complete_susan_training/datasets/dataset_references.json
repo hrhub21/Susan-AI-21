@@ -1,0 +1,13 @@
+{
+  "visual_datasets": [
+    "./datasets/huggingface_roof_damage/",
+    "./sales_training_data/processed/visual_materials.json"
+  ],
+  "textual_datasets": [
+    "./sales_training_data/processed/sales_scripts.json",
+    "./enhanced_susan_training/datasets/conversational_ai_dataset.json"
+  ],
+  "combined_datasets": [
+    "./enhanced_susan_training/datasets/customer_service_dataset.json"
+  ]
+}

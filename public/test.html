@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Susan AI Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #1a1a2e; color: white; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .success { background: #28a745; }
+        .error { background: #dc3545; }
+        .warning { background: #ffc107; color: black; }
+        button { padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer; }
+        #testResults { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Susan AI - Diagnostic Test</h1>
+    <div id="testResults"></div>
+    
+    <button onclick="testBasicFunctionality()">Test Basic Functions</button>
+    <button onclick="testWebSocket()">Test WebSocket</button>
+    <button onclick="testVoice()">Test Voice APIs</button>
+    <button onclick="testEnhanced()">Test Enhanced Features</button>
+    
+    <div id="output"></div>
+    
+    <script>
+        function log(message, type = 'info') {
+            const output = document.getElementById('output');
+            const div = document.createElement('div');
+            div.className = `status ${type}`;
+            div.innerHTML = `${new Date().toLocaleTimeString()}: ${message}`;
+            output.appendChild(div);
+            console.log(message);
+        }
+        
+        function testBasicFunctionality() {
+            log('Testing basic JavaScript functions...', 'info');
+            
+            try {
+                // Test modern JavaScript features
+                const testArray = [1, 2, 3];
+                const doubled = testArray.map(x => x * 2);
+                log(`Array mapping works: [${doubled.join(', ')}]`, 'success');
+                
+                // Test async/await
+                (async () => {
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                    log('Async/await works', 'success');
+                })();
+                
+                // Test ES6 features
+                const { location } = window;
+                log(`ES6 destructuring works: ${location.hostname}`, 'success');
+                
+                log('✅ Basic functionality test passed', 'success');
+            } catch (error) {
+                log(`❌ Basic functionality error: ${error.message}`, 'error');
+            }
+        }
+        
+        function testWebSocket() {
+            log('Testing WebSocket connection...', 'info');
+            
+            try {
+                const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+                const wsUrl = `${protocol}//${window.location.host}`;
+                const ws = new WebSocket(wsUrl);
+                
+                ws.onopen = () => {
+                    log('✅ WebSocket connected successfully', 'success');
+                    ws.send(JSON.stringify({ type: 'test', message: 'Hello Susan' }));
+                };
+                
+                ws.onmessage = (event) => {
+                    const data = JSON.parse(event.data);
+                    log(`📨 WebSocket message received: ${data.type}`, 'success');
+                };
+                
+                ws.onerror = (error) => {
+                    log(`❌ WebSocket error: ${error}`, 'error');
+                };
+                
+                setTimeout(() => ws.close(), 5000);
+            } catch (error) {
+                log(`❌ WebSocket test error: ${error.message}`, 'error');
+            }
+        }
+        
+        function testVoice() {
+            log('Testing voice capabilities...', 'info');
+            
+            // Test Speech Recognition
+            if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+                log('✅ Speech Recognition available', 'success');
+            } else {
+                log('⚠️ Speech Recognition not available', 'warning');
+            }
+            
+            // Test Speech Synthesis
+            if ('speechSynthesis' in window) {
+                log('✅ Speech Synthesis available', 'success');
+                const voices = speechSynthesis.getVoices();
+                log(`Available voices: ${voices.length}`, 'info');
+            } else {
+                log('⚠️ Speech Synthesis not available', 'warning');
+            }
+            
+            // Test MediaRecorder
+            if ('MediaRecorder' in window) {
+                log('✅ MediaRecorder available', 'success');
+            } else {
+                log('⚠️ MediaRecorder not available', 'warning');
+            }
+            
+            // Test getUserMedia
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                log('✅ getUserMedia available', 'success');
+            } else {
+                log('⚠️ getUserMedia not available', 'warning');
+            }
+        }
+        
+        async function testEnhanced() {
+            log('Testing enhanced API endpoints...', 'info');
+            
+            try {
+                // Test health endpoint
+                const healthResponse = await fetch('/api/v1/voice/enhanced/health');
+                if (healthResponse.ok) {
+                    const health = await healthResponse.json();
+                    log('✅ Enhanced Voice API health check passed', 'success');
+                    log(`API Status: ${JSON.stringify(health.services)}`, 'info');
+                } else {
+                    log('⚠️ Enhanced Voice API not available', 'warning');
+                }
+            } catch (error) {
+                log(`❌ Enhanced API test error: ${error.message}`, 'error');
+            }
+            
+            try {
+                // Test legacy health endpoint
+                const legacyResponse = await fetch('/health');
+                if (legacyResponse.ok) {
+                    const health = await legacyResponse.json();
+                    log('✅ Legacy API health check passed', 'success');
+                    log(`Susan Status: ${health.susan.brain}`, 'info');
+                } else {
+                    log('❌ Legacy API not available', 'error');
+                }
+            } catch (error) {
+                log(`❌ Legacy API test error: ${error.message}`, 'error');
+            }
+        }
+        
+        // Auto-run basic test on load
+        window.onload = () => {
+            log('🚀 Susan AI Diagnostic Test Started', 'info');
+            setTimeout(testBasicFunctionality, 500);
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+{
+  "validation_timestamp": "2025-08-23T22:54:02.201507",
+  "model_performance": {
+    "timestamp": "2025-08-23T22:54:02.201467",
+    "model_version": "emergency_binary_v1.0",
+    "accuracy": 0.65,
+    "precision": 1.0,
+    "recall": 0.3,
+    "f1_score": 0.46153846153846156,
+    "specificity": 1.0,
+    "sensitivity": 0.3,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.7,
+    "true_positive_rate": 0.3,
+    "true_negative_rate": 1.0,
+    "roc_auc": 0.48135,
+    "precision_recall_auc": -0.48852307763327313,
+    "confusion_matrix": [
+      [
+        100,
+        0
+      ],
+      [
+        70,
+        30
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.5882352941176471,
+        "recall": 1.0,
+        "f1-score": 0.7407407407407407,
+        "support": 100.0
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.3,
+        "f1-score": 0.46153846153846156,
+        "support": 100.0
+      },
+      "accuracy": 0.65,
+      "macro avg": {
+        "precision": 0.7941176470588236,
+        "recall": 0.65,
+        "f1-score": 0.6011396011396011,
+        "support": 200.0
+      },
+      "weighted avg": {
+        "precision": 0.7941176470588235,
+        "recall": 0.65,
+        "f1-score": 0.6011396011396012,
+        "support": 200.0
+      }
+    },
+    "sample_size": 200,
+    "crisis_resolved": true,
+    "production_ready": false
+  },
+  "quality_gates": {
+    "crisis_resolution": {
+      "total_gates": 3,
+      "passed_gates": 3,
+      "success_rate": 1.0,
+      "overall_status": "RESOLVED"
+    },
+    "production_readiness": {
+      "total_gates": 6,
+      "passed_gates": 3,
+      "success_rate": 0.5,
+      "overall_status": "NOT_READY"
+    }
+  },
+  "detailed_results": [
+    {
+      "gate_name": "false_positive_crisis",
+      "metric_name": "false_positive_rate",
+      "expected_value": 0.5,
+      "actual_value": 0.0,
+      "threshold": 0.5,
+      "operator": "le",
+      "passed": "True",
+      "critical": true,
+      "improvement_needed": "Target achieved"
+    },
+    {
+      "gate_name": "specificity_recovery",
+      "metric_name": "specificity",
+      "expected_value": 0.5,
+      "actual_value": 1.0,
+      "threshold": 0.5,
+      "operator": "ge",
+      "passed": "True",
+      "critical": true,
+      "improvement_needed": "Target achieved"
+    },
+    {
+      "gate_name": "accuracy_improvement",
+      "metric_name": "accuracy",
+      "expected_value": 0.65,
+      "actual_value": 0.65,
+      "threshold": 0.65,
+      "operator": "ge",
+      "passed": true,
+      "critical": true,
+      "improvement_needed": "Target achieved"
+    },
+    {
+      "gate_name": "production_accuracy",
+      "metric_name": "accuracy",
+      "expected_value": 0.85,
+      "actual_value": 0.65,
+      "threshold": 0.85,
+      "operator": "ge",
+      "passed": false,
+      "critical": false,
+      "improvement_needed": "Increase accuracy by 0.200"
+    },
+    {
+      "gate_name": "production_precision",
+      "metric_name": "precision",
+      "expected_value": 0.8,
+      "actual_value": 1.0,
+      "threshold": 0.8,
+      "operator": "ge",
+      "passed": true,
+      "critical": false,
+      "improvement_needed": "Target achieved"
+    },
+    {
+      "gate_name": "production_recall",
+      "metric_name": "recall",
+      "expected_value": 0.75,
+      "actual_value": 0.3,
+      "threshold": 0.75,
+      "operator": "ge",
+      "passed": false,
+      "critical": false,
+      "improvement_needed": "Increase recall by 0.450"
+    },
+    {
+      "gate_name": "production_f1",
+      "metric_name": "f1_score",
+      "expected_value": 0.75,
+      "actual_value": 0.46153846153846156,
+      "threshold": 0.75,
+      "operator": "ge",
+      "passed": false,
+      "critical": false,
+      "improvement_needed": "Increase f1_score by 0.288"
+    },
+    {
+      "gate_name": "production_fpr",
+      "metric_name": "false_positive_rate",
+      "expected_value": 0.1,
+      "actual_value": 0.0,
+      "threshold": 0.1,
+      "operator": "le",
+      "passed": "True",
+      "critical": false,
+      "improvement_needed": "Target achieved"
+    },
+    {
+      "gate_name": "production_specificity",
+      "metric_name": "specificity",
+      "expected_value": 0.9,
+      "actual_value": 1.0,
+      "threshold": 0.9,
+      "operator": "ge",
+      "passed": "True",
+      "critical": false,
+      "improvement_needed": "Target achieved"
+    }
+  ],
+  "recommendations": [
+    "\u2705 False positive crisis resolved - model successfully conservative",
+    "\u26a0\ufe0f Low sensitivity detected - model missing actual damage",
+    "Recommendation: Add more diverse damaged roof examples to training",
+    "Recommendation: Adjust loss function to balance false positives vs false negatives",
+    "Recommendation: Implement ensemble with multiple sensitivity thresholds",
+    "\ud83d\udcc8 Model not production-ready - continue development phase",
+    "Recommendation: Expand training dataset with expert-labeled examples",
+    "Recommendation: Implement advanced architectures (ResNet, EfficientNet)",
+    "Recommendation: Add confidence calibration techniques",
+    "\ud83c\udfaf Increase accuracy by 0.200 for production_accuracy",
+    "\ud83c\udfaf Increase recall by 0.450 for production_recall",
+    "\ud83c\udfaf Increase f1_score by 0.288 for production_f1"
+  ],
+  "next_steps": [
+    "1. \ud83c\udf89 CELEBRATE: False positive crisis addressed!",
+    "2. \ud83d\udcca Begin sensitivity improvement phase",
+    "3. \ud83d\udd04 Implement balanced loss function training",
+    "4. \ud83d\udcc8 Add more diverse training data",
+    "5. \ud83e\udd16 Design ensemble learning system",
+    "6. \ud83c\udfd7\ufe0f Complete MLOps infrastructure setup",
+    "7. \ud83d\udccb Implement automated testing framework",
+    "8. \ud83d\ude80 Set up staging environment",
+    "9. \ud83d\udcc8 Design A/B testing framework",
+    "10. \ud83d\udcca Create real-time monitoring dashboard"
+  ]
+}

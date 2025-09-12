@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susan AI Debug</title>
+    <style>
+        body { 
+            font-family: monospace; 
+            margin: 20px; 
+            background: #111; 
+            color: #0f0; 
+        }
+        .log { 
+            background: #000; 
+            padding: 10px; 
+            border: 1px solid #333; 
+            margin: 10px 0; 
+            white-space: pre-wrap;
+        }
+        .test-btn {
+            background: #333;
+            color: #0f0;
+            border: 1px solid #666;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .test-btn:hover { background: #555; }
+    </style>
+</head>
+<body>
+    <h1>Susan AI Debug Console</h1>
+    
+    <div>
+        <button class="test-btn" onclick="testWebSocket()">Test WebSocket</button>
+        <button class="test-btn" onclick="testAPI()">Test API</button>
+        <button class="test-btn" onclick="checkConsole()">Check Browser Console</button>
+    </div>
+    
+    <div id="log" class="log">Debug output will appear here...\n</div>
+
+    <script>
+        const log = document.getElementById('log');
+        
+        function addLog(message) {
+            log.textContent += new Date().toLocaleTimeString() + ' - ' + message + '\n';
+            log.scrollTop = log.scrollHeight;
+        }
+        
+        function testWebSocket() {
+            addLog('Testing WebSocket connection...');
+            
+            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsUrl = `${protocol}//${window.location.host}`;
+            addLog(`Connecting to: ${wsUrl}`);
+            
+            const ws = new WebSocket(wsUrl);
+            
+            ws.onopen = () => {
+                addLog('✅ WebSocket connected successfully!');
+                ws.send(JSON.stringify({
+                    type: 'message',
+                    content: 'test connection',
+                    timestamp: new Date().toISOString()
+                }));
+            };
+            
+            ws.onmessage = (event) => {
+                addLog(`📨 Received: ${event.data}`);
+                ws.close();
+            };
+            
+            ws.onclose = () => {
+                addLog('🔌 WebSocket connection closed');
+            };
+            
+            ws.onerror = (error) => {
+                addLog('❌ WebSocket error: ' + error);
+            };
+        }
+        
+        async function testAPI() {
+            addLog('Testing HTTP API endpoints...');
+            
+            try {
+                const healthResponse = await fetch('/health');
+                const healthData = await healthResponse.json();
+                addLog(`✅ Health check: ${JSON.stringify(healthData, null, 2)}`);
+            } catch (error) {
+                addLog(`❌ Health check failed: ${error.message}`);
+            }
+            
+            try {
+                const messageResponse = await fetch('/api/message', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: 'hello test' })
+                });
+                const messageData = await messageResponse.json();
+                addLog(`✅ Message API: ${JSON.stringify(messageData, null, 2)}`);
+            } catch (error) {
+                addLog(`❌ Message API failed: ${error.message}`);
+            }
+        }
+        
+        function checkConsole() {
+            addLog('Check browser console (F12) for JavaScript errors');
+            addLog('Common issues to look for:');
+            addLog('- Failed to load scripts (404 errors)');
+            addLog('- JavaScript syntax errors');
+            addLog('- WebSocket connection failures');
+            addLog('- CORS or security policy errors');
+        }
+        
+        // Auto-start diagnostics
+        addLog('Susan AI Debug Console initialized');
+        addLog('Click buttons above to run diagnostics');
+    </script>
+</body>
+</html>

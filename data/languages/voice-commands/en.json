@@ -1,0 +1,19 @@
+{
+  "hello susan": "voice_activation",
+  "hey susan": "voice_activation",
+  "susan": "voice_activation",
+  "start inspection": "start_inspection",
+  "create report": "create_report",
+  "schedule appointment": "schedule_appointment",
+  "check claim status": "check_claim_status",
+  "upload photos": "upload_photos",
+  "generate estimate": "generate_estimate",
+  "call adjuster": "call_adjuster",
+  "review documents": "review_documents",
+  "save progress": "save_progress",
+  "navigate to dashboard": "navigate_dashboard",
+  "help me": "show_help",
+  "what can you do": "show_capabilities",
+  "goodbye": "end_session",
+  "thank you": "acknowledge"
+}

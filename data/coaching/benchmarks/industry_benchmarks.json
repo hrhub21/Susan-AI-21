@@ -1,0 +1,100 @@
+{
+  "overall": {
+    "average": 75,
+    "top10": 90,
+    "distribution": [
+      20,
+      40,
+      60,
+      75,
+      80,
+      85,
+      90,
+      95,
+      98,
+      100
+    ]
+  },
+  "categories": {
+    "technical_skills": {
+      "average": 78,
+      "top10": 92,
+      "distribution": [
+        25,
+        45,
+        65,
+        78,
+        83,
+        87,
+        92,
+        96,
+        98,
+        100
+      ]
+    },
+    "insurance_knowledge": {
+      "average": 72,
+      "top10": 88,
+      "distribution": [
+        20,
+        40,
+        60,
+        72,
+        77,
+        82,
+        88,
+        93,
+        96,
+        100
+      ]
+    },
+    "communication_skills": {
+      "average": 76,
+      "top10": 89,
+      "distribution": [
+        30,
+        50,
+        68,
+        76,
+        81,
+        85,
+        89,
+        94,
+        97,
+        100
+      ]
+    },
+    "technology_mastery": {
+      "average": 69,
+      "top10": 85,
+      "distribution": [
+        15,
+        35,
+        55,
+        69,
+        74,
+        79,
+        85,
+        90,
+        95,
+        100
+      ]
+    },
+    "business_acumen": {
+      "average": 71,
+      "top10": 87,
+      "distribution": [
+        18,
+        38,
+        58,
+        71,
+        76,
+        81,
+        87,
+        92,
+        96,
+        100
+      ]
+    }
+  }
+}

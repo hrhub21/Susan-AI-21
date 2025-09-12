@@ -1,0 +1,178 @@
+{
+  "timestamp": "2025-08-24T00:40:51.409Z",
+  "totalTime": 47.505,
+  "summary": {
+    "total": 11,
+    "passed": 10,
+    "failed": 1,
+    "successRate": "90.9%"
+  },
+  "results": {
+    "qwenBackendTests": [
+      {
+        "test": "Status Endpoint",
+        "status": "PASS",
+        "data": {
+          "model_loaded": true,
+          "processor_loaded": true,
+          "device": "mps",
+          "model_name": "Qwen2.5-VL-7B-Instruct",
+          "parameters": "8.29B"
+        },
+        "details": "Model: Qwen2.5-VL-7B-Instruct, Device: mps, Loaded: true"
+      },
+      {
+        "test": "hailDamage Detection",
+        "status": "PASS",
+        "data": {
+          "rawResponse": "```json\n{\n  \"damageType\": \"hailDamage\",\n  \"severity\": \"minor\",\n  \"confidence\": \"high\",\n  \"description\": \"The roof shows signs of small dents and minor punctures consistent with hail impact. The surface appears to have a few scattered spots where the hail has caused minor indentations.\"\n}\n```",
+          "damageType": "Hail damage detected",
+          "confidence": 75,
+          "processingTime": 3.29
+        },
+        "details": "Response: ```json\n{\n  \"damageType\": \"hailDamage\",\n  \"severity\": \"minor\",\n  \"confidence\": \"high\",\n  \"descriptio..."
+      },
+      {
+        "test": "windDamage Detection",
+        "status": "PASS",
+        "data": {
+          "rawResponse": "```json\n{\n  \"damageType\": \"windDamage\",\n  \"severity\": \"moderate\",\n  \"confidence\": \"high\",\n  \"description\": \"The roof appears to have missing shingles and some areas where the material is lifted or peeled away, indicative of wind damage.\"\n}\n```",
+          "damageType": "Wind damage detected",
+          "confidence": 75,
+          "processingTime": 2.71
+        },
+        "details": "Response: ```json\n{\n  \"damageType\": \"windDamage\",\n  \"severity\": \"moderate\",\n  \"confidence\": \"high\",\n  \"descrip..."
+      },
+      {
+        "test": "nonRoof Detection",
+        "status": "PASS",
+        "data": {
+          "rawResponse": "```json\n[\n    {\n        \"damageType\": \"Missing Shingles\",\n        \"severity\": \"Moderate\",\n        \"confidence\": 0.8,\n        \"description\": \"Several shingles appear to be missing from the roof, exposing the underlying material.\"\n    }\n]\n```",
+          "damageType": "Analysis completed",
+          "confidence": 75,
+          "processingTime": 2.6
+        },
+        "details": "Response: ```json\n[\n    {\n        \"damageType\": \"Missing Shingles\",\n        \"severity\": \"Moderate\",\n        \"c..."
+      }
+    ],
+    "frontendTests": [
+      {
+        "test": "Frontend Health Check",
+        "status": "PASS",
+        "data": {
+          "status": "ready",
+          "service": "Test Photo Analysis Server",
+          "primary": {
+            "engine": "Qwen2.5-VL",
+            "status": "available",
+            "model": "Qwen2.5-VL-7B-Instruct",
+            "device": "mps",
+            "parameters": "8.29B"
+          },
+          "fallback": {
+            "engine": "None (test mode)",
+            "status": "unavailable"
+          },
+          "timestamp": "2025-08-24T00:40:12.531Z"
+        },
+        "details": "Primary: available, Fallback: unavailable"
+      },
+      {
+        "test": "Frontend hailDamage Analysis",
+        "status": "PASS",
+        "data": {
+          "damageType": "No damage detected",
+          "severity": "None",
+          "confidence": 95,
+          "analysisMethod": "Qwen2.5-VL (Test Server)",
+          "processingTime": 19.434,
+          "description": "The provided image appears to be a close-up of a surface that looks like a wall or siding rather tha"
+        },
+        "details": "Method: Qwen2.5-VL (Test Server), Time: 19.434s"
+      },
+      {
+        "test": "Frontend windDamage Analysis",
+        "status": "PASS",
+        "data": {
+          "damageType": "No damage detected",
+          "severity": "None",
+          "confidence": 95,
+          "analysisMethod": "Qwen2.5-VL (Test Server)",
+          "processingTime": 5.632,
+          "description": "The provided image appears to be a close-up of a surface that looks like a wall or siding rather tha"
+        },
+        "details": "Method: Qwen2.5-VL (Test Server), Time: 5.632s"
+      },
+      {
+        "test": "Frontend nonRoof Analysis",
+        "status": "PASS",
+        "data": {
+          "damageType": "No damage detected",
+          "severity": "None",
+          "confidence": 95,
+          "analysisMethod": "Qwen2.5-VL (Test Server)",
+          "processingTime": 5.273,
+          "description": "The provided image appears to be a close-up of a surface that looks like a wall or siding rather tha"
+        },
+        "details": "Method: Qwen2.5-VL (Test Server), Time: 5.273s"
+      }
+    ],
+    "integrationTests": [
+      {
+        "test": "Backend vs Frontend Consistency",
+        "status": "PASS",
+        "data": {
+          "backend": {
+            "damageType": "Hail damage detected",
+            "confidence": 75,
+            "processingTime": 3.15
+          },
+          "frontend": {
+            "damageType": "No damage detected",
+            "confidence": 95,
+            "analysisMethod": "Qwen2.5-VL (Test Server)",
+            "processingTime": 5.279
+          }
+        }
+      }
+    ],
+    "errorHandlingTests": [
+      {
+        "test": "Invalid Image Data Handling",
+        "status": "FAIL",
+        "error": "Should have failed with invalid image data",
+        "data": {
+          "success": true,
+          "damageType": "No damage detected",
+          "severity": "None",
+          "confidence": 80,
+          "description": "Unable to parse response",
+          "findings": [
+            "Analysis completed"
+          ],
+          "recommendations": [
+            "Professional inspection recommended"
+          ],
+          "isRoofingImage": true,
+          "modelUsed": "Qwen2.5-VL-7B",
+          "processingTime": 0,
+          "timestamp": "2025-08-24T00:40:51.407Z",
+          "analysisMethod": "Qwen2.5-VL (Test Server)",
+          "totalProcessingTime": 0.089
+        }
+      },
+      {
+        "test": "Missing Image Data Handling",
+        "status": "PASS",
+        "data": {
+          "error": "No image data provided",
+          "damageType": "Error: No image",
+          "severity": "Unknown",
+          "confidence": 0,
+          "description": "Please provide image data for analysis."
+        },
+        "details": "Properly returned 400 for missing image"
+      }
+    ]
+  }
+}

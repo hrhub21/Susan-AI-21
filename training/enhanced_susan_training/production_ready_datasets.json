@@ -1,0 +1,660 @@
+{
+  "conversational_ai_dataset": {
+    "data": [
+      {
+        "input": "“Any questions so far, sir/ma’am?”",
+        "output": "Answer any questions “Great! Again, I am glad that we were able to make this happen for you, now you get to experience the quality that Roof ER always delivers, at only the cost of your deductible after your whole project is complete!” Potentially mention additional work that they may want to add. Answer any additional questions or engage in any conversation the HO starts.",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "If you haven’t already put up a yard sign: “Would you mind if I put up a yard sign next time I’m in your area? This will definitely help other companies already know that you’re working with someone and hopefully eliminate anyone else from knocking your door asking about your roof/siding.”",
+        "output": "“Look out for the communication from one of our Project Coordinators so you can get that Project Meeting scheduled to go over all the next steps and your full scope of work.  Congratulations again and have a great day!”",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "“Hello sir/ma’am! It’s [YOUR NAME] with Roof ER. How’s it going?”",
+        "output": "“Great, well we just received the decision from the insurance company.  We’re going to have to take some steps to get this turned around.  I have already submitted my photo report that demonstrates the damage to your property and the need to replace your whole roof, so hopefully they review and approve that.  Could you please reach out to the adjuster to see if they were able to review my report?” After HO answers. “Thank you! During that call, please let them know that you disagree with their current decision and would like to have your property reinspected if they are not able to update their current decision to a full approval based on the photo report that I sent them.” If there are some approved shingles:",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "“Great, well we just received the decision from the insurance company.  We’re going to have to take some steps to get this turned around.  I have already submitted my photo report that demonstrates the damage to your property and the need to replace your whole roof, so hopefully they review and approve that.  Could you please reach out to the adjuster to see if they were able to review my report?”",
+        "output": "After HO answers. “Thank you! During that call, please let them know that you disagree with their current decision and would like to have your property reinspected if they are not able to update their current decision to a full approval based on the photo report that I sent them.” If there are some approved shingles: “So we will also be conducting an iTel and Repair Attempt.",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "“Great! The Adjuster/Ladder Assist identified all the same damage as me.  You will be receiving an email from us shortly saying that you’ve been fully approved.  Within a few days you should receive the itemized estimate from the Insurance Company.  Once you receive that, you can forward that to me. This is going to include every line item that the insurance company believes is needed to make you whole again. To you this is going to look like gibberish. But, don’t worry, that’s what we’re here for. If for some weird reason the desk adjuster does not write it for a full approval after this inspection, I will take the steps necessary to get it turned around! Any questions on that, sir/ma’am?”",
+        "output": "Answer any questions “When the insurance company generates their estimate, it will also typically trigger the release of the first payment. The insurance company refers to this payment as the ACV. Which stands for Actual Cash Value. That amount will be used as your down payment.  The remaining funds are held by the insurance company until we complete the work. They refer to these remaining funds as Depreciation. Which is not “depreciation” as most would think about it, it’s just their way of holding on to some of the funds to make sure the work gets done. “At the same time our office will be reviewing your entire project along with my photos and the insurance estimate. As I’ve mentioned, insurance companies are always trying to save money.  We usually find specific line items that are missing. Most commonly, code items like IWS and Drip Edge. We will supplement for all the items needed to complete your project to code and our manufacturer’s specifications. Don’t worry, like we have agreed to from the beginning, we guarantee you that you would not have to cover any of these costs even if the insurance company were to deny our supplement. [Which does not happen.]",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "“A great way for me to help assist some of your neighbors, would be if I could put up a yard sign! Would you mind if I put one up? Thank you, sir/ma’am!”",
+        "output": "Submit your Photo Report and Claim Authorization to the adjuster with an effective email.  Use Post-AM-Email-Template if you need to. If moving to Decision Pending: “So, we just finished our inspection.  The Adjuster/Ladder Assist will be sending their report to a desk adjuster and will be making a final decision. Once they make a decision, they will write up an itemized estimate and should send that over to you.  Once you receive that, please forward that over to me.  They can be a bit hard to read, so I’ll be able to walk through all of that with you.",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "Is the house livable?",
+        "output": "Was there any personal property damaged? Did they lose power? Have you selected a contractor? (yes, we want them to know ASAP that you are working with me)",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "Was there any personal property damaged?",
+        "output": "Did they lose power? Have you selected a contractor? (yes, we want them to know ASAP that you are working with me) Do they have an estimate? (always no)",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "Have you selected a contractor? (yes, we want them to know ASAP that you are working with me)",
+        "output": "Do they have an estimate? (always no) Is your roof steeper than an average staircase? How high is the roof/is it difficult to access with most ladders?",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "“Hi, how are you? My Name is ________ with Roof- ER we’re a local roofing company that specializes in helping homeowners get their roof (and siding) replaced, paid for by their insurance!”",
+        "output": "Generic: “We’ve had a lot of storms here in Northern Virginia/Philadelphia/Maryland over the past few months that have done a lot of damage! “We’re already working with your neighbors. We’ve been able to help them get fully approved through their insurance company to have their roof  and/or siding replaced.”",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "If yes “It was pretty crazy right?! Wait for answer",
+        "output": "If no: “Oh no worries at all, we get that all the time. If yes move on to next line marked with * If no “That’s good! It was a pretty bad one!”",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "Go in for a handshake. What was your name again? [Their name] great to meet you, again I am (your name).  Oh and by the way do you know who your insurance company is”? Wait for their answer, “Great! We work with those guys all the time.”",
+        "output": "“Here’s my card/flier, look us up while I’m conducting the inspection! I will give you a knock when I finish up and show you what I’ve found.” Without any hesitation, move into inspection. (See Inspection and Post-Inspection Script for detailed next steps.)",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "As you approach back to the house/homeowner ask “Is there a place we could sit down for 5-10  Minutes”?",
+        "output": "Once you are in the house, spend some time building rapport as you get settled. “Okay, so first I am going to grab some of your basic information for our system. Then we can let your insurance company know about the damagel”. Gather information from the homeowner:",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "“Do you happen to know your deductible? If not, no big deal at all”!",
+        "output": "After you have collected all the information: Ask if they have the app or if they have the login to the website.",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "Name | Insurance/Inspection Company | Inspector or Adjuster? | Hover required? (Y/N) | Mark roof prior? (Y/N) | Notes on Adjuster/Inspector |  |  |  |  |  |  |  |  |  |  |  |  |  |",
+        "output": "Christian Ballester | USAA/Progressive/Liberty | Adjuster | Y | Y | Always looking to buy. Appreciates when the roof/siding/exterior is already marked up. Get Hover ESX file so he can write estimate easily |  |  |  |  |  |  |  |  |  |  |  |  |  | Badou Hadidane | USAA | Adjuster | N | N | Terrible. Try to get HO to call to get this claim reassigned instead. Spends 10 minutes on the roof and gets off not looking to buy. Most of the time will deny it and you will need to get the reinspection. Will only buy if there's lots of signs. Wants Hover report, but it wont change his decision if you give it to him or not. Might be a waste of time and money giving him the Hover report. Do not supplement his approvals  |  |  |  |  |  |  |  |  |  |  |  |  |  | Vicki Henry | Homesite (Afics) | Adjuster | Y | Y | Very easy to work with. Will use a ladder assist but buys most of the time if the roof is marked up well and damage makes sense. Get Hover ESX for her |  |  |  |  |  |  |  |  |  |  |  |  |  |",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "Fatima  | Liberty | Desk adjuster  | Y | N | Well she was adamant about still inspecting the elevations and exterior while it was raining since she was already there. Ofcourse the hail hits looked distorted and not really as visible and then when I tried to wipe the water away she told me don't wipe it -_- like tf? How are you going to see it then? Then she pulled the ehh I'm seeing a pattern here that's not looking consistent with hail and then I was like are you serious? This is definitely hail and if you were to see the roof metals you wouldn't be doubting this and if it wasn't raining you wouldn't be doubting this. She was pretty difficult but none the less I'm not worried I know there's fire hail damage there and my photo report is great so just gotta get her when it's dry and show her some quality stuff and I'm sure she will buy. She will try to pull the whole \"wind driven\" thing with hail and you tell her NO hail is not always wind driven and does coke straight down and can most absolutely affect four sides of elevation metals. Don't let her outsmart you because she really is clearly just dumb and probably shouldn't be out inspecting for storm damage. Have a bad ass photo report and you will go far with her  |  |  |  |  |  |  |  |  |  |  |  |  |  |",
+        "output": "Stran | USAA | IA Texas Boy! | Y | Y | Dude is out here from Texas literally to buy any and everything you definitely want this guy!! |  |  |  |  |  |  |  |  |  |  |  |  |  | Warner | Seek now | IA | N | Y | Pretty criminal, talked down on our ownership because we are not taught how to vandalize. Plus is he is pushing for the buy negative is it's not honest. May need to redo phot report if done prior to adjuster meeting due to new \"damages\" |  |  |  |  |  |  |  |  |  |  |  |  |  | John  | Hancock  | Ladder assist  | N | Y | This dude is absolutely the boy as long as you give him some good collateral and your test squares look really good and you're not marking any hail on shingles that have fibers inside he will agree and help you win that shit every time we see each other and a hug and a big what's up my boy! This dude is super cool you want him for sure just don't show him bullshit |  |  |  |  |  |  |  |  |  |  |  |  |  |",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "Nick ? | Seeknow | Ladder Assist | N | N | Chalked wood, from Texas, made the inspection as short as possible. I showed him damage to the gutter and he did not acknowledge it in his report. Not mean but unprofessional. Did not want to talk to me at all. He started getting an attitude while I asked questions. |  |  |  |  |  |  |  |  |  |  |  |  |  |",
+        "output": "Billy Murphy | Seeknow  | Ladder assist  | N | N | Guy was a contractor prior to Seeknow. Really cool dude, very detailed.  |  |  |  |  |  |  |  |  |  |  |  |  |  | Patrick (Reed) | Seeknow | Ladder assist | N | N | I've had him twice, makes own squares lets you mark inside them. Do not mark without him being in roof/without permission. Easy to work with. Got along with him well. |  |  |  |  |  |  |  |  |  |  |  |  |  | William  | Patriot claims  | Ladder assist  | N | Y | Been doing this a while. He’s easy going though and somewhat talkative. I got two approvals with him. Sent him photos he added to his file that we forgot to take pics of and he did so. He will lookout. If it’s Allstate let him do the test squares just mark the hail once done. He’s good |  |  |  |  |  |  |  |  |  |  |  |  |  |",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "o “Do you have any questions at all?”",
+        "output": "o “Okay great! Congrats again and I will be on the lookout for that estimate!",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "o Probably ask, ok, what's the process with reinspection then?",
+        "output": "o \"Great question. So  you, as the policyholder, will have to contact your claims department requesting a reinspection with a DIFFERENT adjuster. Typically they request photos and an estimate from your contractor before agreeing to a reinspection. So we  will put together a  detailed estimate which includes all the damaged items I found broken down",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "“Hi, how are you? My Name is ________ with Roof- ER we’re a local roofing company that specializes in helping homeowners get their roof replaced, paid for by their insurance!”",
+        "output": "Reach in for handshake (at your discretion) Non-Storm Environment: “We’ve had a lot of storms here in Northern Virginia/Maryland over the past few months that have done a lot of damage!",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "Go in for a handshake. “What was your name again? [Their name] great to meet you, again I am (your name).  Oh and by the way do you know who your insurance company is”? Wait for their answer, “Great! We work with those guys all the time.”",
+        "output": "“I will give you a knock when I finish up and show you what I’ve found.” Without any hesitation, move into inspection. (See Inspection and Post-Inspection Script for detailed next steps.)",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "If yes “It was pretty crazy right?! Wait for answer",
+        "output": "If no: “Oh no worries at all, we get that all the time. If yes move on to next line marked with * If no “That’s good! It was a pretty bad one.”",
+        "context": "damage_assessment",
+        "confidence": 0.9
+      },
+      {
+        "input": "hail",
+        "output": "Small ice balls that fall from storm clouds and can damage your roof by creating dents and removing protective granules",
+        "context": "technical_explanation",
+        "confidence": 0.95
+      },
+      {
+        "input": "granule",
+        "output": "The small rock particles on shingles that protect them from UV rays and weather",
+        "context": "technical_explanation",
+        "confidence": 0.95
+      },
+      {
+        "input": "impact",
+        "output": "Damage caused when something hits your roof, like hail or falling branches",
+        "context": "technical_explanation",
+        "confidence": 0.95
+      },
+      {
+        "input": "hail",
+        "output": "Small ice balls that fall from storm clouds and can damage your roof by creating dents and removing protective granules",
+        "context": "technical_explanation",
+        "confidence": 0.95
+      },
+      {
+        "input": "granule",
+        "output": "The small rock particles on shingles that protect them from UV rays and weather",
+        "context": "technical_explanation",
+        "confidence": 0.95
+      },
+      {
+        "input": "impact",
+        "output": "Damage caused when something hits your roof, like hail or falling branches",
+        "context": "technical_explanation",
+        "confidence": 0.95
+      },
+      {
+        "input": "hail",
+        "output": "Small ice balls that fall from storm clouds and can damage your roof by creating dents and removing protective granules",
+        "context": "technical_explanation",
+        "confidence": 0.95
+      },
+      {
+        "input": "granule",
+        "output": "The small rock particles on shingles that protect them from UV rays and weather",
+        "context": "technical_explanation",
+        "confidence": 0.95
+      },
+      {
+        "input": "impact",
+        "output": "Damage caused when something hits your roof, like hail or falling branches",
+        "context": "technical_explanation",
+        "confidence": 0.95
+      },
+      {
+        "input": "hail",
+        "output": "Small ice balls that fall from storm clouds and can damage your roof by creating dents and removing protective granules",
+        "context": "technical_explanation",
+        "confidence": 0.95
+      },
+      {
+        "input": "granule",
+        "output": "The small rock particles on shingles that protect them from UV rays and weather",
+        "context": "technical_explanation",
+        "confidence": 0.95
+      },
+      {
+        "input": "impact",
+        "output": "Damage caused when something hits your roof, like hail or falling branches",
+        "context": "technical_explanation",
+        "confidence": 0.95
+      },
+      {
+        "input": "hail",
+        "output": "Small ice balls that fall from storm clouds and can damage your roof by creating dents and removing protective granules",
+        "context": "technical_explanation",
+        "confidence": 0.95
+      }
+    ],
+    "size": 35,
+    "format": "question_answer_pairs",
+    "use_case": "conversational_ai_training"
+  },
+  "damage_classification_dataset": {
+    "data": [
+      {
+        "image_reference": "How to do a Repair Attempt [EXAMPLE].docx",
+        "damage_description": "This image shows storm damage to roofing materials",
+        "damage_type": "storm",
+        "severity": "moderate",
+        "repair_needed": true
+      },
+      {
+        "image_reference": "Sample Photo Report 4.pdf",
+        "damage_description": "This image shows roof damage requiring professional assessment",
+        "damage_type": "damage",
+        "severity": "moderate",
+        "repair_needed": true
+      },
+      {
+        "image_reference": "Sample Photo Report 3.pdf",
+        "damage_description": "This image shows roof damage requiring professional assessment",
+        "damage_type": "damage",
+        "severity": "moderate",
+        "repair_needed": true
+      },
+      {
+        "image_reference": "Sample Photo Report 2.pdf",
+        "damage_description": "This image shows roof damage requiring professional assessment",
+        "damage_type": "damage",
+        "severity": "moderate",
+        "repair_needed": true
+      },
+      {
+        "image_reference": "Sample Photo Report 1.pdf",
+        "damage_description": "This image shows roof damage requiring professional assessment",
+        "damage_type": "damage",
+        "severity": "moderate",
+        "repair_needed": true
+      }
+    ],
+    "size": 5,
+    "format": "image_text_pairs",
+    "use_case": "damage_classification"
+  },
+  "customer_service_dataset": {
+    "data": [
+      {
+        "customer_concern": "schedule",
+        "susan_response": "Congratulations, I am glad we were able to ensure that your insurance company fully approved your roof/siding/gutters/etc replacement!\n“So the next steps are, as I mentioned last time we met:\n“One of our Project Coordinators will be reaching out to you to schedule a Project Meeting to go over your full scope of work. “Based on the estimate, your insurance company will be sending you [ACV AMOUNT] shortly. This will be used as your down payment",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "schedule",
+        "susan_response": "“To get those scheduled, I will need you to sign these 2 documents allowing us to do that. When you see the documents, it will have a cost attached, but don’t worry! Read the bold print and you will see that you, as the homeowner, are never responsible for this cost. ”\nSchedule a time to meet with the HO to sign or let them know you will be sending it out for eSign",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "schedule",
+        "susan_response": "Contingency & Claim Authorization\nAfter the claim: “Okay, perfect! Like they said, an adjuster will be reaching out to you in the next 24 to 48 hours to schedule the inspection. The absolute most important part of this process is that I am at this inspection. Insurance companies don’t want to pay out",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "schedule",
+        "susan_response": "They will reach out to schedule a project meeting where they will walk you through all of the finer details. This is the fun part where you will get to pick our products and colors. *Of course if you have anything else you would like us to do beyond the insurance approval, your Project Coordinator could price that out for you",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "schedule",
+        "susan_response": "Always ask for claim number\nIf Claim Rep wants to schedule the inspection now (only Allstate) – have 3 available times listed out for the HO\nSee example on next page\nExample Customer Info Sheet\nLet them know you would like to file a claim for hail and wind damage. What was damaged: Roof and Aluminum siding\nDate of the storm: September 8th 2023\nTime of the storm: Around 5pm\nSize of hail: 1 inch\nType of shingle: Asphalt\nType of siding: Aluminum\nInterior Damage: Yes, 1 bedroom upstairs\nIs the house livable: Yes\nWas there any personal property damaged: No\nDid they lose power: No\nHave you selected a contractor: Yes, Roof ER out of Vienna VA. All my information is on the business card\nDid they give you an estimate: No\nIs your roof steeper than a staircase: No\nHow high is your roof/is it difficult to access with most ladders: No, it has 1 story access\nAfter they say the claim is filed, please ask for the Claim Number\nAfter they provide that, ask if an adjuster has been assigned",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "schedule",
+        "susan_response": "He was a re inspection IA that ended up getting approved the two final slopes that were denied  |  |  |  |  |  |  |  |  |  |  |  |  |  | \nJeremy | SeekNow | Inspector  | N | N | If you get this guy reschedule immediately he is not out to help contractors he is highly against us  |  |  |  |  |  |  |  |  |  |  |  |  |  | \nAxel | SeekNow | Inspector  | N | N | If you get this guy reschedule immediately he is not out to help contractors he is highly against us  |  |  |  |  |  |  |  |  |  |  |  |  |  | \nDan | SeekNow | Inspector  | N | N | If you get this guy reschedule immediately he is not out to help contractors he is highly against us  |  |  |  |  |  |  |  |  |  |  |  |  |  | \nTrevor Franklin's | Safeco | Adj | Y | N | Amazing experience, ESX helps. He sent out a seek now rep. Buyer |  |  |  |  |  |  |  |  |  |  |  |  |  | \nRyan Richardson | Cumberland | IA | N | Y | Great guy",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "schedule",
+        "susan_response": "You'll be contacted by the adjuster and you can schedule that meeting directly in your portal or simply give me a call!\"  \n \n \n \n \n \n \n \n \n \n \n \n \nINTEGRITY  \n QUALITY  \n SIMPLICITY  \nDenied : Retail  \n• Reminders  \no You should be pushing to set up a retail meeting if the damage is not great (relative to \nwhich insurance we are dealing with) or the homeowner is not all the way on board with \nthe reinspection process. (This stage is predicated on the fact that we should only b e \nsigning up homes that NEED a new roof/siding/etc. , i",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "schedule",
+        "susan_response": "What are the next 2 sentences after they agree to let you do the inspection?\nWhat is the last sentence of the Initial Pitch Script?\n\n[Slide 9]\nField Portal App\nThe Field Portal App will be used mostly on your phone (but is also useable on your iPad)\nLater on this week, we will review using the Field Portal App on a laptop or desktop which is the most ideal way to keep your jobs organized\nOn the Field Portal App, you can:\nTrack your jobs and what stage they are in\nReview Metrics\nPin houses and create leads\nCreate and upload your Photo reports\nSchedule customer-related events\nReview Tasks and Messages\nCheck the Trade Calendar to see when your installs are going up\n\n[Slide 10]\nField Portal App\nPinning Houses\n\n[Slide 11]\nField Portal App\nTurning Pin into a Lead\n\n\n\n\nOnly when inspection scheduled\n\n[Slide 12]\nObjections\nCommon Objections\n“not interested”\n“I don’t have enough time”\n“my roof is in good shape”\n“I just had it checked”\n“I don’t have the money for anything right now”\n“I have a roofer knock my door at least 5 times a week”\n“my roof is only 18 years old and is a 50 year roof”\nTips:\nAlways react positively with an agreeable response and attitude\nAsk questions when appropriate\nRepeat the customers’ objections when appropriate\n\n[Slide 13]\nInitial Pitch\nWork in groups – try to see how much you have memorized\n\n[Slide 14]\nInitial Pitch\nPlease memorize the whole initial pitch in a Non-Storm Environment\nPlease also be familiar with the Storm Environment Pitch\n\n[Slide 15]\nShingles\n\n[Slide 16]\nDiscontinued Shingles\n\n[Slide 17]\nThe Sales Cycle:\u000bGenerating New Business\nKNOCK KNOCK KNOCK\nMake it a goal to knock 70 doors minimum per day\nPin the houses\nTake good (quick) notes\nKNOCK SOME MORE\n\n[Slide 18]\nThe Sales Cycle:\u000bInspections\nConduct the inspection in the order of the inspection\nThink about safety\nIf you do not feel safe, DO NOT DO THE INSPECTION\nAlways ensure ladder is safely placed\nSafety items you should consider:\nCougar Paws (Get this before anything else)\nBungee Cords\nPitch Hopper\nOther roofing items – reach out to discuss additional safety items\n\n\n\n[Slide 19]\nThe Sales Cycle:\u000bAdjuster Meeting\nAdjuster meeting typically happens within 2 – 7 days\nYou meet with the insurance adjuster\nYou will also be creating your formal photo report this day\nThe decision from the insurance company usually comes within 1 – 10 business days\nOnce a decision is made, they usually only send the estimate to the homeowner\nEnsure the homeowner is prepped to send this to you if the insurance company does not send it to you\nDon’t worry – we will review this in much more detail later – we just want to ensure you understand the timeline at this point\n\n[Slide 20]\nThe Sales Cycle:\u000bProject Meeting\nAfter you send the estimate to Amber (estimates@theroofdocs. com) and to me, we will begin to review the estimate and conduct what is called a Project Review\nWithin a few days, the job will be assigned to one of our Project Coordinators who will schedule a Project Meeting with your homeowner\nThis typically happens within a week of receiving the estimate\nAfter that meeting, the homeowner will sign the Project Documents and submit Downpayment. The Downpayment will typically be the first payment the insurance company sends",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "deductible",
+        "susan_response": "As we talked about earlier, your only cost out of this will be your deductible once we finish all the work. “Upon completion of the installation, we will review and inspect all of our work to ensure it is to your satisfaction. Then we will send in a completion form once you sign off on the complete project",
+        "concern_category": "general",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "deductible",
+        "susan_response": "“This basic/simple agreement backs you as the homeowner by guaranteeing you that your only cost will be your deductible if we get you fully approved. If it is a partial approval or denial, first we will fight and jump through the necessary hoops to turn that into a full approval; but if we are not able to get you fully approved, this contract is null and void and you do not owe us a penny. ”\n“What’s in it for us, is we just want to get to do the work",
+        "concern_category": "general",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "deductible",
+        "susan_response": "Gather information from the homeowner:\nFull name\nAddress\nPhone Number  \nE-mail\nInsurance Company\n“Do you happen to know your deductible? If not, no big deal at all”! \n\nAfter you have collected all the information:\nAsk if they have the app or if they have the login to the website. If not, use the Homeowner Information Sheet to prep the HO. As you are writing or typing the information for the HO to use on the call, explain each part to them",
+        "concern_category": "general",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "deductible",
+        "susan_response": "Deductibles. He actually hopped up on the roof with the ladder assist and I inspect some damages, and then made decision on the spot for full replacement |  |  |  |  |  |  |  |  |  |  |  |  |  | \nKyle | Progressive  | Field Adjuster | N | Y | Really friendly and personable. We had a great conversation about how there should be any bad blood between contractors and adjusters",
+        "concern_category": "general",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "deductible",
+        "susan_response": "This payment is a combination of the Depreciation plus their insurance deductible. Once they submit Final Payment, you will receive the remaining 16% of the job. The first 6 weeks, you get 16% of all completed jobs",
+        "concern_category": "general",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "other companies",
+        "susan_response": "“Also, if you know anyone else that I can help, have them reach out to me! You have my card - they can call, text, or email me and I can inspect their property to see if they have the same qualifying damage and I can walk them through the same process I have walked you through!\nEngage in any conversation that this starts\n“Awesome!\nIf you haven’t already put up a yard sign: “Would you mind if I put up a yard sign next time I’m in your area? This will definitely help other companies already know that you’re working with someone and hopefully eliminate anyone else from knocking your door asking about your roof/siding. ”\n“Look out for the communication from one of our Project Coordinators so you can get that Project Meeting scheduled to go over all the next steps and your full scope of work. Congratulations again and have a great day!”",
+        "concern_category": "general",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "cost",
+        "susan_response": "As we talked about earlier, your only cost out of this will be your deductible once we finish all the work. “Upon completion of the installation, we will review and inspect all of our work to ensure it is to your satisfaction. Then we will send in a completion form once you sign off on the complete project",
+        "concern_category": "financial",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "cost",
+        "susan_response": "When you see the documents, it will have a cost attached, but don’t worry! Read the bold print and you will see that you, as the homeowner, are never responsible for this cost. ”\nSchedule a time to meet with the HO to sign or let them know you will be sending it out for eSign. Task the proper people for eSign, if necessary",
+        "concern_category": "financial",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "cost",
+        "susan_response": "“This basic/simple agreement backs you as the homeowner by guaranteeing you that your only cost will be your deductible if we get you fully approved. If it is a partial approval or denial, first we will fight and jump through the necessary hoops to turn that into a full approval; but if we are not able to get you fully approved, this contract is null and void and you do not owe us a penny. ”\n“What’s in it for us, is we just want to get to do the work",
+        "concern_category": "financial",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "cost",
+        "susan_response": "Don’t worry, like we have agreed to from the beginning, we guarantee you that you would not have to cover any of these costs even if the insurance company were to deny our supplement. [Which does not happen. ]\n“Once our office has completed your job review, which takes 2 - 3 business days, your job will be assigned to one of our Project Coordinators",
+        "concern_category": "financial",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "cost",
+        "susan_response": "his dad owns a sports fishing business in Costa Rica. He was cool about me chalking everything up but because I had already sent it to the adjuster he had to do his own test squares. None the less marked 15+ hail each test square in probably 30 seconds each",
+        "concern_category": "financial",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "cost",
+        "susan_response": "[Slide 49]\nContingency & Claim Authorization Script\n“This basic/simple agreement backs you as the homeowner by guaranteeing you that your only cost will be your deductible if we get you fully approved. If it is a partial approval or denial, first we will fight and jump through the necessary hoops to turn that into a full approval; but if we are not able to get you fully approved, this contract is null and void and you do not owe us a penny. “What’s in it for us, is we just want to get to do the work",
+        "concern_category": "financial",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "time",
+        "susan_response": "Congratulations, I am glad we were able to ensure that your insurance company fully approved your roof/siding/gutters/etc replacement!\n“So the next steps are, as I mentioned last time we met:\n“One of our Project Coordinators will be reaching out to you to schedule a Project Meeting to go over your full scope of work. “Based on the estimate, your insurance company will be sending you [ACV AMOUNT] shortly. This will be used as your down payment",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "time",
+        "susan_response": "“At that time, I will also take a video of us removing and replacing that shingle. This Repair Attempt video will demonstrate to the insurance company that your roof is not repairable and therefore would need to be fully replaced. “To get those scheduled, I will need you to sign these 2 documents allowing us to do that",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "time",
+        "susan_response": "If they insist on scheduling with you, go ahead and pencil in a time and avoid these times and days [provide your schedule]\nAnswer any questions that the HO may have\n“Thank you, sir/ma’am, looking forward to seeing you on the day of inspection, you have my contact information on my card if you need anything else",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "time",
+        "susan_response": "“At the same time our office will be reviewing your entire project along with my photos and the insurance estimate. As I’ve mentioned, insurance companies are always trying to save money. We usually find specific line items that are missing",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "time",
+        "susan_response": "Date of loss\nTime of storm (usually around 5pm)\nSize of hail (usually 1 – 1. 5 inches)\nType of shingle and/or siding\nAny interior damage?\nIs the house livable?\nWas there any personal property damaged?\nDid they lose power?\nHave you selected a contractor? (yes, we want them to know ASAP that you are working with me)\nDo they have an estimate? (always no)\nIs your roof steeper than an average staircase?\nHow high is the roof/is it difficult to access with most ladders?\nThings they should do on the call:\nAsk for adjuster info, if not available yet, that’s okay too. Always ask for claim number\nIf Claim Rep wants to schedule the inspection now (only Allstate) – have 3 available times listed out for the HO\nSee example on next page\nExample Customer Info Sheet\nLet them know you would like to file a claim for hail and wind damage",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "time",
+        "susan_response": "Wait for answer\nIf yes “It was pretty crazy right?! Wait for answer \nIf no: “Oh no worries at all, we get that all the time. If yes move on to next line marked with *\nIf no “That’s good! It was a pretty bad one!”\n*“We’re working with a lot of your neighbors in the area. We’ve been able to help them get fully approved through their insurance company to have their roof (and siding) replaced",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "time",
+        "susan_response": "Even if this  damage doesn’t look like a big deal, what happens over time, these hail divots fill with water, freeze…. ,  when water freezes it expands and breaks apart the shingle which will eventually lead to leaks. That is why your insurance company is responsible and your policy covers this type of damage",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "time",
+        "susan_response": "Most of the time will deny it and you will need to get the reinspection. Will only buy if there's lots of signs. Wants Hover report, but it wont change his decision if you give it to him or not",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "time",
+        "susan_response": "It’s no big deal, it happens every time”  \no “We will supplement their estimate and add on specific line items that they should be including. A lot of times they leave off Virginia building code items like  ice and water shield  \nand certain  flashings  that we are required by la w to install with your new roof”  \no “This process can take a couple weeks so it is very important that as soon as you get your \nestimate, you upload it to your portal and/or email it to me”  \no “Like _______ , s aid your mortgage company will likely be on the check. Every mortgage \ncompany is different",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "time",
+        "susan_response": "If you don’t, I wouldn’t want to waste your time, I wouldn’t want to waste mine! I will at least leave giving you peace of mind that you’re in good shape. ”\nPause here – Wait for them to respond/agree. Once they agree to let you do the inspection:, “Alright! It will take me about 10 - 15 minutes",
+        "concern_category": "scheduling",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "quality",
+        "susan_response": "“Any questions so far, sir/ma’am?”\nAnswer any questions\n“Great! Again, I am glad that we were able to make this happen for you, now you get to experience the quality that Roof ER always delivers, at only the cost of your deductible after your whole project is complete!” Potentially mention additional work that they may want to add. Answer any additional questions or engage in any conversation the HO starts. “Also, if you know anyone else that I can help, have them reach out to me! You have my card - they can call, text, or email me and I can inspect their property to see if they have the same qualifying damage and I can walk them through the same process I have walked you through!\nEngage in any conversation that this starts\n“Awesome!\nIf you haven’t already put up a yard sign: “Would you mind if I put up a yard sign next time I’m in your area? This will definitely help other companies already know that you’re working with someone and hopefully eliminate anyone else from knocking your door asking about your roof/siding",
+        "concern_category": "quality_assurance",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "quality",
+        "susan_response": "She was pretty difficult but none the less I'm not worried I know there's fire hail damage there and my photo report is great so just gotta get her when it's dry and show her some quality stuff and I'm sure she will buy. She will try to pull the whole \"wind driven\" thing with hail and you tell her NO hail is not always wind driven and does coke straight down and can most absolutely affect four sides of elevation metals. Don't let her outsmart you because she really is clearly just dumb and probably shouldn't be out inspecting for storm damage",
+        "concern_category": "quality_assurance",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "quality",
+        "susan_response": "INTEGRITY  \n QUALITY  \n SIMPLICITY  \n  \n \n  Adjuster Meeting Outcomes  \nGeneral Notes  \n• The adjuster is always going to go back to the homeowner before they leave (if they are home), \nexplain to them what they found and the next steps. • Always join the adjuster for this conversation to make sure everything is being accurately relayed \nto the homeowner  \n• If you are not there, it is an opportunity for the adjuster to blame you if they aren’t approving the \nclaim  \n• It is also a great opportunity to back up the adjuster on anything they are trying to explain to the homeowner  \n• Adjusters really appreciat e this  \n• Have to remember that these guys aren’t sales people and may not be the best at handling homeowners/ explaining the process. Approved  \n• Reminders  \no Two most important things to prep the homeowner on when you know they are getting an \napproval",
+        "concern_category": "quality_assurance",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "quality",
+        "susan_response": "[Slide 21]\nThe Sales Cycle:\u000bInstall and Final Payment\nThe install will typically be scheduled in 4 – 6 weeks from the time that the Homeowner submits Downpayment\nAfter the install is complete, we will schedule a Quality Check and Wrap Up with the homeowner. They will sign the Certificate of Completion here and we will submit this to the insurance company\nThe insurance company will then release the remaining funds. They call this payment Depreciation",
+        "concern_category": "quality_assurance",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "insurance",
+        "susan_response": "Congratulations, I am glad we were able to ensure that your insurance company fully approved your roof/siding/gutters/etc replacement!\n“So the next steps are, as I mentioned last time we met:\n“One of our Project Coordinators will be reaching out to you to schedule a Project Meeting to go over your full scope of work. “Based on the estimate, your insurance company will be sending you [ACV AMOUNT] shortly. This will be used as your down payment",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "insurance",
+        "susan_response": "How’s it going?”\n“Great, well we just received the decision from the insurance company. We’re going to have to take some steps to get this turned around. I have already submitted my photo report that demonstrates the damage to your property and the need to replace your whole roof, so hopefully they review and approve that",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "insurance",
+        "susan_response": "Insurance companies don’t want to pay out. They are trying to mitigate their losses after storms. I am there as your representation to make sure you get a fair shake",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "insurance",
+        "susan_response": "Within a few days you should receive the itemized estimate from the Insurance Company. Once you receive that, you can forward that to me. This is going to include every line item that the insurance company believes is needed to make you whole again",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "insurance",
+        "susan_response": "Claim Filing Information Sheet  \nYou should use this information to prep the HO – Use a blank note on your iPad\nHO: “I’d like to file a claim for hail [and wind] damage” (never only wind)\nInsurance: “What was damaged?”\nRoof\nDownspouts\nGutters\nWindow Wraps\nSiding\nEtc. Date of loss\nTime of storm (usually around 5pm)\nSize of hail (usually 1 – 1. 5 inches)\nType of shingle and/or siding\nAny interior damage?\nIs the house livable?\nWas there any personal property damaged?\nDid they lose power?\nHave you selected a contractor? (yes, we want them to know ASAP that you are working with me)\nDo they have an estimate? (always no)\nIs your roof steeper than an average staircase?\nHow high is the roof/is it difficult to access with most ladders?\nThings they should do on the call:\nAsk for adjuster info, if not available yet, that’s okay too",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "insurance",
+        "susan_response": "“Hi, how are you? My Name is ________ with Roof- ER we’re a local roofing company that specializes in helping homeowners get their roof (and siding) replaced, paid for by their insurance!”  \nGeneric:\n“We’ve had a lot of storms here in Northern Virginia/Philadelphia/Maryland over the past few months that have done a lot of damage! \n“We’re already working with your neighbors. We’ve been able to help them get fully approved through their insurance company to have their roof  and/or siding replaced. ”\n (Go to line marked with ^)\n\t\t-OR-\nSpecific\n“Were you home for the storm we had in ___",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "insurance",
+        "susan_response": "That is why your insurance company is responsible and your policy covers this type of damage. ” \nStart slowly swiping through all the pictures of hail. “As you can see there is quite a bit of damage",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "insurance",
+        "susan_response": "Use this template to Send to the Adjuster/Insurance when requesting a copy of an estimate \nPLEASE REVIEW AND MAKE EDITS TO MAKE SURE THIS EMAIL FITS YOUR SPECIFIC SITUATION BEFORE YOU SEND IT \nPLEASE ATTACH CLAIM AUTHORIZATION AND MAKE SURE TO INCLUDE CLAIM # IN SUBJECT LINE\nEDIT THE INFO TO ALIGN WITH YOUR SPECIFIC JOB!!!! PLEASE DELETE ALL INSTRUCTIONS BEFORE SENDING THIS TO YOUR HOMEOWNER. EVERYTHING IN THE BRACKETS [ ] SHOULD BE DELETED BEFORE SENDING\nHello!\nThis is [REP NAME]  with Roof-ER. We are assisting [CUSTOMER’S NAME] with the claim referenced above",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "insurance",
+        "susan_response": "[Sheet: Sheet1]\nName | Insurance/Inspection Company | Inspector or Adjuster? | Hover required? (Y/N) | Mark roof prior? (Y/N) | Notes on Adjuster/Inspector |  |  |  |  |  |  |  |  |  |  |  |  |  | \nChristian Ballester | USAA/Progressive/Liberty | Adjuster | Y | Y | Always looking to buy. Appreciates when the roof/siding/exterior is already marked up. Get Hover ESX file so he can write estimate easily |  |  |  |  |  |  |  |  |  |  |  |  |  | \nBadou Hadidane | USAA | Adjuster | N | N | Terrible",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "insurance",
+        "susan_response": "Let me know what they need from us, usually it’s a waiver of lien, our W-9 and a copy of our license”  \no “Do you have any questions at all?”  \no “Okay great! Congrats again and I will be on the lookout for that estimate!  \n \n\n \n \nINTEGRITY  \n QUALITY  \n SIMPLICITY  \nDeni ed: Reinspection  \n• Reminders  \no Only push the homeowner for a reinspection if you feel strongly about the storm damage  \no Ensure you have enough photos documented so that insurance will grant the reinspection  \no Follow up with h/o until payment received -  move to re inspection once received (or \nsupport will have already done this)  \no Support will create damage report, order EV, write Est  \no Those items with a reinspection request template will be sent to homeowner who can then \nsend to insurance  \n• Script  \no  “So unfortunately, ________ is not approving the roof/siding. We could not agree on any \nof the damage. He is trying to say that all of the damage I found is normal wear and tear”",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "insurance",
+        "susan_response": "[Slide 1]\nRoof-ER Sales Training\nWelcome:\nMiguel O’Campo\nAubrey Kanu\nPat Mulford\nEdward Compere\n\n\n\n[Slide 2]\nGoogle Drive\n\n[Slide 3]\nInitial Pitch\u000b5 Non-Negotiables\nWho you are\nWho we are and what we do (Roof ER)\nMake it relatable\nWhat you’re there to do (an inspection)\nGo for the close (them agreeing to the inspection)\n\n\n[Slide 4]\nInitial Pitch\n“Hi, how are you? My Name is ________ with Roof- ER we’re a local roofing company that specializes in helping homeowners get their roof replaced, paid for by their insurance!”  \nReach in for handshake (at your discretion)\nNon-Storm Environment:\n“We’ve had a lot of storms here in Northern Virginia/Maryland over the past few months that have done a lot of damage! \n“We’re working with a lot of your neighbors in the area. We’ve been able to help them get fully approved through their insurance company to have their roof  replaced. ”\n\n\n[Slide 5]\nInitial Pitch\n“While I’m here, in the neighborhood, I am conducting a completely free inspection to see if you have similar, qualifiable damage",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "claim",
+        "susan_response": "But, of course, insurance companies are billion dollar, publicly traded companies that will try to save as much money as they can on every claim. That is why it is great that you are working with us since we know the proper steps to ensure that you are adequately taken care of by your insurance company!”\nAnswer any questions or concerns the HO has. “Alright, so let me know how the phone call goes with your adjuster and I’ll start working on my end to put everything together to get this turned around",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "claim",
+        "susan_response": "Contingency & Claim Authorization\nAfter the claim: “Okay, perfect! Like they said, an adjuster will be reaching out to you in the next 24 to 48 hours to schedule the inspection. The absolute most important part of this process is that I am at this inspection. Insurance companies don’t want to pay out",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "claim",
+        "susan_response": "“A great way for me to help assist some of your neighbors, would be if I could put up a yard sign! Would you mind if I put one up? Thank you, sir/ma’am!”\nSubmit your Photo Report and Claim Authorization to the adjuster with an effective email. Use Post-AM-Email-Template if you need to. If moving to Decision Pending:\n“So, we just finished our inspection",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "claim",
+        "susan_response": "Claim Filing Information Sheet  \nYou should use this information to prep the HO – Use a blank note on your iPad\nHO: “I’d like to file a claim for hail [and wind] damage” (never only wind)\nInsurance: “What was damaged?”\nRoof\nDownspouts\nGutters\nWindow Wraps\nSiding\nEtc. Date of loss\nTime of storm (usually around 5pm)\nSize of hail (usually 1 – 1. 5 inches)\nType of shingle and/or siding\nAny interior damage?\nIs the house livable?\nWas there any personal property damaged?\nDid they lose power?\nHave you selected a contractor? (yes, we want them to know ASAP that you are working with me)\nDo they have an estimate? (always no)\nIs your roof steeper than an average staircase?\nHow high is the roof/is it difficult to access with most ladders?\nThings they should do on the call:\nAsk for adjuster info, if not available yet, that’s okay too",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "claim",
+        "susan_response": "It doesn’t  matter how quickly you are able to complete the inspection if you don’t have enough damage-photos for  the homeowner to be on board with filing the claim. §Flashlight\n \\\nPost-Inspection Pitch\nKnock on the door \n“Hey _______, so I have a bunch of photos to show you. First I walked around the perimeter of the house  to look for collateral damage",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "claim",
+        "susan_response": "Use this template to Send to the Adjuster/Insurance when requesting a copy of an estimate \nPLEASE REVIEW AND MAKE EDITS TO MAKE SURE THIS EMAIL FITS YOUR SPECIFIC SITUATION BEFORE YOU SEND IT \nPLEASE ATTACH CLAIM AUTHORIZATION AND MAKE SURE TO INCLUDE CLAIM # IN SUBJECT LINE\nEDIT THE INFO TO ALIGN WITH YOUR SPECIFIC JOB!!!! PLEASE DELETE ALL INSTRUCTIONS BEFORE SENDING THIS TO YOUR HOMEOWNER. EVERYTHING IN THE BRACKETS [ ] SHOULD BE DELETED BEFORE SENDING\nHello!\nThis is [REP NAME]  with Roof-ER. We are assisting [CUSTOMER’S NAME] with the claim referenced above",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "claim",
+        "susan_response": "Try to get HO to call to get this claim reassigned instead. Spends 10 minutes on the roof and gets off not looking to buy. Most of the time will deny it and you will need to get the reinspection",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "claim",
+        "susan_response": "• Always join the adjuster for this conversation to make sure everything is being accurately relayed \nto the homeowner  \n• If you are not there, it is an opportunity for the adjuster to blame you if they aren’t approving the \nclaim  \n• It is also a great opportunity to back up the adjuster on anything they are trying to explain to the homeowner  \n• Adjusters really appreciat e this  \n• Have to remember that these guys aren’t sales people and may not be the best at handling homeowners/ explaining the process. Approved  \n• Reminders  \no Two most important things to prep the homeowner on when you know they are getting an \napproval. o Suppleme nt process (This gives us value moving forward)  \no Mortgage Company  \n• Script  \no “Congrats ________ “!  \no Reiterate what the adjuster told them they are approving  \no “As you know they are still going to try and mitigate their loss by writing a low estimate",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "claim",
+        "susan_response": "It doesn’t  matter how quickly you are able to complete the inspection if you don’t have enough damage-photos for  the homeowner to be on board with filing the claim. Flashlight\n\n[Slide 30]\nPost-Inspection Pitch\nKnock on the door \n“Hey _______, so I have a bunch of photos to show you. First I walked around the perimeter of the house  to look for collateral damage",
+        "concern_category": "insurance_related",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "money",
+        "susan_response": "But, of course, insurance companies are billion dollar, publicly traded companies that will try to save as much money as they can on every claim. That is why it is great that you are working with us since we know the proper steps to ensure that you are adequately taken care of by your insurance company!”\nAnswer any questions or concerns the HO has. “Alright, so let me know how the phone call goes with your adjuster and I’ll start working on my end to put everything together to get this turned around",
+        "concern_category": "financial",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "money",
+        "susan_response": "As I’ve mentioned, insurance companies are always trying to save money. We usually find specific line items that are missing. Most commonly, code items like IWS and Drip Edge",
+        "concern_category": "financial",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "money",
+        "susan_response": "It’s unfortunate but that’s how they make money. The most important part of this process is that when your insurance company comes out to run their inspection, we are here as storm experts to make sure you as a homeowner get a fair shake. If they are missing anything we make sure they see all the damage that I  just showed you",
+        "concern_category": "financial",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "money",
+        "susan_response": "Might be a waste of time and money giving him the Hover report. Do not supplement his approvals  |  |  |  |  |  |  |  |  |  |  |  |  |  | \nVicki Henry | Homesite (Afics) | Adjuster | Y | Y | Very easy to work with. Will use a ladder assist but buys most of the time if the roof is marked up well and damage makes sense",
+        "concern_category": "financial",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "money",
+        "susan_response": "What are the next 2 sentences after they agree to let you do the inspection?\nWhat is the last sentence of the Initial Pitch Script?\n\n[Slide 9]\nField Portal App\nThe Field Portal App will be used mostly on your phone (but is also useable on your iPad)\nLater on this week, we will review using the Field Portal App on a laptop or desktop which is the most ideal way to keep your jobs organized\nOn the Field Portal App, you can:\nTrack your jobs and what stage they are in\nReview Metrics\nPin houses and create leads\nCreate and upload your Photo reports\nSchedule customer-related events\nReview Tasks and Messages\nCheck the Trade Calendar to see when your installs are going up\n\n[Slide 10]\nField Portal App\nPinning Houses\n\n[Slide 11]\nField Portal App\nTurning Pin into a Lead\n\n\n\n\nOnly when inspection scheduled\n\n[Slide 12]\nObjections\nCommon Objections\n“not interested”\n“I don’t have enough time”\n“my roof is in good shape”\n“I just had it checked”\n“I don’t have the money for anything right now”\n“I have a roofer knock my door at least 5 times a week”\n“my roof is only 18 years old and is a 50 year roof”\nTips:\nAlways react positively with an agreeable response and attitude\nAsk questions when appropriate\nRepeat the customers’ objections when appropriate\n\n[Slide 13]\nInitial Pitch\nWork in groups – try to see how much you have memorized\n\n[Slide 14]\nInitial Pitch\nPlease memorize the whole initial pitch in a Non-Storm Environment\nPlease also be familiar with the Storm Environment Pitch\n\n[Slide 15]\nShingles\n\n[Slide 16]\nDiscontinued Shingles\n\n[Slide 17]\nThe Sales Cycle:\u000bGenerating New Business\nKNOCK KNOCK KNOCK\nMake it a goal to knock 70 doors minimum per day\nPin the houses\nTake good (quick) notes\nKNOCK SOME MORE\n\n[Slide 18]\nThe Sales Cycle:\u000bInspections\nConduct the inspection in the order of the inspection\nThink about safety\nIf you do not feel safe, DO NOT DO THE INSPECTION\nAlways ensure ladder is safely placed\nSafety items you should consider:\nCougar Paws (Get this before anything else)\nBungee Cords\nPitch Hopper\nOther roofing items – reach out to discuss additional safety items\n\n\n\n[Slide 19]\nThe Sales Cycle:\u000bAdjuster Meeting\nAdjuster meeting typically happens within 2 – 7 days\nYou meet with the insurance adjuster\nYou will also be creating your formal photo report this day\nThe decision from the insurance company usually comes within 1 – 10 business days\nOnce a decision is made, they usually only send the estimate to the homeowner\nEnsure the homeowner is prepped to send this to you if the insurance company does not send it to you\nDon’t worry – we will review this in much more detail later – we just want to ensure you understand the timeline at this point\n\n[Slide 20]\nThe Sales Cycle:\u000bProject Meeting\nAfter you send the estimate to Amber (estimates@theroofdocs. com) and to me, we will begin to review the estimate and conduct what is called a Project Review\nWithin a few days, the job will be assigned to one of our Project Coordinators who will schedule a Project Meeting with your homeowner\nThis typically happens within a week of receiving the estimate\nAfter that meeting, the homeowner will sign the Project Documents and submit Downpayment. The Downpayment will typically be the first payment the insurance company sends",
+        "concern_category": "financial",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "guarantee",
+        "susan_response": "“This basic/simple agreement backs you as the homeowner by guaranteeing you that your only cost will be your deductible if we get you fully approved. If it is a partial approval or denial, first we will fight and jump through the necessary hoops to turn that into a full approval; but if we are not able to get you fully approved, this contract is null and void and you do not owe us a penny. ”\n“What’s in it for us, is we just want to get to do the work",
+        "concern_category": "general",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "guarantee",
+        "susan_response": "Don’t worry, like we have agreed to from the beginning, we guarantee you that you would not have to cover any of these costs even if the insurance company were to deny our supplement. [Which does not happen. ]\n“Once our office has completed your job review, which takes 2 - 3 business days, your job will be assigned to one of our Project Coordinators",
+        "concern_category": "general",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "guarantee",
+        "susan_response": "[Slide 49]\nContingency & Claim Authorization Script\n“This basic/simple agreement backs you as the homeowner by guaranteeing you that your only cost will be your deductible if we get you fully approved. If it is a partial approval or denial, first we will fight and jump through the necessary hoops to turn that into a full approval; but if we are not able to get you fully approved, this contract is null and void and you do not owe us a penny. “What’s in it for us, is we just want to get to do the work",
+        "concern_category": "general",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "price",
+        "susan_response": "*Of course if you have anything else you would like us to do beyond the insurance approval, your Project Coordinator could price that out for you. *\n“Your install date will typically be 4 - 6 weeks after your Project Meeting. After you submit that initial payment from the insurance company, we’ll reach out to get your project scheduled!\n“I know that was a lot of information",
+        "concern_category": "general",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "price",
+        "susan_response": "By committing to our core values of Integrity, Quality, and Simplicity, we promise to deliver an experience every homeowner wants when remodeling their home: a simple and straightforward quality installation for a fair and honest price. Our Core Values:\nIntegrity: At Roof-ER, we set the standard for Integrity in an industry that has lost credibility among many consumers. We do not only set the standard of integrity with our clients, but it starts with being honest to ourselves",
+        "concern_category": "general",
+        "resolution_effectiveness": "high"
+      },
+      {
+        "customer_concern": "workmanship",
+        "susan_response": "In an industry known for poor workmanship, lack of communication, and at times, outright deceit; we seek to restore the name of exterior remodeling contractors nationwide. By committing to our core values of Integrity, Quality, and Simplicity, we promise to deliver an experience every homeowner wants when remodeling their home: a simple and straightforward quality installation for a fair and honest price. Our Core Values:\nIntegrity: At Roof-ER, we set the standard for Integrity in an industry that has lost credibility among many consumers",
+        "concern_category": "quality_assurance",
+        "resolution_effectiveness": "high"
+      }
+    ],
+    "size": 65,
+    "format": "concern_response_pairs",
+    "use_case": "customer_service"
+  },
+  "technical_qa_dataset": {},
+  "sales_support_dataset": {}
+}

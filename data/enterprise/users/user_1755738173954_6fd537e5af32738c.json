@@ -1,0 +1,75 @@
+{
+  "id": "user_1755738173954_6fd537e5af32738c",
+  "email": "adjuster@test-insurance.com",
+  "firstName": "Jane",
+  "lastName": "Adjuster",
+  "fullName": "Jane Adjuster",
+  "role": "adjuster",
+  "organizationId": "org_1755738173950_9669ace9f97b7840",
+  "permissions": [
+    "claims:view",
+    "claims:edit",
+    "claims:assign",
+    "documents:view",
+    "documents:edit",
+    "reports:view",
+    "reports:edit",
+    "estimates:review",
+    "estimates:approve",
+    "analytics:view_basic",
+    "teams:view_own",
+    "claims:view_all",
+    "documents:edit"
+  ],
+  "features": [
+    "claim_management",
+    "advanced_analytics",
+    "team_collaboration",
+    "ai_insights"
+  ],
+  "isOrgAdmin": false,
+  "passwordHash": "mock_hash_iZ!vEvhmw9eQ",
+  "teams": [],
+  "settings": {
+    "timezone": "UTC",
+    "language": "en",
+    "theme": "light",
+    "notifications": {
+      "email": true
+    },
+    "dashboard": {
+      "layout": "default",
+      "widgets": [
+        "claims_queue",
+        "analytics",
+        "documents",
+        "calendar"
+      ]
+    }
+  },
+  "security": {
+    "mfaEnabled": false,
+    "lastPasswordChange": "2025-08-21T01:02:53.954Z",
+    "requirePasswordReset": false,
+    "failedLoginAttempts": 0,
+    "lastLoginAt": null,
+    "lastActiveAt": null,
+    "trustedDevices": []
+  },
+  "metadata": {
+    "createdAt": "2025-08-21T01:02:53.954Z",
+    "createdBy": "system",
+    "lastUpdated": "2025-08-21T01:02:53.954Z",
+    "source": "enterprise_admin"
+  },
+  "status": "active",
+  "profile": {
+    "avatar": null,
+    "bio": null,
+    "phone": null,
+    "department": null,
+    "jobTitle": null,
+    "location": null,
+    "emergencyContact": null
+  }
+}

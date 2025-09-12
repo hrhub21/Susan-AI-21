@@ -1,0 +1,1905 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Susan AI - Enhanced Premium Assistant</title>
+    <meta name="description" content="Advanced AI assistant with voice interaction, real-time chat, and premium features powered by modern web technologies">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="keywords" content="AI assistant, voice recognition, chat interface, artificial intelligence, smart assistant">
+    <meta name="author" content="Susan AI Team">
+    
+    <!-- Enhanced SEO and PWA meta tags -->
+    <meta name="application-name" content="Susan AI">
+    <meta name="apple-mobile-web-app-title" content="Susan AI">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Enhanced fonts with display swap for better loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Enhanced favicon and app icons -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%233b82f6'/><stop offset='100%' stop-color='%238b5cf6'/></linearGradient></defs><circle cx='50' cy='50' r='50' fill='url(%23g1)'/><circle cx='50' cy='50' r='25' fill='white' opacity='0.9'/><circle cx='40' cy='40' r='8' fill='url(%23g1)' opacity='0.6'/></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><defs><linearGradient id='g1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%233b82f6'/><stop offset='100%' stop-color='%238b5cf6'/></linearGradient></defs><circle cx='90' cy='90' r='90' fill='url(%23g1)'/><circle cx='90' cy='90' r='45' fill='white' opacity='0.9'/><circle cx='72' cy='72' r='14' fill='url(%23g1)' opacity='0.6'/></svg>">
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    
+    <!-- Resource hints for better performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    
+    <!-- Enhanced stylesheet -->
+    <link rel="stylesheet" href="susan-styles.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="susan-working.js" as="script">
+    
+    <!-- Security headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="background-effects">
+        <div class="neural-network" id="neuralNetwork"></div>
+        <div class="particles" id="particles"></div>
+        <div class="gradient-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+    </div>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav" role="banner" aria-label="Main navigation">
+        <div class="nav-left">
+            <div class="logo">
+                <div class="logo-icon" role="img" aria-label="Susan AI Logo"></div>
+                <span class="logo-text">SUSAN AI</span>
+            </div>
+        </div>
+        <div class="nav-center">
+            <div class="status-indicator" id="statusIndicator" role="status" aria-live="polite">
+                <div class="status-dot" aria-hidden="true"></div>
+                <span class="status-text" id="statusText">Ready</span>
+            </div>
+        </div>
+        <div class="nav-right">
+            <button class="nav-btn" id="themeToggle" 
+                    aria-label="Toggle between light and dark theme" 
+                    title="Toggle Theme">
+                <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="5"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                </svg>
+            </button>
+            <button class="nav-btn" id="settingsBtn" 
+                    aria-label="Open settings panel" 
+                    title="Settings" 
+                    aria-expanded="false" 
+                    aria-controls="settingsPanel">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 1v6M12 17v6M5.64 7.05l4.95 4.95M13.41 13.41l4.95 4.95M7.05 18.36l4.95-4.95M13.41 10.59l4.95-4.95"/>
+                </svg>
+            </button>
+            <button class="nav-btn" id="fullscreenBtn" 
+                    aria-label="Toggle fullscreen mode" 
+                    title="Fullscreen">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M16 21h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                </svg>
+            </button>
+            <button class="nav-btn" id="featuresBtn" 
+                    aria-label="Access advanced Roof-ER features" 
+                    title="Advanced Features"
+                    aria-expanded="false"
+                    aria-controls="featuresMenu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <rect x="9" y="9" width="6" height="6"/>
+                    <path d="M9 1v6M15 1v6M9 17v6M15 17v6M1 9h6M1 15h6M17 9h6M17 15h6"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Advanced Features Menu -->
+    <div class="features-menu hidden" id="featuresMenu" role="dialog" aria-labelledby="features-title" aria-hidden="true">
+        <div class="features-overlay" id="featuresOverlay"></div>
+        <div class="features-panel">
+            <header class="features-header">
+                <h2 id="features-title">🏗️ Roof-ER Advanced Features</h2>
+                <button class="close-btn" id="closeFeaturesBtn" aria-label="Close features menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </header>
+            
+            <div class="features-content">
+                <!-- Photo & Analysis Category -->
+                <div class="feature-category">
+                    <h3 class="category-title">📸 Photo & Analysis</h3>
+                    <div class="features-grid">
+                        <div class="feature-card" data-feature="smart-photo-analysis">
+                            <div class="feature-icon">📸</div>
+                            <h4>Smart Photo Analysis</h4>
+                            <p>AI damage assessment for hail, wind, and collateral damage</p>
+                            <button class="feature-btn" onclick="window.susan.startSmartPhotoAnalysis()">Open Tool</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="damage-quantification">
+                            <div class="feature-icon">🔢</div>
+                            <h4>Damage Quantification</h4>
+                            <p>Count impacts per sq ft and measure granule loss</p>
+                            <button class="feature-btn" onclick="window.susan.startDamageQuantification()">Launch</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="photo-report-generation">
+                            <div class="feature-icon">📄</div>
+                            <h4>Photo Report Generation</h4>
+                            <p>Generate professional reports with damage annotations</p>
+                            <button class="feature-btn" onclick="window.susan.startPhotoReports()">Create Report</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="photo-organization">
+                            <div class="feature-icon">🗂️</div>
+                            <h4>Photo Organization</h4>
+                            <p>Smart categorization and tagging of photos</p>
+                            <button class="feature-btn" onclick="window.susan.startPhotoOrganization()">Organize</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="roof-measurement">
+                            <div class="feature-icon">📏</div>
+                            <h4>Roof Measurement</h4>
+                            <p>Precise measurements from aerial and ground photos</p>
+                            <button class="feature-btn" onclick="window.susan.startRoofMeasurement()">Measure</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="damage-annotation">
+                            <div class="feature-icon">✏️</div>
+                            <h4>Damage Annotation</h4>
+                            <p>Mark and annotate damage areas with AI assistance</p>
+                            <button class="feature-btn" onclick="window.susan.startDamageAnnotation()">Annotate</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="comparison-tool">
+                            <div class="feature-icon">🔄</div>
+                            <h4>Comparison Tool</h4>
+                            <p>Before/after comparisons and progress tracking</p>
+                            <button class="feature-btn" onclick="window.susan.startComparisonTool()">Compare</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insurance & Claims Category -->
+                <div class="feature-category">
+                    <h3 class="category-title">🏢 Insurance & Claims</h3>
+                    <div class="features-grid">
+                        <div class="feature-card" data-feature="insurance-forms">
+                            <div class="feature-icon">📋</div>
+                            <h4>Insurance Forms</h4>
+                            <p>Auto-fill and submit insurance forms with AI</p>
+                            <button class="feature-btn" onclick="window.susan.startInsuranceForms()">Open Forms</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="claim-templates">
+                            <div class="feature-icon">📝</div>
+                            <h4>Claim Templates</h4>
+                            <p>Dynamic templates based on claim details</p>
+                            <button class="feature-btn" onclick="window.susan.startClaimTemplates()">Create Template</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="policy-analysis">
+                            <div class="feature-icon">🔍</div>
+                            <h4>Policy Analysis</h4>
+                            <p>Analyze policy coverage and limitations</p>
+                            <button class="feature-btn" onclick="window.susan.startPolicyAnalysis()">Analyze</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="estimate-builder">
+                            <div class="feature-icon">💰</div>
+                            <h4>Estimate Builder</h4>
+                            <p>Build accurate estimates with current pricing</p>
+                            <button class="feature-btn" onclick="window.susan.startEstimateBuilder()">Build Estimate</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="claim-tracking">
+                            <div class="feature-icon">📊</div>
+                            <h4>Claim Tracking</h4>
+                            <p>Track claim status and progress dashboard</p>
+                            <button class="feature-btn" onclick="window.susan.startClaimTracking()">Track Claims</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="damage-validation">
+                            <div class="feature-icon">✅</div>
+                            <h4>Damage Validation</h4>
+                            <p>AI-powered damage validation and verification</p>
+                            <button class="feature-btn" onclick="window.susan.startDamageValidation()">Validate</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="documentation-hub">
+                            <div class="feature-icon">📚</div>
+                            <h4>Documentation Hub</h4>
+                            <p>Centralized claim documentation management</p>
+                            <button class="feature-btn" onclick="window.susan.startDocumentationHub()">Open Hub</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Materials & Inventory Category -->
+                <div class="feature-category">
+                    <h3 class="category-title">🧱 Materials & Inventory</h3>
+                    <div class="features-grid">
+                        <div class="feature-card" data-feature="material-calculator">
+                            <div class="feature-icon">🔢</div>
+                            <h4>Material Calculator</h4>
+                            <p>Calculate exact materials needed for repairs</p>
+                            <button class="feature-btn" onclick="window.susan.startMaterialCalculator()">Calculate</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="inventory-tracker">
+                            <div class="feature-icon">📦</div>
+                            <h4>Inventory Tracker</h4>
+                            <p>Track materials, tools, and supplies</p>
+                            <button class="feature-btn" onclick="window.susan.startInventoryTracker()">Track Inventory</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="price-lookup">
+                            <div class="feature-icon">💲</div>
+                            <h4>Price Lookup</h4>
+                            <p>Real-time pricing from multiple suppliers</p>
+                            <button class="feature-btn" onclick="window.susan.startPriceLookup()">Check Prices</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="order-management">
+                            <div class="feature-icon">🛒</div>
+                            <h4>Order Management</h4>
+                            <p>Manage purchase orders and deliveries</p>
+                            <button class="feature-btn" onclick="window.susan.startOrderManagement()">Manage Orders</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="supplier-database">
+                            <div class="feature-icon">🏪</div>
+                            <h4>Supplier Database</h4>
+                            <p>Comprehensive supplier contact and rating system</p>
+                            <button class="feature-btn" onclick="window.susan.startSupplierDatabase()">View Suppliers</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="stock-alerts">
+                            <div class="feature-icon">🚨</div>
+                            <h4>Stock Alerts</h4>
+                            <p>Low stock alerts and reorder notifications</p>
+                            <button class="feature-btn" onclick="window.susan.startStockAlerts()">Setup Alerts</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer & Project Category -->
+                <div class="feature-category">
+                    <h3 class="category-title">👥 Customer & Project</h3>
+                    <div class="features-grid">
+                        <div class="feature-card" data-feature="customer-portal">
+                            <div class="feature-icon">🏠</div>
+                            <h4>Customer Portal</h4>
+                            <p>Client dashboard for project updates and communication</p>
+                            <button class="feature-btn" onclick="window.susan.startCustomerPortal()">Open Portal</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="schedule-manager">
+                            <div class="feature-icon">📅</div>
+                            <h4>Schedule Manager</h4>
+                            <p>Intelligent scheduling and calendar management</p>
+                            <button class="feature-btn" onclick="window.susan.startScheduleManager()">Manage Schedule</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="sms-updates">
+                            <div class="feature-icon">💬</div>
+                            <h4>SMS Updates</h4>
+                            <p>Automated SMS notifications and updates</p>
+                            <button class="feature-btn" onclick="window.susan.startSMSUpdates()">Setup SMS</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="review-collection">
+                            <div class="feature-icon">⭐</div>
+                            <h4>Review Collection</h4>
+                            <p>Automated review requests and reputation management</p>
+                            <button class="feature-btn" onclick="window.susan.startReviewCollection()">Collect Reviews</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="project-dashboard">
+                            <div class="feature-icon">📋</div>
+                            <h4>Project Dashboard</h4>
+                            <p>Comprehensive project management and tracking</p>
+                            <button class="feature-btn" onclick="window.susan.startProjectDashboard()">View Projects</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="contract-generator">
+                            <div class="feature-icon">📄</div>
+                            <h4>Contract Generator</h4>
+                            <p>Generate legal contracts and agreements</p>
+                            <button class="feature-btn" onclick="window.susan.startContractGenerator()">Generate Contract</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safety & Compliance Category -->
+                <div class="feature-category">
+                    <h3 class="category-title">🛡️ Safety & Compliance</h3>
+                    <div class="features-grid">
+                        <div class="feature-card" data-feature="safety-protocols">
+                            <div class="feature-icon">⚠️</div>
+                            <h4>Safety Protocols</h4>
+                            <p>OSHA compliance and safety management</p>
+                            <button class="feature-btn" onclick="window.susan.startSafetyProtocols()">View Protocols</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="weather-alerts">
+                            <div class="feature-icon">🌦️</div>
+                            <h4>Weather Alerts</h4>
+                            <p>Real-time weather monitoring and work alerts</p>
+                            <button class="feature-btn" onclick="window.susan.startWeatherAlerts()">Setup Alerts</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="permit-tracker">
+                            <div class="feature-icon">📜</div>
+                            <h4>Permit Tracker</h4>
+                            <p>Track permits and regulatory requirements</p>
+                            <button class="feature-btn" onclick="window.susan.startPermitTracker()">Track Permits</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="quality-checks">
+                            <div class="feature-icon">🔍</div>
+                            <h4>Quality Checks</h4>
+                            <p>Automated quality control and inspections</p>
+                            <button class="feature-btn" onclick="window.susan.startQualityChecks()">Start Check</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Automation Category -->
+                <div class="feature-category">
+                    <h3 class="category-title">🤖 AI & Automation</h3>
+                    <div class="features-grid">
+                        <div class="feature-card" data-feature="ai-assistant">
+                            <div class="feature-icon">🧠</div>
+                            <h4>AI Assistant</h4>
+                            <p>Advanced AI guidance and decision support</p>
+                            <button class="feature-btn" onclick="window.susan.startAIAssistant()">Activate AI</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="lead-scoring">
+                            <div class="feature-icon">🎯</div>
+                            <h4>Lead Scoring</h4>
+                            <p>AI-powered lead qualification and scoring</p>
+                            <button class="feature-btn" onclick="window.susan.startLeadScoring()">Score Leads</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="predictive-analytics">
+                            <div class="feature-icon">🔮</div>
+                            <h4>Predictive Analytics</h4>
+                            <p>Forecast trends and business insights</p>
+                            <button class="feature-btn" onclick="window.susan.startPredictiveAnalytics()">View Analytics</button>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="workflow-automation">
+                            <div class="feature-icon">⚙️</div>
+                            <h4>Workflow Automation</h4>
+                            <p>Automate repetitive tasks and processes</p>
+                            <button class="feature-btn" onclick="window.susan.startWorkflowAutomation()">Setup Automation</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="features-footer">
+                <div class="feature-stats">
+                    <span class="stat">34 Advanced Features</span>
+                    <span class="stat">AI-Powered</span>
+                    <span class="stat">Revolutionary</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Main Dashboard Grid -->
+    <div class="dashboard-grid" role="application" aria-label="Susan AI Dashboard">
+        <!-- Left Sidebar - Enhanced System Dashboard -->
+        <aside class="sidebar left-sidebar" role="complementary" aria-label="System dashboard with real-time monitoring widgets">
+            <!-- Enhanced Weather Widget -->
+            <section class="widget weather-widget" id="weatherWidget" role="region" aria-labelledby="weather-title" tabindex="0">
+                <header class="widget-header">
+                    <h3 id="weather-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" class="widget-icon">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                        </svg>
+                        Weather Conditions
+                    </h3>
+                    <button class="widget-refresh" aria-label="Refresh weather data" title="Refresh Weather">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="23,4 23,10 17,10"/>
+                            <polyline points="1,20 1,14 7,14"/>
+                            <path d="M20.49,9A9,9,0,0,0,5.64,5.64L1,10m22,4L18.36,18.36A9,9,0,0,1,3.51,15"/>
+                        </svg>
+                    </button>
+                </header>
+                <div class="widget-content" role="group" aria-labelledby="weather-title">
+                    <div class="weather-main">
+                        <div class="temperature-display">
+                            <span class="temperature" aria-label="Current temperature">--°</span>
+                            <span class="temperature-unit" aria-hidden="true">C</span>
+                        </div>
+                        <div class="weather-details">
+                            <div class="weather-desc" aria-live="polite" aria-label="Weather description">Loading weather data...</div>
+                            <div class="weather-meta">
+                                <span class="humidity" aria-label="Humidity level">--% humidity</span>
+                                <span class="wind-speed" aria-label="Wind speed">-- km/h wind</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weather-indicator" aria-hidden="true"></div>
+                </div>
+            </section>
+
+            <!-- Enhanced System Performance Widget -->
+            <section class="widget system-widget" id="systemWidget" role="region" aria-labelledby="system-title" tabindex="0">
+                <header class="widget-header">
+                    <h3 id="system-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" class="widget-icon">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                        System Performance
+                    </h3>
+                    <div class="performance-indicator" aria-label="Overall system health" role="status">
+                        <span class="indicator-dot healthy" aria-hidden="true"></span>
+                        <span class="sr-only">System running optimally</span>
+                    </div>
+                </header>
+                <div class="widget-content" role="group" aria-labelledby="system-title">
+                    <div class="system-stats">
+                        <div class="stat-item" role="group">
+                            <div class="stat-header">
+                                <span class="stat-label">CPU Usage</span>
+                                <span class="stat-value" aria-live="polite">45%</span>
+                            </div>
+                            <div class="stat-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" aria-label="CPU usage at 45 percent">
+                                <div class="stat-fill cpu-fill" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item" role="group">
+                            <div class="stat-header">
+                                <span class="stat-label">Memory Usage</span>
+                                <span class="stat-value" aria-live="polite">62%</span>
+                            </div>
+                            <div class="stat-bar" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" aria-label="Memory usage at 62 percent">
+                                <div class="stat-fill memory-fill" style="width: 62%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item" role="group">
+                            <div class="stat-header">
+                                <span class="stat-label">Network</span>
+                                <span class="stat-value" aria-live="polite">Normal</span>
+                            </div>
+                            <div class="network-status">
+                                <div class="network-bars" aria-hidden="true">
+                                    <span class="bar active"></span>
+                                    <span class="bar active"></span>
+                                    <span class="bar active"></span>
+                                    <span class="bar"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Enhanced AI Status Widget -->
+            <section class="widget ai-status-widget" id="aiStatusWidget" role="region" aria-labelledby="ai-status-title" tabindex="0">
+                <header class="widget-header">
+                    <h3 id="ai-status-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" class="widget-icon">
+                            <path d="M9 12l2 2 4-4"/>
+                            <circle cx="12" cy="12" r="9"/>
+                        </svg>
+                        AI Engine Status
+                    </h3>
+                    <div class="ai-health-indicator" role="status" aria-label="AI system health">
+                        <div class="health-pulse online" aria-hidden="true"></div>
+                    </div>
+                </header>
+                <div class="widget-content" role="group" aria-labelledby="ai-status-title">
+                    <div class="ai-metrics">
+                        <div class="metric-row" role="group">
+                            <span class="metric-label">Response Time</span>
+                            <span class="metric-value" aria-live="polite" aria-label="Average response time">2.3s</span>
+                        </div>
+                        <div class="metric-row" role="group">
+                            <span class="metric-label">Accuracy Rate</span>
+                            <span class="metric-value" aria-live="polite" aria-label="Model accuracy percentage">99.1%</span>
+                        </div>
+                        <div class="metric-row" role="group">
+                            <span class="metric-label">Model Status</span>
+                            <span class="metric-value online" aria-live="polite" aria-label="Current model status">Online</span>
+                        </div>
+                        <div class="metric-row" role="group">
+                            <span class="metric-label">Load Factor</span>
+                            <span class="metric-value" aria-live="polite" aria-label="Current system load">Low</span>
+                        </div>
+                    </div>
+                    <div class="ai-capabilities" role="group" aria-label="Available AI capabilities">
+                        <div class="capability-tags">
+                            <span class="capability-tag active" aria-label="Voice recognition enabled">Voice</span>
+                            <span class="capability-tag active" aria-label="Text processing enabled">Text</span>
+                            <span class="capability-tag active" aria-label="File analysis enabled">Files</span>
+                            <span class="capability-tag" aria-label="Image processing disabled">Images</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </aside>
+
+        <!-- Central Interface -->
+        <main class="central-interface" role="main" aria-label="Susan AI interaction area">
+            <!-- Enhanced Susan Orb Container -->
+            <section class="orb-container" role="region" aria-labelledby="orb-description">
+                <h2 id="orb-description" class="sr-only">Enhanced Susan AI voice interaction interface with advanced visual feedback</h2>
+                
+                <!-- Orb Interaction Area -->
+                <div class="orb-interaction-zone" role="group" aria-labelledby="orb-description">
+                    <div class="orb-wrapper">
+                        <button class="susan-orb enhanced" id="susanOrb" 
+                                aria-label="Click to interact with Susan AI - Voice and text interaction available" 
+                                aria-describedby="orb-status orb-help"
+                                role="button"
+                                data-state="ready">
+                            
+                            <!-- Enhanced Core with Multiple Layers -->
+                            <div class="orb-core" aria-hidden="true">
+                                <div class="core-inner"></div>
+                                <div class="core-highlight"></div>
+                                <div class="core-pulse"></div>
+                            </div>
+                            
+                            <!-- Enhanced Ring System -->
+                            <div class="orb-rings" aria-hidden="true">
+                                <div class="ring ring-1">
+                                    <div class="ring-segments">
+                                        <span class="segment"></span>
+                                        <span class="segment"></span>
+                                        <span class="segment"></span>
+                                        <span class="segment"></span>
+                                    </div>
+                                </div>
+                                <div class="ring ring-2">
+                                    <div class="ring-particles">
+                                        <span class="particle"></span>
+                                        <span class="particle"></span>
+                                        <span class="particle"></span>
+                                        <span class="particle"></span>
+                                        <span class="particle"></span>
+                                        <span class="particle"></span>
+                                    </div>
+                                </div>
+                                <div class="ring ring-3">
+                                    <div class="ring-energy"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Enhanced Voice Visualizer -->
+                            <div class="voice-visualizer enhanced" id="voiceVisualizer" aria-hidden="true">
+                                <canvas id="audioCanvas" width="320" height="120" 
+                                        aria-label="Real-time voice activity visualization"></canvas>
+                                <div class="visualizer-overlay">
+                                    <div class="frequency-bars">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- State Indicators -->
+                            <div class="orb-state-indicators" aria-hidden="true">
+                                <div class="state-indicator listening">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                                    </svg>
+                                </div>
+                                <div class="state-indicator speaking">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                                    </svg>
+                                </div>
+                                <div class="state-indicator thinking">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="1"/>
+                                        <circle cx="19" cy="12" r="1"/>
+                                        <circle cx="5" cy="12" r="1"/>
+                                    </svg>
+                                </div>
+                                <div class="state-indicator processing">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                        <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                                        <line x1="12" y1="22.08" x2="12" y2="12"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </button>
+                        
+                        <!-- Enhanced Glow Effects -->
+                        <div class="orb-glow primary" aria-hidden="true"></div>
+                        <div class="orb-glow secondary" aria-hidden="true"></div>
+                        <div class="orb-ambient-glow" aria-hidden="true"></div>
+                    </div>
+                    
+                    <!-- Status and Help Information -->
+                    <div class="orb-info">
+                        <div id="orb-status" class="orb-status" aria-live="polite" aria-atomic="true">
+                            <span class="status-text">Ready for interaction</span>
+                            <span class="status-subtext">Click orb or use voice controls</span>
+                        </div>
+                        <div id="orb-help" class="orb-help" aria-describedby="orb-description">
+                            <kbd>Space</kbd> to talk • <kbd>Esc</kbd> to stop • Click for menu
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Voice Controls -->
+                <div class="voice-controls enhanced" role="group" aria-label="Voice interaction controls with advanced options">
+                    <div class="control-group primary-controls">
+                        <button class="control-btn primary voice-btn" id="voiceBtn" 
+                                aria-label="Start voice interaction with Susan AI using Whisper technology"
+                                data-tooltip="Hold Shift for browser recognition">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                                <line x1="12" y1="19" x2="12" y2="23"/>
+                                <line x1="8" y1="23" x2="16" y2="23"/>
+                            </svg>
+                            <span class="btn-text">Talk to Susan</span>
+                            <span class="btn-badge">Whisper</span>
+                        </button>
+                        
+                        <button class="control-btn secondary stop-btn" id="stopBtn" 
+                                aria-label="Stop current voice interaction or speech"
+                                style="display: none;">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <rect x="6" y="6" width="12" height="12" rx="2"/>
+                            </svg>
+                            <span class="btn-text">Stop</span>
+                        </button>
+                    </div>
+                    
+                    <div class="control-group secondary-controls">
+                        <button class="control-btn tertiary mute-btn" id="muteBtn" 
+                                aria-label="Mute Susan's voice responses"
+                                aria-pressed="false">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                                <path d="M23 9l-6 6M17 9l6 6"/>
+                            </svg>
+                        </button>
+                        
+                        <button class="control-btn tertiary voice-mode-btn" id="voiceModeBtn" 
+                                aria-label="Toggle voice interaction mode"
+                                aria-pressed="false"
+                                data-mode="push-to-talk">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 1v6M12 17v6M5.64 7.05l4.95 4.95M13.41 13.41l4.95 4.95M7.05 18.36l4.95-4.95M13.41 10.59l4.95-4.95"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Enhanced Multi-modal Input Area -->
+            <section class="input-area enhanced" role="region" aria-labelledby="input-section-title">
+                <h3 id="input-section-title" class="sr-only">Enhanced message input area with file support and smart suggestions</h3>
+                
+                <!-- Smart Input Container -->
+                <div class="input-container smart">
+                    <form class="input-wrapper enhanced" role="search" aria-label="Send message to Susan AI with enhanced features">
+                        <label for="textInput" class="sr-only">Type your message to Susan AI with smart completion</label>
+                        
+                        <!-- Input Field with Enhancements -->
+                        <div class="input-field-container">
+                            <textarea class="text-input enhanced" 
+                                   id="textInput" 
+                                   placeholder="Ask Susan anything... or use voice interaction" 
+                                   aria-label="Message input with auto-resize"
+                                   aria-describedby="input-help input-counter"
+                                   autocomplete="off"
+                                   rows="1"
+                                   maxlength="2000"></textarea>
+                            
+                            <!-- Input Enhancements -->
+                            <div class="input-enhancements">
+                                <div class="typing-indicator-small" id="userTypingIndicator" style="display: none;">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="character-counter" id="inputCounter" aria-live="polite">
+                                    <span class="count">0</span>/<span class="limit">2000</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="input-help" class="sr-only">Press Enter to send message, Shift+Enter for new line, or use voice controls</div>
+                        
+                        <!-- Enhanced Action Buttons -->
+                        <div class="input-actions">
+                            <!-- Quick Actions -->
+                            <div class="quick-actions" role="group" aria-label="Quick input actions">
+                                <button type="button" 
+                                        class="input-btn quick-action-btn emoji-btn" 
+                                        id="emojiBtn" 
+                                        aria-label="Add emoji"
+                                        title="Add Emoji">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                                        <line x1="9" y1="9" x2="9.01" y2="9"/>
+                                        <line x1="15" y1="9" x2="15.01" y2="9"/>
+                                    </svg>
+                                </button>
+                                
+                                <button type="button" 
+                                        class="input-btn quick-action-btn attach-btn" 
+                                        id="attachBtn" 
+                                        aria-label="Attach files - Images, documents, and more"
+                                        title="Attach Files">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
+                                    </svg>
+                                    <span class="attachment-badge" id="attachmentBadge" style="display: none;">0</span>
+                                </button>
+                                
+                                <button type="button" 
+                                        class="input-btn quick-action-btn voice-input-btn" 
+                                        id="quickVoiceBtn" 
+                                        aria-label="Quick voice input"
+                                        title="Voice Input">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <!-- Primary Send Button -->
+                            <button type="submit" 
+                                    class="input-btn send-btn enhanced" 
+                                    id="sendBtn" 
+                                    aria-label="Send message to Susan AI"
+                                    title="Send Message"
+                                    disabled>
+                                <svg class="send-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <line x1="22" y1="2" x2="11" y2="13"/>
+                                    <polygon points="22,2 15,22 11,13 2,9 22,2"/>
+                                </svg>
+                                <svg class="sending-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display: none;">
+                                    <path d="M21 12c0 5-4 9-9 9s-9-4-9-9 4-9 9-9c2.5 0 4.8 1 6.5 2.6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Smart Suggestions -->
+                    <div class="input-suggestions" id="inputSuggestions" style="display: none;" role="listbox" aria-label="Input suggestions">
+                        <!-- Dynamic suggestions will be inserted here -->
+                    </div>
+                </div>
+                
+                <!-- Enhanced File Drop Zone -->
+                <div class="drop-zone enhanced" 
+                     id="dropZone" 
+                     role="button" 
+                     tabindex="0"
+                     aria-label="Enhanced file upload area - Drag and drop or click to select files"
+                     aria-describedby="drop-instructions">
+                    <div class="drop-content">
+                        <div class="drop-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10,9 9,9 8,9"/>
+                            </svg>
+                        </div>
+                        <div class="drop-text">
+                            <p id="drop-instructions" class="primary-text">Drop files here or click to upload</p>
+                            <p class="secondary-text">Supports images, documents, audio, and more</p>
+                            <div class="supported-formats">
+                                <span class="format">PNG</span>
+                                <span class="format">JPG</span>
+                                <span class="format">HEIC</span>
+                                <span class="format">PDF</span>
+                                <span class="format">DOC</span>
+                                <span class="format">+more</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Upload Command Input -->
+                    <div class="upload-command-container" style="margin-top: 15px; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 8px; display: none;" id="uploadCommandContainer">
+                        <label for="uploadCommand" style="display: block; margin-bottom: 5px; font-size: 0.9em; color: #888;">Add instructions for uploaded files:</label>
+                        <input type="text" 
+                               id="uploadCommand" 
+                               placeholder="e.g., 'analyze for hail damage', 'quantify impacts', 'create estimate'"
+                               style="width: 100%; padding: 8px; border: 1px solid #333; border-radius: 4px; background: rgba(0,0,0,0.3); color: white; font-size: 0.9em;"
+                               maxlength="200">
+                        <div style="font-size: 0.8em; color: #aaa; margin-top: 5px;">
+                            💡 Type what you want me to do with the uploaded files
+                        </div>
+                    </div>
+                    
+                    <div class="drop-overlay" aria-hidden="true"></div>
+                </div>
+                
+                <!-- File Preview Area -->
+                <div class="file-preview-area" id="filePreviewArea" style="display: none;" role="region" aria-label="File attachments preview">
+                    <div class="file-preview-header">
+                        <h4>Attached Files</h4>
+                        <button class="clear-attachments" id="clearAttachments" aria-label="Clear all attachments">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"/>
+                                <line x1="6" y1="6" x2="18" y2="18"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="file-preview-list" id="filePreviewList">
+                        <!-- File previews will be inserted here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Enhanced Right Sidebar - Conversation & Intelligence Hub -->
+        <aside class="sidebar right-sidebar enhanced" role="complementary" aria-label="Enhanced conversation interface and intelligent activity monitoring">
+            <!-- Enhanced Chat Section -->
+            <section class="chat-section enhanced" role="region" aria-labelledby="chat-title">
+                <header class="chat-header enhanced">
+                    <div class="chat-title-area">
+                        <h3 id="chat-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" class="chat-icon">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            Conversation
+                        </h3>
+                        <div class="conversation-stats">
+                            <span class="message-count" aria-label="Message count">0 messages</span>
+                            <span class="conversation-time" aria-label="Conversation duration">0m</span>
+                        </div>
+                    </div>
+                    <div class="chat-actions" role="group" aria-label="Chat management actions">
+                        <button class="chat-action export-btn" 
+                                id="exportChat" 
+                                aria-label="Export conversation"
+                                title="Export Chat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7,10 12,15 17,10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                        </button>
+                        <button class="chat-action search-btn" 
+                                id="searchChat" 
+                                aria-label="Search conversation"
+                                title="Search Messages">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <circle cx="11" cy="11" r="8"/>
+                                <path d="M21 21l-4.35-4.35"/>
+                            </svg>
+                        </button>
+                        <button class="chat-action clear-btn" 
+                                id="clearChat" 
+                                aria-label="Clear conversation history"
+                                title="Clear Chat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="3,6 5,6 21,6"/>
+                                <path d="M19,6v14a2,2,0,0,1-2,2H7a2,2,0,0,1-2-2V6M8,6V4a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2V6"/>
+                            </svg>
+                        </button>
+                    </div>
+                </header>
+                
+                <!-- Chat Search Bar -->
+                <div class="chat-search" id="chatSearch" style="display: none;" role="search">
+                    <div class="search-input-wrapper">
+                        <input type="text" class="search-input" placeholder="Search messages..." aria-label="Search conversation">
+                        <button class="search-close" aria-label="Close search">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"/>
+                                <line x1="6" y1="6" x2="18" y2="18"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="search-results" aria-live="polite">0 results</div>
+                </div>
+                
+                <!-- Enhanced Chat Container -->
+                <div class="chat-container enhanced" 
+                     id="chatContainer" 
+                     role="log" 
+                     aria-live="polite" 
+                     aria-label="Enhanced chat conversation with rich message features"
+                     tabindex="0">
+                    
+                    <!-- Enhanced Welcome Message -->
+                    <div class="message susan welcome-message enhanced" data-message-id="welcome-001">
+                        <div class="message-avatar enhanced">
+                            <div class="avatar-icon susan-avatar">
+                                <div class="avatar-glow"></div>
+                            </div>
+                            <div class="avatar-status online" aria-label="Susan is online"></div>
+                        </div>
+                        <div class="message-content enhanced">
+                            <div class="message-header">
+                                <span class="sender-name">Susan AI</span>
+                                <span class="message-badges">
+                                    <span class="badge ai-enhanced" title="AI Enhanced Response">AI+</span>
+                                </span>
+                            </div>
+                            <div class="message-text rich">
+                                <p>Welcome to <strong>Susan AI Enhanced</strong>! 🚀</p>
+                                <p>I'm your advanced AI assistant with cutting-edge capabilities including:</p>
+                                <ul>
+                                    <li>🎤 Advanced voice recognition with Whisper</li>
+                                    <li>📁 Multi-format file analysis</li>
+                                    <li>💬 Intelligent conversation memory</li>
+                                    <li>🎨 Rich media support</li>
+                                </ul>
+                                <p>How can I assist you today?</p>
+                            </div>
+                            <div class="message-actions">
+                                <button class="message-action copy-btn" aria-label="Copy message" title="Copy">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                    </svg>
+                                </button>
+                                <button class="message-action speak-btn" aria-label="Read aloud" title="Speak">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="message-metadata">
+                                <time class="message-time" data-time="now" datetime="">Just now</time>
+                                <span class="message-stats">
+                                    <span class="word-count">42 words</span>
+                                    <span class="read-time">~15s read</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Enhanced Typing Indicator -->
+                    <div class="typing-indicator enhanced" id="typingIndicator">
+                        <div class="message-avatar enhanced">
+                            <div class="avatar-icon susan-avatar thinking">
+                                <div class="avatar-glow pulsing"></div>
+                            </div>
+                        </div>
+                        <div class="typing-content enhanced">
+                            <div class="typing-animation">
+                                <div class="typing-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="typing-waves">
+                                    <span class="wave"></span>
+                                    <span class="wave"></span>
+                                    <span class="wave"></span>
+                                    <span class="wave"></span>
+                                </div>
+                            </div>
+                            <div class="typing-text-wrapper">
+                                <div class="typing-text" id="typingText">Susan is thinking...</div>
+                                <div class="typing-subtext" id="typingSubtext">Processing your request</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Reply Suggestions -->
+                <div class="quick-replies" id="quickReplies" style="display: none;" role="group" aria-label="Quick reply suggestions">
+                    <div class="quick-reply-header">Suggested responses:</div>
+                    <div class="quick-reply-buttons">
+                        <!-- Dynamic quick replies will be inserted here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Enhanced Activity Intelligence Section -->
+            <section class="activity-section enhanced" role="region" aria-labelledby="activity-title">
+                <header class="activity-header enhanced">
+                    <h3 id="activity-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" class="activity-icon">
+                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+                        </svg>
+                        Activity Intelligence
+                    </h3>
+                    <div class="activity-controls">
+                        <button class="activity-filter" id="activityFilter" aria-label="Filter activities" title="Filter">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="22,3 2,3 10,12.46 10,19 14,21 14,12.46 22,3"/>
+                            </svg>
+                        </button>
+                    </div>
+                </header>
+                
+                <!-- Activity Summary -->
+                <div class="activity-summary" role="group" aria-label="Activity summary statistics">
+                    <div class="summary-stat">
+                        <span class="stat-number" id="totalActivities">0</span>
+                        <span class="stat-label">Total Events</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="stat-number" id="voiceInteractions">0</span>
+                        <span class="stat-label">Voice</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="stat-number" id="filesProcessed">0</span>
+                        <span class="stat-label">Files</span>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Activity List -->
+                <div class="activity-list enhanced" id="activityList" role="log" aria-live="polite" aria-label="Real-time activity feed">
+                    <div class="activity-item system" data-activity-type="system">
+                        <div class="activity-icon system">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 1v6M12 17v6M5.64 7.05l4.95 4.95M13.41 13.41l4.95 4.95M7.05 18.36l4.95-4.95M13.41 10.59l4.95-4.95"/>
+                            </svg>
+                        </div>
+                        <div class="activity-content enhanced">
+                            <div class="activity-main">
+                                <div class="activity-text">System initialized and ready</div>
+                                <div class="activity-details">Enhanced interface loaded successfully</div>
+                            </div>
+                            <div class="activity-metadata">
+                                <time class="activity-time">Just now</time>
+                                <span class="activity-priority high" title="High priority event"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Activity Insights -->
+                <div class="activity-insights" role="group" aria-label="Activity insights and patterns">
+                    <div class="insight-card">
+                        <div class="insight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                        <div class="insight-content">
+                            <div class="insight-title">Usage Pattern</div>
+                            <div class="insight-text">Most active during afternoon sessions</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </div>
+
+    <!-- Notification System -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <!-- Enhanced Settings Panel -->
+    <div class="settings-panel enhanced" id="settingsPanel" role="dialog" aria-labelledby="settings-title" aria-modal="true">
+        <div class="settings-overlay" aria-hidden="true"></div>
+        <div class="settings-container">
+            <header class="settings-header enhanced">
+                <div class="settings-title-area">
+                    <h2 id="settings-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" class="settings-icon">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6M12 17v6M5.64 7.05l4.95 4.95M13.41 13.41l4.95 4.95M7.05 18.36l4.95-4.95M13.41 10.59l4.95-4.95"/>
+                        </svg>
+                        Enhanced Settings
+                    </h2>
+                    <div class="settings-version">v2.0 Enhanced</div>
+                </div>
+                <button class="close-settings enhanced" id="closeSettings" aria-label="Close settings panel">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </header>
+            
+            <!-- Settings Navigation -->
+            <nav class="settings-nav" role="tablist" aria-label="Settings categories">
+                <button class="nav-tab active" role="tab" aria-selected="true" aria-controls="voice-panel" id="voice-tab">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                    </svg>
+                    Voice & Audio
+                </button>
+                <button class="nav-tab" role="tab" aria-selected="false" aria-controls="interface-panel" id="interface-tab">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <path d="M9 9h6v6H9z"/>
+                    </svg>
+                    Interface
+                </button>
+                <button class="nav-tab" role="tab" aria-selected="false" aria-controls="ai-panel" id="ai-tab">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        <circle cx="12" cy="12" r="4"/>
+                    </svg>
+                    AI Behavior
+                </button>
+                <button class="nav-tab" role="tab" aria-selected="false" aria-controls="privacy-panel" id="privacy-tab">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                        <circle cx="12" cy="16" r="1"/>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                    Privacy
+                </button>
+            </nav>
+            
+            <div class="settings-content enhanced">
+                <!-- Voice & Audio Settings Panel -->
+                <div class="settings-panel-content active" id="voice-panel" role="tabpanel" aria-labelledby="voice-tab">
+                    <div class="settings-section enhanced">
+                        <div class="section-header">
+                            <h3>Speech Synthesis</h3>
+                            <p class="section-description">Configure how Susan speaks to you</p>
+                        </div>
+                        <div class="setting-item enhanced">
+                            <div class="setting-label-area">
+                                <label for="voiceSpeed" class="setting-label">Speech Speed</label>
+                                <p class="setting-description">Adjust the speed of Susan's voice responses</p>
+                            </div>
+                            <div class="setting-control">
+                                <input type="range" id="voiceSpeed" min="0.5" max="2" step="0.1" value="1" 
+                                       aria-describedby="speed-help" class="enhanced-slider">
+                                <span class="setting-value">1.0x</span>
+                            </div>
+                            <div id="speed-help" class="setting-help">Normal speed is 1.0x</div>
+                        </div>
+                        
+                        <div class="setting-item enhanced">
+                            <div class="setting-label-area">
+                                <label for="voicePitch" class="setting-label">Voice Pitch</label>
+                                <p class="setting-description">Adjust the pitch of Susan's voice</p>
+                            </div>
+                            <div class="setting-control">
+                                <input type="range" id="voicePitch" min="0.5" max="2" step="0.1" value="1" 
+                                       aria-describedby="pitch-help" class="enhanced-slider">
+                                <span class="setting-value">1.0</span>
+                            </div>
+                            <div id="pitch-help" class="setting-help">Normal pitch is 1.0</div>
+                        </div>
+                        
+                        <div class="setting-item enhanced">
+                            <div class="setting-label-area">
+                                <label for="voiceVolume" class="setting-label">Voice Volume</label>
+                                <p class="setting-description">Control Susan's voice volume</p>
+                            </div>
+                            <div class="setting-control">
+                                <input type="range" id="voiceVolume" min="0" max="1" step="0.1" value="0.8" 
+                                       class="enhanced-slider">
+                                <span class="setting-value">80%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item enhanced toggle-item">
+                            <div class="setting-label-area">
+                                <label for="autoSpeak" class="setting-label">Auto-speak Responses</label>
+                                <p class="setting-description">Automatically read Susan's responses aloud</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="autoSpeak" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-section enhanced">
+                        <div class="section-header">
+                            <h3>Voice Recognition</h3>
+                            <p class="section-description">Configure voice input settings</p>
+                        </div>
+                        
+                        <div class="setting-item enhanced">
+                            <div class="setting-label-area">
+                                <label for="recognitionEngine" class="setting-label">Recognition Engine</label>
+                                <p class="setting-description">Choose voice recognition technology</p>
+                            </div>
+                            <div class="setting-control">
+                                <select id="recognitionEngine" class="enhanced-select">
+                                    <option value="whisper">Whisper (Recommended)</option>
+                                    <option value="browser">Browser Speech API</option>
+                                    <option value="auto">Auto-detect Best</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item enhanced toggle-item">
+                            <div class="setting-label-area">
+                                <label for="noiseSuppression" class="setting-label">Noise Suppression</label>
+                                <p class="setting-description">Reduce background noise during recording</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="noiseSuppression" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interface Settings Panel -->
+                <div class="settings-panel-content" id="interface-panel" role="tabpanel" aria-labelledby="interface-tab">
+                    <div class="settings-section enhanced">
+                        <div class="section-header">
+                            <h3>Visual Effects</h3>
+                            <p class="section-description">Customize the visual experience</p>
+                        </div>
+                        
+                        <div class="setting-item enhanced toggle-item">
+                            <div class="setting-label-area">
+                                <label for="animationsToggle" class="setting-label">Enable Animations</label>
+                                <p class="setting-description">Show smooth transitions and effects</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="animationsToggle" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item enhanced toggle-item">
+                            <div class="setting-label-area">
+                                <label for="particlesToggle" class="setting-label">Particle Effects</label>
+                                <p class="setting-description">Show floating particles in background</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="particlesToggle" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item enhanced toggle-item">
+                            <div class="setting-label-area">
+                                <label for="reducedMotion" class="setting-label">Reduce Motion</label>
+                                <p class="setting-description">Minimize animations for accessibility</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="reducedMotion">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item enhanced">
+                            <div class="setting-label-area">
+                                <label for="uiScale" class="setting-label">UI Scale</label>
+                                <p class="setting-description">Adjust interface size for better readability</p>
+                            </div>
+                            <div class="setting-control">
+                                <input type="range" id="uiScale" min="0.8" max="1.4" step="0.1" value="1" 
+                                       class="enhanced-slider">
+                                <span class="setting-value">100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-section enhanced">
+                        <div class="section-header">
+                            <h3>Theme & Appearance</h3>
+                            <p class="section-description">Customize colors and appearance</p>
+                        </div>
+                        
+                        <div class="setting-item enhanced">
+                            <div class="setting-label-area">
+                                <label for="themeSelector" class="setting-label">Theme</label>
+                                <p class="setting-description">Choose your preferred color scheme</p>
+                            </div>
+                            <div class="setting-control">
+                                <select id="themeSelector" class="enhanced-select">
+                                    <option value="dark">Dark Theme</option>
+                                    <option value="light">Light Theme</option>
+                                    <option value="auto">Auto (System)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item enhanced">
+                            <div class="setting-label-area">
+                                <label for="accentColor" class="setting-label">Accent Color</label>
+                                <p class="setting-description">Primary color for interface elements</p>
+                            </div>
+                            <div class="setting-control">
+                                <div class="color-picker-wrapper">
+                                    <input type="color" id="accentColor" value="#3b82f6" class="color-picker">
+                                    <div class="color-presets">
+                                        <button class="color-preset" data-color="#3b82f6" style="background: #3b82f6"></button>
+                                        <button class="color-preset" data-color="#8b5cf6" style="background: #8b5cf6"></button>
+                                        <button class="color-preset" data-color="#10b981" style="background: #10b981"></button>
+                                        <button class="color-preset" data-color="#f59e0b" style="background: #f59e0b"></button>
+                                        <button class="color-preset" data-color="#ef4444" style="background: #ef4444"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI Behavior Settings Panel -->
+                <div class="settings-panel-content" id="ai-panel" role="tabpanel" aria-labelledby="ai-tab">
+                    <div class="settings-section enhanced">
+                        <div class="section-header">
+                            <h3>Response Behavior</h3>
+                            <p class="section-description">Configure how Susan responds</p>
+                        </div>
+                        
+                        <div class="setting-item enhanced">
+                            <div class="setting-label-area">
+                                <label for="responseStyle" class="setting-label">Response Style</label>
+                                <p class="setting-description">Choose Susan's communication style</p>
+                            </div>
+                            <div class="setting-control">
+                                <select id="responseStyle" class="enhanced-select">
+                                    <option value="balanced">Balanced</option>
+                                    <option value="concise">Concise</option>
+                                    <option value="detailed">Detailed</option>
+                                    <option value="creative">Creative</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item enhanced toggle-item">
+                            <div class="setting-label-area">
+                                <label for="contextMemory" class="setting-label">Context Memory</label>
+                                <p class="setting-description">Remember conversation context</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="contextMemory" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item enhanced toggle-item">
+                            <div class="setting-label-area">
+                                <label for="smartSuggestions" class="setting-label">Smart Suggestions</label>
+                                <p class="setting-description">Show intelligent response suggestions</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="smartSuggestions" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Privacy Settings Panel -->
+                <div class="settings-panel-content" id="privacy-panel" role="tabpanel" aria-labelledby="privacy-tab">
+                    <div class="settings-section enhanced">
+                        <div class="section-header">
+                            <h3>Data & Privacy</h3>
+                            <p class="section-description">Control your data and privacy settings</p>
+                        </div>
+                        
+                        <div class="setting-item enhanced toggle-item">
+                            <div class="setting-label-area">
+                                <label for="saveConversations" class="setting-label">Save Conversations</label>
+                                <p class="setting-description">Store conversation history locally</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="saveConversations" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item enhanced toggle-item">
+                            <div class="setting-label-area">
+                                <label for="analytics" class="setting-label">Usage Analytics</label>
+                                <p class="setting-description">Help improve Susan with anonymous usage data</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="analytics">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item enhanced button-item">
+                            <div class="setting-label-area">
+                                <div class="setting-label">Clear All Data</div>
+                                <p class="setting-description">Remove all stored data and reset settings</p>
+                            </div>
+                            <div class="setting-control">
+                                <button class="danger-button" id="clearAllData">Clear Data</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Settings Footer -->
+            <footer class="settings-footer">
+                <div class="settings-info">
+                    <span class="build-info">Susan AI Enhanced v2.0</span>
+                    <span class="last-updated">Settings auto-saved</span>
+                </div>
+                <div class="settings-actions">
+                    <button class="reset-button" id="resetSettings">Reset to Defaults</button>
+                    <button class="primary-button" id="closeSettings2">Done</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Enhanced Hidden Inputs -->
+    <input type="file" 
+           id="fileInput" 
+           multiple 
+           style="display: none;" 
+           accept="image/*,.heic,.HEIC,.pdf,.txt,.doc,.docx,.mp3,.wav,.ogg,.mp4,.webm,.zip,.rar"
+           aria-label="Enhanced file upload input with extended format support">
+
+    <!-- Enhanced Loading Indicator -->
+    <div id="loading-indicator" class="loading-indicator enhanced" aria-hidden="true" role="status" aria-label="Loading Susan AI">
+        <div class="loading-container">
+            <div class="loading-orb">
+                <div class="orb-core loading"></div>
+                <div class="orb-rings loading">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                </div>
+            </div>
+            <div class="loading-content">
+                <h2 class="loading-title">Susan AI Enhanced</h2>
+                <div class="loading-text" id="loadingText">Initializing advanced AI systems...</div>
+                <div class="loading-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="loadingProgress"></div>
+                    </div>
+                    <div class="progress-steps" id="loadingSteps">
+                        <span class="step active">Core Systems</span>
+                        <span class="step">Voice Engine</span>
+                        <span class="step">AI Models</span>
+                        <span class="step">Interface</span>
+                        <span class="step">Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="loading-background-effects">
+            <div class="loading-particles"></div>
+            <div class="loading-waves"></div>
+        </div>
+    </div>
+
+    <!-- Context Menu -->
+    <div class="context-menu" id="contextMenu" style="display: none;" role="menu" aria-label="Context menu">
+        <div class="context-menu-item" role="menuitem" data-action="copy">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            Copy
+        </div>
+        <div class="context-menu-item" role="menuitem" data-action="speak">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+            </svg>
+            Read Aloud
+        </div>
+        <div class="context-menu-item" role="menuitem" data-action="translate">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 8l6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/>
+            </svg>
+            Translate
+        </div>
+        <div class="context-menu-divider"></div>
+        <div class="context-menu-item" role="menuitem" data-action="export">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7,10 12,15 17,10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Export Message
+        </div>
+    </div>
+
+    <!-- Tooltip -->
+    <div class="tooltip" id="tooltip" role="tooltip" style="display: none;">
+        <div class="tooltip-content"></div>
+        <div class="tooltip-arrow"></div>
+    </div>
+
+    <!-- Feature Modals -->
+    
+    <!-- Smart Photo Analysis Modal -->
+    <div class="feature-modal" id="photoAnalysisModal" style="display: none;">
+        <div class="modal-overlay" onclick="susan.closeFeatureModal('photoAnalysisModal')"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>📸 Smart Photo Analysis</h2>
+                <button class="modal-close" onclick="susan.closeFeatureModal('photoAnalysisModal')">×</button>
+            </div>
+            <div class="modal-content">
+                <div class="upload-area" id="photoUploadArea">
+                    <div class="upload-icon">📸</div>
+                    <div class="upload-text">
+                        <p>Drag and drop photos here or click to browse</p>
+                        <p class="upload-subtext">Supports JPG, PNG, HEIC up to 10MB</p>
+                    </div>
+                    <input type="file" id="photoUploadInput" accept="image/*" multiple style="display: none;">
+                    <button class="upload-btn" onclick="document.getElementById('photoUploadInput').click()">
+                        Choose Photos
+                    </button>
+                </div>
+                <div class="analysis-results" id="photoAnalysisResults" style="display: none;">
+                    <h3>Analysis Results</h3>
+                    <div class="results-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Damage Quantification Modal -->
+    <div class="feature-modal" id="damageQuantificationModal" style="display: none;">
+        <div class="modal-overlay" onclick="susan.closeFeatureModal('damageQuantificationModal')"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>🔢 Damage Quantification Tool</h2>
+                <button class="modal-close" onclick="susan.closeFeatureModal('damageQuantificationModal')">×</button>
+            </div>
+            <div class="modal-content">
+                <div class="quantification-controls">
+                    <div class="control-group">
+                        <label>Measurement Area (sq ft):</label>
+                        <input type="number" id="measurementArea" value="100" min="1" max="10000">
+                    </div>
+                    <div class="control-group">
+                        <label>Impact Type:</label>
+                        <select id="impactType">
+                            <option value="hail">Hail Damage</option>
+                            <option value="wind">Wind Damage</option>
+                            <option value="debris">Debris Impact</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="counting-interface">
+                    <div class="counter-display">
+                        <div class="counter">
+                            <span class="count-number" id="impactCount">0</span>
+                            <span class="count-label">Impacts Counted</span>
+                        </div>
+                        <div class="counter-stats">
+                            <div class="stat">
+                                <span class="stat-value" id="impactsPerSqFt">0.0</span>
+                                <span class="stat-label">Per Sq Ft</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value" id="damagePercentage">0%</span>
+                                <span class="stat-label">Coverage</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="counter-controls">
+                        <button class="count-btn" onclick="susan.addImpact()">+ Add Impact</button>
+                        <button class="count-btn secondary" onclick="susan.removeImpact()">- Remove</button>
+                        <button class="count-btn tertiary" onclick="susan.resetCount()">Reset</button>
+                        <button class="count-btn ai-btn" onclick="susan.autoQuantifyDamage()" 
+                                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; margin-top: 10px;">
+                            🤖 AI Auto-Count
+                        </button>
+                    </div>
+                </div>
+                <div class="quantification-results">
+                    <h3>Assessment Results</h3>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <span class="result-label">Total Impacts:</span>
+                            <span class="result-value" id="totalImpacts">0</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Damage Density:</span>
+                            <span class="result-value" id="damageDensity">Low</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Recommended Action:</span>
+                            <span class="result-value" id="recommendedAction">Monitor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Reports Modal -->
+    <div class="feature-modal" id="photoReportsModal" style="display: none;">
+        <div class="modal-overlay" onclick="susan.closeFeatureModal('photoReportsModal')"></div>
+        <div class="modal-container large">
+            <div class="modal-header">
+                <h2>📄 Photo Report Generator</h2>
+                <button class="modal-close" onclick="susan.closeFeatureModal('photoReportsModal')">×</button>
+            </div>
+            <div class="modal-content">
+                <div class="report-builder">
+                    <div class="report-section">
+                        <h3>Report Details</h3>
+                        <div class="form-group">
+                            <label>Property Address:</label>
+                            <input type="text" id="propertyAddress" placeholder="Enter property address">
+                        </div>
+                        <div class="form-group">
+                            <label>Claim Number:</label>
+                            <input type="text" id="claimNumber" placeholder="Enter claim number">
+                        </div>
+                        <div class="form-group">
+                            <label>Inspection Date:</label>
+                            <input type="date" id="inspectionDate">
+                        </div>
+                    </div>
+                    <div class="report-section">
+                        <h3>Photos</h3>
+                        <div class="photo-grid" id="reportPhotoGrid">
+                            <div class="photo-placeholder">
+                                <span>📸</span>
+                                <p>Add photos to generate report</p>
+                            </div>
+                        </div>
+                        <button class="add-photos-btn" onclick="susan.addReportPhotos()">Add Photos</button>
+                    </div>
+                </div>
+                <div class="report-actions">
+                    <button class="generate-btn" onclick="susan.generateReport()">Generate Report</button>
+                    <button class="preview-btn" onclick="susan.previewReport()">Preview</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Before/After Comparison Modal -->
+    <div class="feature-modal" id="beforeAfterModal" style="display: none;">
+        <div class="modal-overlay" onclick="susan.closeFeatureModal('beforeAfterModal')"></div>
+        <div class="modal-container large">
+            <div class="modal-header">
+                <h2>🔄 Before/After Comparison</h2>
+                <button class="modal-close" onclick="susan.closeFeatureModal('beforeAfterModal')">×</button>
+            </div>
+            <div class="modal-content">
+                <div class="comparison-interface">
+                    <div class="comparison-side">
+                        <h3>Before</h3>
+                        <div class="image-upload-area" id="beforeImageArea">
+                            <div class="upload-placeholder">
+                                <span>📷</span>
+                                <p>Upload "before" image</p>
+                                <button onclick="susan.uploadBeforeImage()">Choose Image</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comparison-divider">
+                        <div class="divider-line"></div>
+                        <span class="vs-text">VS</span>
+                    </div>
+                    <div class="comparison-side">
+                        <h3>After</h3>
+                        <div class="image-upload-area" id="afterImageArea">
+                            <div class="upload-placeholder">
+                                <span>📷</span>
+                                <p>Upload "after" image</p>
+                                <button onclick="susan.uploadAfterImage()">Choose Image</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comparison-controls">
+                    <button class="comparison-btn" onclick="susan.alignImages()">Auto-Align</button>
+                    <button class="comparison-btn" onclick="susan.toggleSlider()">Slider View</button>
+                    <button class="comparison-btn" onclick="susan.exportComparison()">Export</button>
+                </div>
+                <div class="comparison-analysis" id="comparisonAnalysis" style="display: none;">
+                    <h3>Analysis Results</h3>
+                    <div class="analysis-stats">
+                        <div class="stat">
+                            <span class="stat-label">Change Detected:</span>
+                            <span class="stat-value" id="changeDetected">-</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Improvement Score:</span>
+                            <span class="stat-value" id="improvementScore">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Claim Tracking Dashboard Modal -->
+    <div class="feature-modal" id="claimTrackingModal" style="display: none;">
+        <div class="modal-overlay" onclick="susan.closeFeatureModal('claimTrackingModal')"></div>
+        <div class="modal-container large">
+            <div class="modal-header">
+                <h2>📊 Claim Tracking Dashboard</h2>
+                <button class="modal-close" onclick="susan.closeFeatureModal('claimTrackingModal')">×</button>
+            </div>
+            <div class="modal-content">
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Active Claims</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">89%</div>
+                        <div class="stat-label">Approval Rate</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">18</div>
+                        <div class="stat-label">Avg Days</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">$15.2K</div>
+                        <div class="stat-label">Avg Payout</div>
+                    </div>
+                </div>
+                <div class="claims-list">
+                    <div class="claims-header">
+                        <h3>Recent Claims</h3>
+                        <button class="add-claim-btn" onclick="susan.addNewClaim()">+ New Claim</button>
+                    </div>
+                    <div class="claims-table">
+                        <div class="table-header">
+                            <span>Claim #</span>
+                            <span>Property</span>
+                            <span>Status</span>
+                            <span>Date</span>
+                            <span>Amount</span>
+                            <span>Actions</span>
+                        </div>
+                        <div class="claim-row">
+                            <span>CLM-2024-001</span>
+                            <span>123 Main St</span>
+                            <span class="status approved">Approved</span>
+                            <span>2024-08-15</span>
+                            <span>$12,500</span>
+                            <span><button onclick="susan.viewClaim('CLM-2024-001')">View</button></span>
+                        </div>
+                        <div class="claim-row">
+                            <span>CLM-2024-002</span>
+                            <span>456 Oak Ave</span>
+                            <span class="status pending">Under Review</span>
+                            <span>2024-08-18</span>
+                            <span>$8,750</span>
+                            <span><button onclick="susan.viewClaim('CLM-2024-002')">View</button></span>
+                        </div>
+                        <div class="claim-row">
+                            <span>CLM-2024-003</span>
+                            <span>789 Pine Rd</span>
+                            <span class="status submitted">Submitted</span>
+                            <span>2024-08-20</span>
+                            <span>$15,200</span>
+                            <span><button onclick="susan.viewClaim('CLM-2024-003')">View</button></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Performance monitoring and analytics -->
+    <div id="perf-monitor" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    <div id="analytics-beacon" style="display: none;"></div>
+
+    <!-- Accessibility announcements -->
+    <div id="a11y-announcer" class="sr-only" aria-live="assertive" aria-atomic="true"></div>
+
+    <!-- Enhanced PWA Manifest -->
+    <link rel="manifest" href="data:application/json,{
+        \"name\": \"Susan AI Enhanced\",
+        \"short_name\": \"Susan AI\",
+        \"description\": \"Advanced AI Assistant with Voice Interaction\",
+        \"start_url\": \"/\",
+        \"display\": \"standalone\",
+        \"background_color\": \"#0a0e1a\",
+        \"theme_color\": \"#3b82f6\",
+        \"orientation\": \"portrait-primary\",
+        \"icons\": [
+            {
+                \"src\": \"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><defs><linearGradient id='g1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%233b82f6'/><stop offset='100%' stop-color='%238b5cf6'/></linearGradient></defs><circle cx='96' cy='96' r='96' fill='url(%23g1)'/><circle cx='96' cy='96' r='48' fill='white' opacity='0.9'/><circle cx='76' cy='76' r='16' fill='url(%23g1)' opacity='0.6'/></svg>\",
+                \"sizes\": \"192x192\",
+                \"type\": \"image/svg+xml\"
+            },
+            {
+                \"src\": \"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><defs><linearGradient id='g1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%233b82f6'/><stop offset='100%' stop-color='%238b5cf6'/></linearGradient></defs><circle cx='256' cy='256' r='256' fill='url(%23g1)'/><circle cx='256' cy='256' r='128' fill='white' opacity='0.9'/><circle cx='204' cy='204' r='42' fill='url(%23g1)' opacity='0.6'/></svg>\",
+                \"sizes\": \"512x512\",
+                \"type\": \"image/svg+xml\"
+            }
+        ]
+    }">
+
+    <!-- Service Worker Registration -->
+    <script>
+        // Register service worker for offline capability
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+
+    <!-- Enhanced JavaScript Architecture -->
+    <script src="susan-working.js?v=2" defer></script>
+    
+    <!-- Performance and Error Monitoring -->
+    <script>
+        // Enhanced error handling and performance monitoring
+        window.addEventListener('error', (event) => {
+            console.error('Global error:', event.error);
+            // Report to analytics or error tracking service
+        });
+
+        window.addEventListener('unhandledrejection', (event) => {
+            console.error('Unhandled promise rejection:', event.reason);
+            // Report to analytics or error tracking service
+        });
+
+        // Performance monitoring
+        window.addEventListener('load', () => {
+            // Log performance metrics
+            if (window.performance && window.performance.timing) {
+                const perfData = window.performance.timing;
+                const loadTime = perfData.loadEventEnd - perfData.navigationStart;
+                console.log('Page load time:', loadTime + 'ms');
+            }
+        });
+    </script>
+</body>
+</html>

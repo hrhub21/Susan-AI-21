@@ -1,0 +1,11 @@
+{
+  "status": "ready",
+  "splits_found": [
+    "train_final.json",
+    "validation_final.json",
+    "test_final.json"
+  ],
+  "total_samples": 304,
+  "label_balance": {
+    "train": {
+      "hail": 

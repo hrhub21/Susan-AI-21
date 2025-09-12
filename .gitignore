@@ -1,0 +1,84 @@
+# Node modules
+node_modules/
+
+# Large model files
+*.pth
+*.pt
+*.h5
+*.ckpt
+*.safetensors
+*.bin
+
+# Large datasets
+training/datasets/processed/export_pytorch/
+*.tfrecord
+*.parquet
+
+# Tensorflow libs
+libtensorflow*.dylib
+libtensorflow*.so
+
+# Git pack files (local only)
+.git/objects/pack/*.pack
+.git/objects/pack/*.idx
+
+# Environment files
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# Test coverage
+coverage/
+.coverage
+*.cover
+.pytest_cache/
+
+# Documentation build
+docs/_build/
+docs/.build/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Media files (if too large)
+*.mp4
+*.avi
+*.mov
+*.mkv

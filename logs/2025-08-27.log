@@ -1,0 +1,82 @@
+{"timestamp":"2025-08-27T15:18:47.439Z","level":"INFO","message":"Company context setup completed","departments":8,"terminology":9,"escalationContacts":4}
+{"timestamp":"2025-08-27T15:18:47.440Z","level":"INFO","message":"Webhook handlers setup completed"}
+{"timestamp":"2025-08-27T15:18:47.440Z","level":"INFO","message":"Sync schedules started"}
+{"timestamp":"2025-08-27T15:18:47.440Z","level":"INFO","message":"Knowledge processing services initialized successfully"}
+{"timestamp":"2025-08-27T15:18:50.478Z","level":"INFO","message":"🎬 Initializing Video Generation Service..."}
+{"timestamp":"2025-08-27T15:18:50.478Z","level":"INFO","message":"📋 Loaded 4 video templates"}
+{"timestamp":"2025-08-27T15:18:50.479Z","level":"INFO","message":"AnythingLLM Service initialized","baseUrl":"http://localhost:3001","workspace":"roofer21","autoSync":false}
+{"timestamp":"2025-08-27T15:18:50.479Z","level":"INFO","message":"AnythingLLM API services initialized successfully"}
+{"timestamp":"2025-08-27T15:18:50.480Z","level":"INFO","message":"🎥 FFmpeg initialized successfully"}
+{"timestamp":"2025-08-27T15:18:50.481Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-27T15:18:50.509Z","level":"INFO","message":"🔤 Fonts registered for video generation"}
+{"timestamp":"2025-08-27T15:18:50.518Z","level":"INFO","message":"✅ Video Generation Service initialized successfully"}
+{"timestamp":"2025-08-27T15:18:50.529Z","level":"INFO","message":"AnythingLLM Service initialized","baseUrl":"http://localhost:3001","workspace":"roofer21","autoSync":true}
+{"timestamp":"2025-08-27T15:18:50.530Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-27T15:18:50.531Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspaces"}
+{"timestamp":"2025-08-27T15:18:50.549Z","level":"INFO","message":"Loaded existing vector memory","entriesLoaded":0}
+{"timestamp":"2025-08-27T15:18:50.550Z","level":"INFO","message":"Existing knowledge loaded","documentsLoaded":0,"topicClusters":0,"terminology":9}
+{"timestamp":"2025-08-27T15:18:50.551Z","level":"INFO","message":"Loaded existing RBAC data","roles":0,"permissions":0}
+{"timestamp":"2025-08-27T15:18:50.551Z","level":"INFO","message":"Loaded existing RBAC data","roles":0,"permissions":0}
+{"timestamp":"2025-08-27T15:18:50.551Z","level":"INFO","message":"Loaded existing RBAC data","roles":0,"permissions":0}
+{"timestamp":"2025-08-27T15:18:50.552Z","level":"ERROR","message":"","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-27T15:18:50.552Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-27T15:18:50.552Z","level":"ERROR","message":"Failed to initialize workspace","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-27T15:18:50.552Z","level":"ERROR","message":"","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-27T15:18:50.552Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-27T15:18:50.552Z","level":"ERROR","message":"Failed to initialize workspace","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-27T15:18:50.554Z","level":"ERROR","message":"","url":"/api/workspaces"}
+{"timestamp":"2025-08-27T15:18:50.554Z","level":"ERROR","message":"AnythingLLM connection failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-27T15:18:50.554Z","level":"INFO","message":"Plugin system initialized","pluginsLoaded":0,"sandboxDirectory":"/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/sandboxes"}
+{"timestamp":"2025-08-27T15:18:50.554Z","level":"INFO","message":"Spanish language pack initialized successfully"}
+{"timestamp":"2025-08-27T15:18:50.557Z","level":"INFO","message":"Employee profiles loaded","profilesLoaded":0}
+{"timestamp":"2025-08-27T15:18:50.557Z","level":"INFO","message":"Quality monitoring started"}
+{"timestamp":"2025-08-27T15:18:50.557Z","level":"INFO","message":"Historical quality data loaded"}
+{"timestamp":"2025-08-27T15:18:50.558Z","level":"WARN","message":"Google Translate API key not configured. Translation features will use fallback methods."}
+{"timestamp":"2025-08-27T15:18:50.560Z","level":"INFO","message":"Loading language data for: es"}
+{"timestamp":"2025-08-27T15:18:50.560Z","level":"INFO","message":"MultiLanguageService initialized successfully"}
+{"timestamp":"2025-08-27T15:18:50.652Z","level":"INFO","message":"Voice commands initialized for multiple languages"}
+{"timestamp":"2025-08-27T15:18:50.667Z","level":"INFO","message":"Integration services initialized successfully"}
+{"timestamp":"2025-08-27T15:18:50.667Z","level":"INFO","message":"Cultural adaptations initialized"}
+{"timestamp":"2025-08-27T15:18:50.784Z","level":"INFO","message":"Loaded existing enterprise data","organizations":3,"teams":0,"users":5}
+{"timestamp":"2025-08-27T15:18:51.427Z","level":"INFO","message":"Training modules initialized successfully","categoriesCount":6,"totalModules":48}
+{"timestamp":"2025-08-27T15:30:37.760Z","level":"INFO","message":"Company context setup completed","departments":8,"terminology":9,"escalationContacts":4}
+{"timestamp":"2025-08-27T15:30:37.761Z","level":"INFO","message":"Webhook handlers setup completed"}
+{"timestamp":"2025-08-27T15:30:37.761Z","level":"INFO","message":"Sync schedules started"}
+{"timestamp":"2025-08-27T15:30:37.761Z","level":"INFO","message":"Knowledge processing services initialized successfully"}
+{"timestamp":"2025-08-27T15:30:38.007Z","level":"INFO","message":"🎬 Initializing Video Generation Service..."}
+{"timestamp":"2025-08-27T15:30:38.007Z","level":"INFO","message":"📋 Loaded 4 video templates"}
+{"timestamp":"2025-08-27T15:30:38.008Z","level":"INFO","message":"AnythingLLM Service initialized","baseUrl":"http://localhost:3001","workspace":"susan-ai","autoSync":false}
+{"timestamp":"2025-08-27T15:30:38.008Z","level":"INFO","message":"AnythingLLM API services initialized successfully"}
+{"timestamp":"2025-08-27T15:30:38.009Z","level":"INFO","message":"🎥 FFmpeg initialized successfully"}
+{"timestamp":"2025-08-27T15:30:38.010Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/susan-ai"}
+{"timestamp":"2025-08-27T15:30:38.037Z","level":"INFO","message":"🔤 Fonts registered for video generation"}
+{"timestamp":"2025-08-27T15:30:38.046Z","level":"INFO","message":"✅ Video Generation Service initialized successfully"}
+{"timestamp":"2025-08-27T15:30:38.057Z","level":"INFO","message":"AnythingLLM Service initialized","baseUrl":"http://localhost:3001","workspace":"roofer21","autoSync":true}
+{"timestamp":"2025-08-27T15:30:38.058Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-27T15:30:38.059Z","level":"DEBUG","message":"AnythingLLM Request","method":"GET","url":"/api/workspaces"}
+{"timestamp":"2025-08-27T15:30:38.077Z","level":"INFO","message":"Loaded existing vector memory","entriesLoaded":0}
+{"timestamp":"2025-08-27T15:30:38.078Z","level":"INFO","message":"Existing knowledge loaded","documentsLoaded":0,"topicClusters":0,"terminology":9}
+{"timestamp":"2025-08-27T15:30:38.079Z","level":"INFO","message":"Loaded existing RBAC data","roles":0,"permissions":0}
+{"timestamp":"2025-08-27T15:30:38.079Z","level":"INFO","message":"Loaded existing RBAC data","roles":0,"permissions":0}
+{"timestamp":"2025-08-27T15:30:38.079Z","level":"INFO","message":"Loaded existing RBAC data","roles":0,"permissions":0}
+{"timestamp":"2025-08-27T15:30:38.080Z","level":"ERROR","message":"","url":"/api/workspace/susan-ai"}
+{"timestamp":"2025-08-27T15:30:38.080Z","level":"ERROR","message":"Failed to ensure workspace: susan-ai","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-27T15:30:38.080Z","level":"ERROR","message":"Failed to initialize workspace","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-27T15:30:38.080Z","level":"ERROR","message":"","url":"/api/workspace/roofer21"}
+{"timestamp":"2025-08-27T15:30:38.080Z","level":"ERROR","message":"Failed to ensure workspace: roofer21","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-27T15:30:38.080Z","level":"ERROR","message":"Failed to initialize workspace","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-27T15:30:38.081Z","level":"ERROR","message":"","url":"/api/workspaces"}
+{"timestamp":"2025-08-27T15:30:38.081Z","level":"ERROR","message":"AnythingLLM connection failed","name":"ApiError","statusCode":500,"details":null,"isOperational":true}
+{"timestamp":"2025-08-27T15:30:38.082Z","level":"INFO","message":"Plugin system initialized","pluginsLoaded":0,"sandboxDirectory":"/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/sandboxes"}
+{"timestamp":"2025-08-27T15:30:38.082Z","level":"INFO","message":"Spanish language pack initialized successfully"}
+{"timestamp":"2025-08-27T15:30:38.085Z","level":"INFO","message":"Quality monitoring started"}
+{"timestamp":"2025-08-27T15:30:38.085Z","level":"INFO","message":"Employee profiles loaded","profilesLoaded":0}
+{"timestamp":"2025-08-27T15:30:38.085Z","level":"INFO","message":"Historical quality data loaded"}
+{"timestamp":"2025-08-27T15:30:38.086Z","level":"WARN","message":"Google Translate API key not configured. Translation features will use fallback methods."}
+{"timestamp":"2025-08-27T15:30:38.086Z","level":"INFO","message":"Loading language data for: es"}
+{"timestamp":"2025-08-27T15:30:38.086Z","level":"INFO","message":"MultiLanguageService initialized successfully"}
+{"timestamp":"2025-08-27T15:30:38.176Z","level":"INFO","message":"Voice commands initialized for multiple languages"}
+{"timestamp":"2025-08-27T15:30:38.190Z","level":"INFO","message":"Cultural adaptations initialized"}
+{"timestamp":"2025-08-27T15:30:38.192Z","level":"INFO","message":"Integration services initialized successfully"}
+{"timestamp":"2025-08-27T15:30:38.314Z","level":"INFO","message":"Loaded existing enterprise data","organizations":3,"teams":0,"users":5}
+{"timestamp":"2025-08-27T15:30:38.928Z","level":"INFO","message":"Training modules initialized successfully","categoriesCount":6,"totalModules":48}

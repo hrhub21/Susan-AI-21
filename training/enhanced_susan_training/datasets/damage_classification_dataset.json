@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "image_reference": "How to do a Repair Attempt [EXAMPLE].docx",
+      "damage_description": "This image shows storm damage to roofing materials",
+      "damage_type": "storm",
+      "severity": "moderate",
+      "repair_needed": true
+    },
+    {
+      "image_reference": "Sample Photo Report 4.pdf",
+      "damage_description": "This image shows roof damage requiring professional assessment",
+      "damage_type": "damage",
+      "severity": "moderate",
+      "repair_needed": true
+    },
+    {
+      "image_reference": "Sample Photo Report 3.pdf",
+      "damage_description": "This image shows roof damage requiring professional assessment",
+      "damage_type": "damage",
+      "severity": "moderate",
+      "repair_needed": true
+    },
+    {
+      "image_reference": "Sample Photo Report 2.pdf",
+      "damage_description": "This image shows roof damage requiring professional assessment",
+      "damage_type": "damage",
+      "severity": "moderate",
+      "repair_needed": true
+    },
+    {
+      "image_reference": "Sample Photo Report 1.pdf",
+      "damage_description": "This image shows roof damage requiring professional assessment",
+      "damage_type": "damage",
+      "severity": "moderate",
+      "repair_needed": true
+    }
+  ],
+  "size": 5,
+  "format": "image_text_pairs",
+  "use_case": "damage_classification"
+}

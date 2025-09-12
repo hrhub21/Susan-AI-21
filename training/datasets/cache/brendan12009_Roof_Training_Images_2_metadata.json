@@ -1,0 +1,12 @@
+{
+  "dataset_name": "brendan12009/Roof_Training_Images_2",
+  "download_date": "2025-08-23T20:55:55.798541",
+  "splits": [
+    "train"
+  ],
+  "total_samples": 323,
+  "features": [
+    "image",
+    "label"
+  ]
+}

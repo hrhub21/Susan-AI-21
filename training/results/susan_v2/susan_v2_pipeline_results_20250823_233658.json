@@ -1,0 +1,83 @@
+{
+  "pipeline_info": {
+    "version": "2.0.0",
+    "total_duration_minutes": 0.23668095270792644,
+    "total_duration_hours": 0.0039446825451321076,
+    "completion_time": "2025-08-23T23:36:58.917975",
+    "phases_completed": 0,
+    "total_phases": 4
+  },
+  "phase_results": {
+    "phase1": {
+      "phase_name": "Vision Pre-training",
+      "start_time": "2025-08-23T23:36:44.717198",
+      "end_time": "2025-08-23T23:36:51.652606",
+      "duration_minutes": 0.1155901312828064,
+      "accuracy": 0.0,
+      "loss": Infinity,
+      "metrics": {},
+      "model_path": "",
+      "status": "failed",
+      "errors": [
+        "Phase 1 failed: 'Sequential' object has no attribute 'in_features'\nTraceback (most recent call last):\n  File \"/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/susan_ai_v2_complete_training_pipeline.py\", line 438, in phase1_vision_pretraining\n    self.model = MultiModalSusanV2(self.config).to(self.config.device)\n  File \"/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/susan_ai_v2_complete_training_pipeline.py\", line 188, in __init__\n    vision_features = self.vision_backbone.classifier.in_features\n  File \"/Users/a21/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py\", line 1962, in __getattr__\n    raise AttributeError(\nAttributeError: 'Sequential' object has no attribute 'in_features'\n"
+      ]
+    },
+    "phase2": {
+      "phase_name": "Language Adaptation",
+      "start_time": "2025-08-23T23:36:51.676990",
+      "end_time": "2025-08-23T23:36:51.678339",
+      "duration_minutes": 2.2482872009277343e-05,
+      "accuracy": 0.0,
+      "loss": Infinity,
+      "metrics": {},
+      "model_path": "",
+      "status": "failed",
+      "errors": [
+        "Phase 2 failed: No sales training data available\nTraceback (most recent call last):\n  File \"/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/susan_ai_v2_complete_training_pipeline.py\", line 613, in phase2_language_adaptation\n    raise ValueError(\"No sales training data available\")\nValueError: No sales training data available\n"
+      ]
+    },
+    "phase3": {
+      "phase_name": "Multi-modal Fusion",
+      "start_time": "2025-08-23T23:36:51.678421",
+      "end_time": "2025-08-23T23:36:55.280066",
+      "duration_minutes": 0.06002741654713949,
+      "accuracy": 0.0,
+      "loss": Infinity,
+      "metrics": {},
+      "model_path": "",
+      "status": "failed",
+      "errors": [
+        "Phase 3 failed: 'Sequential' object has no attribute 'in_features'\nTraceback (most recent call last):\n  File \"/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/susan_ai_v2_complete_training_pipeline.py\", line 866, in phase3_multimodal_fusion\n    self.model = MultiModalSusanV2(self.config).to(self.config.device)\n  File \"/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/susan_ai_v2_complete_training_pipeline.py\", line 188, in __init__\n    vision_features = self.vision_backbone.classifier.in_features\n  File \"/Users/a21/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py\", line 1962, in __getattr__\n    raise AttributeError(\nAttributeError: 'Sequential' object has no attribute 'in_features'\n"
+      ]
+    },
+    "phase4": {
+      "phase_name": "Customer Fine-tuning",
+      "start_time": "2025-08-23T23:36:55.305195",
+      "end_time": "2025-08-23T23:36:58.890943",
+      "duration_minutes": 0.05976246595382691,
+      "accuracy": 0.0,
+      "loss": Infinity,
+      "metrics": {},
+      "model_path": "",
+      "status": "failed",
+      "errors": [
+        "Phase 4 failed: 'Sequential' object has no attribute 'in_features'\nTraceback (most recent call last):\n  File \"/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/susan_ai_v2_complete_training_pipeline.py\", line 1099, in phase4_customer_finetuning\n    self.model = MultiModalSusanV2(self.config).to(self.config.device)\n  File \"/Users/a21/Desktop/Susan-AI-Enhanced-JARVIS-Edition-Final/training/susan_ai_v2_complete_training_pipeline.py\", line 188, in __init__\n    vision_features = self.vision_backbone.classifier.in_features\n  File \"/Users/a21/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py\", line 1962, in __getattr__\n    raise AttributeError(\nAttributeError: 'Sequential' object has no attribute 'in_features'\n"
+      ]
+    }
+  },
+  "deployment_package": {},
+  "performance_validation": {},
+  "success_criteria_met": {
+    "accuracy_target": false,
+    "false_positive_target": false,
+    "inference_speed_target": false,
+    "overall_success": false
+  },
+  "recommendations": [
+    "Deploy to staging environment for integration testing",
+    "Monitor customer interaction quality in production",
+    "Set up continuous learning pipeline for ongoing improvement",
+    "Implement A/B testing to measure business impact",
+    "Plan regular model retraining with new data"
+  ]
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing All 34 Features</title>
+</head>
+<body>
+    <h1>Testing All 34 Roof-ER Features</h1>
+    <p>Opening Susan AI and testing all features...</p>
+    
+    <iframe id="susan-frame" src="http://localhost:3003" width="100%" height="600" style="border: 2px solid #333;"></iframe>
+    
+    <div id="results" style="margin-top: 20px; padding: 20px; background: #f0f0f0; font-family: monospace; white-space: pre-wrap;"></div>
+
+    <script>
+        const resultsDiv = document.getElementById('results');
+        let testResults = 'Test Results:\n\n';
+        
+        // Wait for iframe to load
+        document.getElementById('susan-frame').onload = function() {
+            setTimeout(() => {
+                const susanWindow = document.getElementById('susan-frame').contentWindow;
+                const susanDoc = document.getElementById('susan-frame').contentDocument;
+                
+                // Check if Susan object exists
+                testResults += '1. Susan Object: ' + (susanWindow.susan ? '✅ Loaded\n' : '❌ Not found\n');
+                
+                // Check features button
+                const featuresBtn = susanDoc.getElementById('featuresBtn');
+                testResults += '2. Features Button: ' + (featuresBtn ? '✅ Found\n' : '❌ Missing\n');
+                
+                // Check features menu
+                const featuresMenu = susanDoc.getElementById('featuresMenu');
+                testResults += '3. Features Menu: ' + (featuresMenu ? '✅ Found\n' : '❌ Missing\n');
+                
+                // Count feature cards
+                const featureCards = susanDoc.querySelectorAll('.feature-card');
+                testResults += '4. Feature Cards: ' + featureCards.length + ' found (Expected: 34)\n';
+                
+                if (featureCards.length === 34) {
+                    testResults += '✅ All 34 features present in UI!\n\n';
+                    
+                    // List all features
+                    testResults += 'Features found:\n';
+                    featureCards.forEach((card, index) => {
+                        const title = card.querySelector('h3').textContent;
+                        testResults += `  ${index + 1}. ${title}\n`;
+                    });
+                } else {
+                    testResults += '⚠️ Feature count mismatch\n';
+                }
+                
+                // Click features button to open menu
+                if (featuresBtn) {
+                    testResults += '\n5. Opening features menu...\n';
+                    featuresBtn.click();
+                    
+                    setTimeout(() => {
+                        const isVisible = !featuresMenu.classList.contains('hidden');
+                        testResults += '   Menu visible: ' + (isVisible ? '✅ Yes\n' : '❌ No\n');
+                        
+                        resultsDiv.textContent = testResults;
+                    }, 500);
+                } else {
+                    resultsDiv.textContent = testResults;
+                }
+            }, 2000);
+        };
+    </script>
+</body>
+</html>

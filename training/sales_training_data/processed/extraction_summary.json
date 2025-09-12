@@ -1,0 +1,17 @@
+{
+  "extraction_date": "2025-08-23T23:28:57.593481",
+  "statistics": {
+    "files_processed": 81,
+    "total_content_extracted": 429097,
+    "sales_scripts_found": 51,
+    "damage_terms_found": 286,
+    "errors": 0
+  },
+  "datasets_created": {
+    "sales_scripts": 12,
+    "damage_terminology": 100,
+    "customer_interactions": 9,
+    "process_workflows": 3,
+    "visual_materials": 7
+  }
+}

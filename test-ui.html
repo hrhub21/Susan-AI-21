@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susan AI UI Test</title>
+</head>
+<body>
+    <div id="test-results">
+        <h2>Susan AI UI Test Results</h2>
+        <div id="connection-status">Testing connection...</div>
+        <div id="message-test">Testing message sending...</div>
+        <div id="response-test">Testing response handling...</div>
+    </div>
+
+    <script>
+        console.log('🧪 Starting Susan AI UI Test...');
+        
+        // Test WebSocket connection
+        const ws = new WebSocket('ws://localhost:3003');
+        const connectionStatus = document.getElementById('connection-status');
+        const messageTest = document.getElementById('message-test');
+        const responseTest = document.getElementById('response-test');
+        
+        let testsPassed = 0;
+        let testsTotal = 3;
+        
+        ws.onopen = function() {
+            console.log('✅ WebSocket connected');
+            connectionStatus.innerHTML = '✅ WebSocket Connection: PASSED';
+            connectionStatus.style.color = 'green';
+            testsPassed++;
+            
+            // Test sending a message
+            console.log('📤 Sending test message...');
+            ws.send(JSON.stringify({
+                type: 'message',
+                content: 'UI test message - are you working?',
+                timestamp: new Date().toISOString()
+            }));
+            
+            messageTest.innerHTML = '✅ Message Sending: PASSED';
+            messageTest.style.color = 'green';
+            testsPassed++;
+        };
+        
+        ws.onmessage = function(event) {
+            const data = JSON.parse(event.data);
+            console.log('📥 Received:', data);
+            
+            if (data.type === 'response' && data.content) {
+                console.log('✅ Response received successfully');
+                responseTest.innerHTML = `✅ Response Handling: PASSED<br>Content: "${data.content.substring(0, 100)}..."`;
+                responseTest.style.color = 'green';
+                testsPassed++;
+                
+                // Show final results
+                setTimeout(() => {
+                    showFinalResults();
+                }, 1000);
+            }
+        };
+        
+        ws.onerror = function(error) {
+            console.error('❌ WebSocket error:', error);
+            connectionStatus.innerHTML = '❌ WebSocket Connection: FAILED';
+            connectionStatus.style.color = 'red';
+        };
+        
+        ws.onclose = function() {
+            console.log('🔌 WebSocket closed');
+        };
+        
+        function showFinalResults() {
+            const resultsDiv = document.getElementById('test-results');
+            const successRate = (testsPassed / testsTotal) * 100;
+            
+            resultsDiv.innerHTML += `
+                <h3>Final Results</h3>
+                <p>Tests Passed: ${testsPassed}/${testsTotal} (${successRate}%)</p>
+                <p style="color: ${successRate === 100 ? 'green' : 'red'}; font-weight: bold;">
+                    ${successRate === 100 ? '✅ ALL TESTS PASSED - Susan AI is fully operational!' : '❌ Some tests failed - needs debugging'}
+                </p>
+            `;
+        }
+        
+        // Timeout in case something hangs
+        setTimeout(() => {
+            if (testsPassed < testsTotal) {
+                showFinalResults();
+            }
+        }, 10000);
+    </script>
+</body>
+</html>

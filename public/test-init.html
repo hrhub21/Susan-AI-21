@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Susan AI Initialization Test</title>
+    <style>
+        body { background: #1a1a2e; color: white; font-family: Arial; padding: 20px; }
+        .log { padding: 5px; margin: 5px 0; background: #2a2a4e; border-radius: 3px; }
+        .error { background: #dc3545; }
+        .success { background: #28a745; }
+        .warning { background: #ffc107; color: black; }
+    </style>
+</head>
+<body>
+    <h1>Susan AI Initialization Test</h1>
+    <div id="output"></div>
+    
+    <!-- Add essential elements that Susan AI expects -->
+    <div style="display: none;">
+        <div id="susanOrb"></div>
+        <div id="statusText"></div>
+        <div id="statusIndicator"></div>
+        <button id="voiceBtn"></button>
+        <button id="sendBtn"></button>
+        <input id="textInput" />
+        <div id="chatContainer"></div>
+        <div id="typingIndicator"></div>
+        <div id="activityList"></div>
+        <div id="notificationContainer"></div>
+    </div>
+    
+    <script>
+        function log(message, type = 'info') {
+            const output = document.getElementById('output');
+            const div = document.createElement('div');
+            div.className = `log ${type}`;
+            div.innerHTML = `${new Date().toLocaleTimeString()}: ${message}`;
+            output.appendChild(div);
+            console.log(message);
+        }
+        
+        // Global error handler
+        window.addEventListener('error', (event) => {
+            log(`❌ JavaScript Error: ${event.message} at ${event.filename}:${event.lineno}`, 'error');
+        });
+        
+        window.addEventListener('unhandledrejection', (event) => {
+            log(`❌ Unhandled Promise Rejection: ${event.reason}`, 'error');
+        });
+        
+        // Test script loading
+        log('🚀 Starting Susan AI initialization test', 'info');
+        
+        // Load the susan-working.js script
+        const script = document.createElement('script');
+        script.src = 'susan-working.js';
+        script.onload = () => {
+            log('✅ susan-working.js loaded successfully', 'success');
+            
+            // Test if SusanAI class exists
+            if (typeof SusanAI !== 'undefined') {
+                log('✅ SusanAI class is available', 'success');
+                
+                // Try to create instance
+                try {
+                    log('🔄 Creating SusanAI instance...', 'info');
+                    const testSusan = new SusanAI();
+                    log('✅ SusanAI instance created successfully!', 'success');
+                    
+                    // Test instance properties
+                    log(`Instance has recognition: ${testSusan.recognition !== null}`, 'info');
+                    log(`Instance has synthesis: ${testSusan.synthesis !== null}`, 'info');
+                    log(`Instance has WebSocket: ${testSusan.ws !== null}`, 'info');
+                    
+                    window.testSusan = testSusan;
+                    
+                } catch (error) {
+                    log(`❌ Failed to create SusanAI instance: ${error.message}`, 'error');
+                    log(`Error stack: ${error.stack}`, 'error');
+                }
+            } else {
+                log('❌ SusanAI class not found', 'error');
+            }
+        };
+        
+        script.onerror = () => {
+            log('❌ Failed to load susan-working.js', 'error');
+        };
+        
+        document.head.appendChild(script);
+        
+        // Test after 2 seconds
+        setTimeout(() => {
+            if (window.testSusan) {
+                log('✅ Test completed successfully - SusanAI works!', 'success');
+            } else {
+                log('❌ Test failed - SusanAI not working', 'error');
+            }
+        }, 2000);
+    </script>
+</body>
+</html>

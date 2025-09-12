@@ -1,0 +1,30 @@
+{"timestamp":"2025-08-20T21:23:01.445Z","level":"WARN","message":"No AI providers configured. Set OPENAI_API_KEY or ANTHROPIC_API_KEY environment variables."}
+{"timestamp":"2025-08-20T21:23:31.760Z","level":"WARN","message":"No AI providers configured. Set OPENAI_API_KEY or ANTHROPIC_API_KEY environment variables."}
+{"timestamp":"2025-08-20T21:23:31.769Z","level":"WARN","message":"No AI providers configured. Set OPENAI_API_KEY or ANTHROPIC_API_KEY environment variables."}
+{"timestamp":"2025-08-20T21:23:31.769Z","level":"WARN","message":"OpenAI API key not found. Voice features will be limited."}
+{"timestamp":"2025-08-20T21:23:31.769Z","level":"WARN","message":"No AI providers configured. Set OPENAI_API_KEY or ANTHROPIC_API_KEY environment variables."}
+{"timestamp":"2025-08-20T21:24:09.830Z","level":"WARN","message":"No AI providers configured. Set OPENAI_API_KEY or ANTHROPIC_API_KEY environment variables."}
+{"timestamp":"2025-08-20T21:24:09.835Z","level":"WARN","message":"No AI providers configured. Set OPENAI_API_KEY or ANTHROPIC_API_KEY environment variables."}
+{"timestamp":"2025-08-20T21:24:09.835Z","level":"WARN","message":"OpenAI API key not found. Voice features will be limited."}
+{"timestamp":"2025-08-20T21:24:09.835Z","level":"WARN","message":"No AI providers configured. Set OPENAI_API_KEY or ANTHROPIC_API_KEY environment variables."}
+{"timestamp":"2025-08-20T21:24:09.849Z","level":"WARN","message":"No AI providers configured for knowledge processing"}
+{"timestamp":"2025-08-20T21:24:09.850Z","level":"INFO","message":"Company context setup completed","departments":8,"terminology":9,"escalationContacts":4}
+{"timestamp":"2025-08-20T21:24:09.851Z","level":"INFO","message":"Webhook handlers setup completed"}
+{"timestamp":"2025-08-20T21:24:09.851Z","level":"INFO","message":"Sync schedules started"}
+{"timestamp":"2025-08-20T21:24:09.851Z","level":"INFO","message":"Knowledge processing services initialized successfully"}
+{"timestamp":"2025-08-20T21:51:33.706Z","level":"WARN","message":"No AI providers configured. Set OPENAI_API_KEY or ANTHROPIC_API_KEY environment variables."}
+{"timestamp":"2025-08-20T21:51:33.710Z","level":"WARN","message":"No AI providers configured. Set OPENAI_API_KEY or ANTHROPIC_API_KEY environment variables."}
+{"timestamp":"2025-08-20T21:51:33.710Z","level":"WARN","message":"OpenAI API key not found. Voice features will be limited."}
+{"timestamp":"2025-08-20T21:51:33.711Z","level":"WARN","message":"No AI providers configured. Set OPENAI_API_KEY or ANTHROPIC_API_KEY environment variables."}
+{"timestamp":"2025-08-20T21:51:33.727Z","level":"WARN","message":"No AI providers configured for knowledge processing"}
+{"timestamp":"2025-08-20T21:51:33.727Z","level":"INFO","message":"Company context setup completed","departments":8,"terminology":9,"escalationContacts":4}
+{"timestamp":"2025-08-20T21:51:33.728Z","level":"INFO","message":"Webhook handlers setup completed"}
+{"timestamp":"2025-08-20T21:51:33.728Z","level":"INFO","message":"Sync schedules started"}
+{"timestamp":"2025-08-20T21:51:33.728Z","level":"INFO","message":"Knowledge processing services initialized successfully"}
+{"timestamp":"2025-08-20T23:49:45.173Z","level":"INFO","message":"Client initialized for integration: Test API"}
+{"timestamp":"2025-08-20T23:49:45.174Z","level":"INFO","message":"API Integration Audit Log","id":"6bcf9ccd03922bb6","action":"integration_registered","details":{"integrationId":"test-api","name":"Test API"}}
+{"timestamp":"2025-08-20T23:49:45.175Z","level":"DEBUG","message":"API Request","integrationId":"test-api","method":"GET","url":"/posts/1"}
+{"timestamp":"2025-08-20T23:49:45.175Z","level":"ERROR","message":"API Integration Error - Response Error","integrationId":"test-api","error":"429"}
+{"timestamp":"2025-08-20T23:49:45.175Z","level":"ERROR","message":"API Integration Error - Request Failed","integrationId":"test-api","error":"429"}
+{"timestamp":"2025-08-20T23:49:45.175Z","level":"INFO","message":"Processing Salesforce webhook","type":"contact.created","objectId":"test-contact-123"}
+{"timestamp":"2025-08-20T23:49:45.175Z","level":"INFO","message":"Processing Google Calendar webhook","resourceId":"test-calendar-456","resourceState":"updated"}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "greeting": "professional",
+    "formality": "moderate",
+    "directness": "high",
+    "timeContext": "monochronic",
+    "personalSpace": "formal",
+    "decisionMaking": "individual",
+    "communicationStyle": "low-context"
+  },
+  "es": {
+    "greeting": "warm",
+    "formality": "high",
+    "directness": "moderate",
+    "timeContext": "polychronic",
+    "personalSpace": "close",
+    "decisionMaking": "relationship-based",
+    "communicationStyle": "high-context"
+  }
+}

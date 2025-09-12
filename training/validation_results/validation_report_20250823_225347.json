@@ -1,0 +1,81 @@
+{
+  "validation_timestamp": "2025-08-23T22:53:47.128048",
+  "model_performance": {
+    "timestamp": "2025-08-23T22:53:47.127994",
+    "model_version": "emergency_binary_v1.0",
+    "accuracy": 0.65,
+    "precision": 1.0,
+    "recall": 0.3,
+    "f1_score": 0.46153846153846156,
+    "specificity": 1.0,
+    "sensitivity": 0.3,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.7,
+    "true_positive_rate": 0.3,
+    "true_negative_rate": 1.0,
+    "roc_auc": 0.48135,
+    "precision_recall_auc": -0.48852307763327313,
+    "confusion_matrix": [
+      [
+        100,
+        0
+      ],
+      [
+        70,
+        30
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.5882352941176471,
+        "recall": 1.0,
+        "f1-score": 0.7407407407407407,
+        "support": 100.0
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.3,
+        "f1-score": 0.46153846153846156,
+        "support": 100.0
+      },
+      "accuracy": 0.65,
+      "macro avg": {
+        "precision": 0.7941176470588236,
+        "recall": 0.65,
+        "f1-score": 0.6011396011396011,
+        "support": 200.0
+      },
+      "weighted avg": {
+        "precision": 0.7941176470588235,
+        "recall": 0.65,
+        "f1-score": 0.6011396011396012,
+        "support": 200.0
+      }
+    },
+    "sample_size": 200,
+    "crisis_resolved": true,
+    "production_ready": false
+  },
+  "quality_gates": {
+    "crisis_resolution": {
+      "total_gates": 3,
+      "passed_gates": 3,
+      "success_rate": 1.0,
+      "overall_status": "RESOLVED"
+    },
+    "production_readiness": {
+      "total_gates": 6,
+      "passed_gates": 3,
+      "success_rate": 0.5,
+      "overall_status": "NOT_READY"
+    }
+  },
+  "detailed_results": [
+    {
+      "gate_name": "false_positive_crisis",
+      "metric_name": "false_positive_rate",
+      "expected_value": 0.5,
+      "actual_value": 0.0,
+      "threshold": 0.5,
+      "operator": "le",
+      "passed": 

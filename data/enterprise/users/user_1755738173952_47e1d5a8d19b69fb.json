@@ -1,0 +1,76 @@
+{
+  "id": "user_1755738173952_47e1d5a8d19b69fb",
+  "email": "admin@test-insurance.com",
+  "firstName": "Test",
+  "lastName": "Admin",
+  "fullName": "Test Admin",
+  "role": "admin",
+  "organizationId": "org_1755738173950_9669ace9f97b7840",
+  "permissions": [
+    "claims:*",
+    "documents:*",
+    "reports:*",
+    "analytics:*",
+    "teams:*",
+    "users:*",
+    "organizations:*",
+    "settings:*",
+    "security:*",
+    "billing:*",
+    "integrations:*"
+  ],
+  "features": [
+    "full_access",
+    "system_administration",
+    "security_management",
+    "billing_management"
+  ],
+  "isOrgAdmin": true,
+  "passwordHash": "mock_hash_97PYQxcauHXv",
+  "teams": [],
+  "settings": {
+    "timezone": "UTC",
+    "language": "en",
+    "theme": "light",
+    "notifications": {
+      "email": true,
+      "sms": false,
+      "push": true,
+      "frequency": "immediate"
+    },
+    "dashboard": {
+      "layout": "default",
+      "widgets": [
+        "system_overview",
+        "users",
+        "analytics",
+        "security"
+      ]
+    }
+  },
+  "security": {
+    "mfaEnabled": false,
+    "lastPasswordChange": "2025-08-21T01:02:53.952Z",
+    "requirePasswordReset": true,
+    "failedLoginAttempts": 0,
+    "lastLoginAt": null,
+    "lastActiveAt": null,
+    "trustedDevices": []
+  },
+  "metadata": {
+    "createdAt": "2025-08-21T01:02:53.952Z",
+    "createdBy": "system",
+    "lastUpdated": "2025-08-21T01:02:53.952Z",
+    "source": "enterprise_admin"
+  },
+  "status": "active",
+  "profile": {
+    "avatar": null,
+    "bio": null,
+    "phone": null,
+    "department": null,
+    "jobTitle": null,
+    "location": null,
+    "emergencyContact": null
+  }
+}

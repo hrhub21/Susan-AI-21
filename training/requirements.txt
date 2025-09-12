@@ -1,0 +1,291 @@
+# Susan AI Roof Damage Training System - Python Dependencies
+# Comprehensive requirements for advanced ML training pipeline
+# Compatible with Susan AI's existing infrastructure
+
+# Core ML and Deep Learning Libraries
+torch>=2.0.0,<2.2.0
+torchvision>=0.15.0,<0.17.0
+torchaudio>=2.0.0,<2.2.0
+pytorch-lightning>=2.0.0
+torchmetrics>=0.11.0
+
+# HuggingFace Ecosystem
+transformers>=4.35.0
+datasets>=2.14.0
+tokenizers>=0.14.0
+accelerate>=0.24.0
+peft>=0.6.0  # For LoRA fine-tuning
+optimum>=1.14.0
+
+# Qwen 2.5 VL Specific
+qwen-vl-utils>=0.0.1
+qwen2-vl>=0.0.1
+# Note: These may need to be installed from specific repos
+
+# Computer Vision and Image Processing
+opencv-python>=4.8.0
+Pillow>=10.0.0
+scikit-image>=0.21.0
+albumentations>=1.3.0
+imagehash>=4.3.0
+exifread>=3.0.0
+
+# Traditional ML and Data Science
+scikit-learn>=1.3.0
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.11.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.15.0
+
+# Model Architecture Libraries
+timm>=0.9.0  # Pretrained vision models
+efficientnet-pytorch>=0.7.1
+segmentation-models-pytorch>=0.3.3
+
+# Advanced Training Libraries
+wandb>=0.15.0  # Experiment tracking
+tensorboard>=2.14.0
+optuna>=3.3.0  # Hyperparameter optimization
+ray[tune]>=2.7.0  # Distributed hyperparameter tuning
+
+# Data Processing and Augmentation
+imgaug>=0.4.0
+Augmentor>=0.2.12
+kornia>=0.7.0  # Differentiable computer vision
+
+# Utilities and System Tools
+tqdm>=4.66.0
+rich>=13.5.0  # Beautiful terminal output
+click>=8.1.0  # CLI interface
+pydantic>=2.3.0  # Data validation
+omegaconf>=2.3.0  # Configuration management
+hydra-core>=1.3.0  # Configuration management
+
+# File and Data Handling
+h5py>=3.9.0
+zarr>=2.16.0  # Large array storage
+pyarrow>=13.0.0  # Fast data interchange
+fastparquet>=2023.7.0
+
+# Image Quality and Analysis
+pyiqa>=0.1.7  # Image quality assessment
+lpips>=0.1.4  # Perceptual loss
+ssim-pil>=1.0.1
+
+# Networking and APIs
+requests>=2.31.0
+aiohttp>=3.8.0
+httpx>=0.24.0
+websocket-client>=1.6.0
+
+# YAML and Configuration
+PyYAML>=6.0.1
+ruamel.yaml>=0.17.32
+
+# Scientific Computing Extensions
+numba>=0.58.0  # JIT compilation
+cupy-cuda11x>=12.2.0  # GPU array library (optional)
+
+# Profiling and Debugging
+memory-profiler>=0.61.0
+line-profiler>=4.1.0
+py-spy>=0.3.14
+
+# Testing and Quality Assurance
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-xdist>=3.3.0
+black>=23.7.0  # Code formatting
+isort>=5.12.0  # Import sorting
+flake8>=6.0.0  # Linting
+mypy>=1.5.0  # Type checking
+
+# Documentation
+sphinx>=7.1.0
+sphinx-rtd-theme>=1.3.0
+sphinx-autodoc-typehints>=1.24.0
+
+# Jupyter and Interactive Development
+jupyter>=1.0.0
+ipywidgets>=8.1.0
+notebook>=7.0.0
+
+# Database and Storage (Optional)
+sqlalchemy>=2.0.0
+alembic>=1.12.0
+redis>=4.6.0
+pymongo>=4.5.0
+
+# Cloud and Distributed Computing (Optional)
+boto3>=1.28.0  # AWS SDK
+google-cloud-storage>=2.10.0  # GCP storage
+azure-storage-blob>=12.17.0  # Azure storage
+
+# Specialized Roof Analysis Libraries
+roofline-model>=1.0.0  # If available
+building-analysis>=0.1.0  # If available
+
+# Performance Optimization
+psutil>=5.9.0
+py3nvml>=0.2.7  # NVIDIA GPU monitoring
+
+# Development and Deployment
+docker>=6.1.0
+kubernetes>=27.2.0
+gunicorn>=21.2.0
+uvicorn>=0.23.0
+fastapi>=0.103.0
+
+# Machine Learning Operations (MLOps)
+mlflow>=2.6.0
+clearml>=1.12.0
+neptune-client>=1.4.0
+comet-ml>=3.35.0
+
+# Model Serving and Inference
+onnx>=1.14.0
+onnxruntime>=1.15.0
+tensorrt>=8.6.0  # NVIDIA TensorRT (optional)
+torch2trt>=0.4.0  # PyTorch to TensorRT (optional)
+
+# Specialized Computer Vision
+detectron2>=0.6  # May need special installation
+mmcv>=2.0.0
+mmdet>=3.1.0
+mmsegmentation>=1.1.0
+
+# Time Series and Sequence Processing (for damage progression)
+tslearn>=0.6.2
+tsfresh>=0.20.0
+
+# Graph Neural Networks (for spatial relationships)
+torch-geometric>=2.3.0
+dgl>=1.1.0
+
+# Explainable AI
+shap>=0.42.0
+lime>=0.2.0.1
+captum>=0.6.0
+
+# Audio Processing (for damage assessment sounds, if applicable)
+librosa>=0.10.0
+soundfile>=0.12.0
+
+# Natural Language Processing (for report generation)
+nltk>=3.8.1
+spacy>=3.6.0
+textblob>=0.17.1
+
+# 3D Processing (for 3D roof models, if applicable)
+open3d>=0.17.0
+trimesh>=3.23.0
+pyvista>=0.42.0
+
+# Statistical Analysis
+statsmodels>=0.14.0
+pingouin>=0.5.3
+
+# Geospatial Analysis (for roof location data)
+geopandas>=0.13.0
+shapely>=2.0.0
+fiona>=1.9.0
+rasterio>=1.3.0
+
+# Weather Data Integration
+meteostat>=1.6.0
+weatherapi>=1.0.0  # If available
+
+# Insurance Industry Specific (if available)
+insurance-analytics>=0.1.0  # Placeholder
+claims-processing>=0.1.0    # Placeholder
+
+# Development Environment
+ipython>=8.14.0
+jupyterlab>=4.0.0
+notebook>=7.0.0
+
+# Version Control Integration
+gitpython>=3.1.0
+pre-commit>=3.3.0
+
+# Configuration Management
+python-dotenv>=1.0.0
+configparser>=5.3.0
+
+# Logging and Monitoring
+loguru>=0.7.0
+structlog>=23.1.0
+prometheus-client>=0.17.0
+
+# Security and Encryption
+cryptography>=41.0.0
+keyring>=24.2.0
+
+# Model Compression and Optimization
+torch-pruning>=1.2.0
+neural-compressor>=2.3.0  # Intel optimization
+
+# Edge Deployment
+openvino>=2023.0.0  # Intel OpenVINO (optional)
+onnxruntime-gpu>=1.15.0  # GPU inference
+
+# Specialized Metrics for Roof Analysis
+building-metrics>=0.1.0  # Placeholder for specialized metrics
+roofing-kpis>=0.1.0      # Placeholder for roofing KPIs
+
+# Alternative package sources and development installs
+# Install these manually if needed:
+# pip install git+https://github.com/QwenLM/Qwen-VL.git
+# pip install git+https://github.com/facebookresearch/segment-anything.git
+
+# Platform-specific packages (uncomment as needed)
+# Windows-specific
+# pywin32>=306; sys_platform == "win32"
+
+# Linux-specific
+# python-magic>=0.4.27; sys_platform == "linux"
+
+# macOS-specific  
+# pyobjc>=9.2; sys_platform == "darwin"
+
+# CUDA-specific (uncomment for GPU acceleration)
+# cudf-cu11>=23.8.0
+# cuml-cu11>=23.8.0
+# cugraph-cu11>=23.8.0
+
+# Development tools
+setuptools>=68.0.0
+wheel>=0.41.0
+twine>=4.0.0
+build>=0.10.0
+
+# Documentation tools
+mkdocs>=1.5.0
+mkdocs-material>=9.2.0
+
+# API documentation
+fastapi-utils>=0.2.1
+pydantic-openapi-helper>=0.2.0
+
+# Background task processing
+celery>=5.3.0
+redis>=4.6.0
+flower>=2.0.0  # Celery monitoring
+
+# Database migrations and ORM
+alembic>=1.12.0
+sqlmodel>=0.0.8
+
+# Caching
+diskcache>=5.6.0
+joblib>=1.3.0
+
+# Parallel processing
+multiprocessing-logging>=0.3.4
+concurrent-futures>=3.1.1
+
+# Memory optimization
+memory-mapping>=0.1.0  # Placeholder
+mmap-ninja>=0.1.0      # Placeholder
