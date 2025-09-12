@@ -1,77 +1,140 @@
-# Susan AI - Your Personal Jarvis-like Assistant
+# Susan AI 21 - Advanced Roofing Intelligence System
 
-Susan is an intelligent AI assistant with voice interaction capabilities, similar to JARVIS from Iron Man. She can understand speech, respond naturally, and help with various tasks.
+An enterprise-grade AI assistant specialized for the roofing industry, featuring advanced photo analysis, multi-language support, and comprehensive business intelligence capabilities.
 
-## Features
-
-🗣️ **Voice Interaction**: Full speech-to-text and text-to-speech capabilities  
-🧠 **AI-Powered**: Uses Claude and GPT models for intelligent responses  
-💬 **Natural Conversation**: Maintains conversation context and memory  
-⚡ **Command System**: Built-in commands for system operations  
-🌐 **Web Interface**: Beautiful, responsive web UI  
-📝 **Memory**: Persistent conversation history  
-
-## Quick Start
-
-1. **Copy the environment file:**
-   ```bash
-   copy .env.example .env
-   ```
-
-2. **Add your API keys to .env:**
-   ```
-   OPENAI_API_KEY=your_key_here
-   ANTHROPIC_API_KEY=your_key_here
-   ```
-
-3. **Start Susan:**
-   ```bash
-   npm start
-   ```
-
-4. **Open your browser to:**
-   ```
-   http://localhost:3001
-   ```
-
-## Available Commands
-
-- **System**: `time`, `date`, `system info`
-- **Files**: `list files`, `current directory`  
-- **Math**: `calculate [expression]`
-- **Reminders**: `remind me [text]`, `show reminders`
-- **Susan**: `who are you`, `your capabilities`, `help`
-
-## Voice Controls
-
-- Click the Susan orb or "Start Listening" to begin voice interaction
-- Susan will respond with both text and speech
-- Click during speech to interrupt Susan
-
-## Requirements
-
-- Node.js 18+
-- Modern web browser with speech recognition support
-- At least one AI API key (OpenAI or Anthropic)
-
-## Development
+## 🚀 Quick Start
 
 ```bash
-npm run dev    # Start with auto-reload
-npm test       # Run tests
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your API keys
+
+# Start the server
+npm start
+
+# Access the interface
+open http://localhost:3000
 ```
 
-## API
+## 🎯 Core Features
 
-REST endpoint available at `/api/message` for text-only interactions:
+### AI-Powered Capabilities
+- **Photo Analysis**: Advanced damage detection and roof assessment using computer vision
+- **Voice Assistant**: Natural language processing with voice commands
+- **Multi-Language Support**: Full support for English, Spanish, and other languages
+- **Real-Time Chat**: WebSocket-based instant communication
 
-```javascript
-POST /api/message
-{
-  "message": "Hello Susan!"
-}
+### Business Intelligence
+- **Insurance Integration**: Automated claim processing and documentation
+- **Weather Analysis**: Real-time weather impact assessment
+- **Building Codes**: Comprehensive code compliance verification
+- **Legal Precedents**: Access to relevant case law and regulations
+- **Predictive Analytics**: Forecasting and trend analysis
+
+### Enterprise Features
+- **Role-Based Access Control (RBAC)**: Secure multi-user management
+- **Training System**: Interactive modules for team education
+- **OCR Processing**: Document and image text extraction
+- **API Integrations**: Hover, EagleView, and custom APIs
+
+## 📁 Project Structure
+
+```
+Susan-AI-21/
+├── src/                    # Source code
+│   ├── api/               # API endpoints
+│   ├── services/          # Business logic
+│   ├── utils/             # Utilities
+│   └── agents/            # AI agents
+├── public/                # Static files
+├── data/                  # Data storage
+├── training/              # Training modules
+├── tests/                 # Test suites
+├── plugins/               # Extensions
+└── docs/                  # Documentation
+```
+
+## 🔧 Configuration
+
+### Required API Keys
+- `OPENAI_API_KEY` - OpenAI API access
+- `ANTHROPIC_API_KEY` - Claude API access
+- `WEATHER_API_KEY` - Weather service
+- `HOVER_API_KEY` - Hover integration (optional)
+- `EAGLEVIEW_API_KEY` - EagleView integration (optional)
+
+### Database Setup
+```bash
+# PostgreSQL connection
+DATABASE_URL=postgresql://user:password@localhost:5432/susan_ai
+```
+
+## 🧪 Testing
+
+```bash
+# Run all tests
+npm test
+
+# Run specific test suite
+npm run test:unit
+npm run test:integration
+```
+
+## 📚 API Documentation
+
+### REST Endpoints
+- `POST /api/analyze-photo` - Photo analysis
+- `POST /api/chat` - Chat interaction
+- `GET /api/weather` - Weather data
+- `POST /api/translate` - Translation service
+
+### WebSocket Events
+- `connection` - Client connected
+- `message` - Chat message
+- `analysis` - Photo analysis result
+- `voice` - Voice command
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+Proprietary - All rights reserved
+
+## 🆘 Support
+
+For support, email support@roofer21.com or visit our [documentation](https://docs.roofer21.com).
+
+## 🚀 Deployment
+
+### Production Deployment
+```bash
+# Build for production
+npm run build
+
+# Start production server
+npm run start:prod
+```
+
+### Docker Deployment
+```bash
+# Build Docker image
+docker build -t susan-ai-21 .
+
+# Run container
+docker run -p 3000:3000 susan-ai-21
 ```
 
 ---
 
-**Susan** - Your intelligent AI companion 🤖
+**Version**: 2.0.0  
+**Last Updated**: September 2025  
+**Maintained by**: RoofER21 Team
